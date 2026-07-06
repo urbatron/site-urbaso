@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url(/powercube/site_mirror/_static/css/animate.css);
-@import url(/powercube/site_mirror/_static/font-awesome/4.3.0/css/font-awesome.min.css);
-@import url(/powercube/site_mirror/_static/css.css);
+@import url(/_static/css/animate.css);
+@import url(/_static/font-awesome/4.3.0/css/font-awesome.min.css);
+@import url(/_static/css.css);
 /*========================================================
 					  Main Styles
 =========================================================*/
@@ -33,26 +33,26 @@ header a.maylYakor:hover{
 }
 
 .header_slide{
-    width: 100%; 
-    height: 0px; 
-    top: 0; 
-    left: 0; 
-    background-blend-mode: multiply; 
-    background: rgba(0,0,0,.7) url(/powercube/site_mirror/_static/images/article/news2/test_header2.jpg) no-repeat center 0; 
-    background-size: 100% 100%; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
-    background-position: cover; 
+    width: 100%;
+    height: 0px;
+    top: 0;
+    left: 0;
+    background-blend-mode: multiply;
+    background: rgba(0,0,0,.7) url(/_static/images/article/news2/test_header2.jpg) no-repeat center 0;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: cover;
 }
 
 .header_slide_text{
-    font-weight: bold; 
-    width: 100%; 
+    font-weight: bold;
+    width: 100%;
     text-align: center;
-    font-size: 56px; 
-    line-height: 88px; 
+    font-size: 56px;
+    line-height: 88px;
     color: #fff;
     margin-top: 120px;
 }
@@ -237,7 +237,7 @@ hr {
  display: block;
  word-wrap: break-word;
  max-width: 7em;
- 
+
 }
 .tableParsing table td:first-child {
  display: table-cell;
@@ -355,8 +355,8 @@ float:none;
 }
 
 .header_slide_text{
-    font-size: 40px; 
-    line-height: 88px; 
+    font-size: 40px;
+    line-height: 88px;
     margin-top: 120px;
 }
 
@@ -402,7 +402,7 @@ p + .btn_wr {
 
   /*Лого яндекс в шапке*/
   .yandexReiting, .social-networks-links {
-    
+
   }
 
 }
@@ -482,7 +482,7 @@ float:none;
 }
 
 .bg-image {
-  background: url(/powercube/site_mirror/_static/images/page-3_bg.jpg) center no-repeat;
+  background: url(/_static/images/page-3_bg.jpg) center no-repeat;
   background-size: cover;
 }
 .bg-image p {
@@ -771,11 +771,11 @@ display: none;
  overflow: hidden;
  width: 100%;
  }
- 
+
 #breadcrumb .B_crumbBox div{
  float: left;
  }
- 
+
 #breadcrumb .B_crumbBox a, #breadcrumb .B_crumbBox .B_currentCrumb{
  padding: .7em 1em .7em 2em;
  float: left;
@@ -786,16 +786,16 @@ display: none;
  background-color: #ddd;
  background-image: linear-gradient(to right, #f5f5f5, #ddd);
  }
- 
+
 #breadcrumb .B_crumbBox div:first-child a{
  padding-left: 1em;
  border-radius: 5px 0 0 5px;
  }
- 
+
 #breadcrumb .B_crumbBox a:hover{
  background: #fff;
  }
- 
+
 #breadcrumb .B_crumbBox a::after, #breadcrumb .B_crumbBox .B_currentCrumb::after,
  #breadcrumb .B_crumbBox a::before, #breadcrumb .B_crumbBox .B_currentCrumb::before{
  content: "";
@@ -807,28 +807,28 @@ display: none;
  border-left: 1em solid;
  right: -1em;
  }
- 
+
 #breadcrumb .B_crumbBox a::after, #breadcrumb .B_crumbBox .B_currentCrumb::after{
  z-index: 2;
  border-left-color: #ddd;
  }
- 
+
 #breadcrumb .B_crumbBox a::before, #breadcrumb .B_crumbBox .B_currentCrumba::before{
  border-left-color: #ccc;
  right: -1.1em;
  z-index: 1;
  }
- 
+
 #breadcrumb .B_crumbBox a:hover::after, #breadcrumb .B_crumbBox .B_currentCrumba:hover::after{
  border-left-color: #fff;
  }
- 
+
 #breadcrumb .B_crumbBox .current,
  #breadcrumbs-one .current:hover{
  font-weight: bold;
  background: none;
  }
- 
+
 #breadcrumbs-one .current::after,
  #breadcrumbs-one .current::before{
  content: normal;
@@ -1069,10 +1069,10 @@ blockquote p + cite {
     margin-top: 30px;
     padding-left: 0;
   }
-  
+
   .header_slide_text{
-    font-size: 35px; 
-    line-height: 60px; 
+    font-size: 35px;
+    line-height: 60px;
     margin-top: 90px;
 }
 
@@ -1674,9 +1674,9 @@ header a[href^="callto:"] + p {
 }
 @media (max-width: 979px) {
     header a.maylYakor{
-       padding: 20px 0px 30px 0px; 
-    }    
-    
+       padding: 20px 0px 30px 0px;
+    }
+
   header {
     text-align: center;
   }
@@ -1763,18 +1763,18 @@ a[href^="callto:"]:hover {
 }
 
 .well ul li {
-  border: 5px solid #62bfe6; 
-  box-sizing: border-box; 
+  border: 5px solid #62bfe6;
+  box-sizing: border-box;
   padding-bottom: 30px
 }
 
 .well ul li .box_cnt__no-flow_first {
-  overflow: visible; 
+  overflow: visible;
   margin-bottom: 30px
 }
 
 .well ul li .box_cnt__no-flow_first img {
-  display: block; 
+  display: block;
   margin: -50px auto;
 }
 
@@ -1783,16 +1783,16 @@ a[href^="callto:"]:hover {
 }
 
 .well ul li .box_cnt__no-flow_two {
-  display: inline-block; 
-  float: left; 
+  display: inline-block;
+  float: left;
   width: 70%;
 }
 
 .well ul li .box_cnt__no-flow_price {
-    display: inline-block; 
-    width:23%; 
-    float: right; 
-    font-size: 24px; 
+    display: inline-block;
+    width:23%;
+    float: right;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -1895,7 +1895,7 @@ color:#ffffff;
 @media (max-width: 979px){
 
   .well ul li .box_cnt__no-flow_two {
-  display: block; 
+  display: block;
   text-align: center;
   width: 100%;
   float: none;
@@ -1903,10 +1903,10 @@ color:#ffffff;
 }
 
 .well ul li .box_cnt__no-flow_price {
-    display: block; 
-    width: 100%; 
-    float: none; 
-    font-size: 24px; 
+    display: block;
+    width: 100%;
+    float: none;
+    font-size: 24px;
     text-align: center;
     padding: 0px;
 }
@@ -2005,14 +2005,14 @@ margin: 20px;
 }
 
 .article .keep{
-    color: white; 
-    background: #4BB0DB; 
-    font-weight: bold; 
-    border-radius: 2px; 
-    line-height: 1.05; 
+    color: white;
+    background: #4BB0DB;
+    font-weight: bold;
+    border-radius: 2px;
+    line-height: 1.05;
     padding: 0.35em 0.84em;
 }
-/* Gallery -----------------------------------------------------------------------------*/ 
+/* Gallery -----------------------------------------------------------------------------*/
 
 .galleries {
 margin: 15px auto;
@@ -2030,7 +2030,7 @@ list-style-type: none;
 .galleries li img {
 float: left;
 border: 1px solid #CCC;
-padding: 2px;	
+padding: 2px;
 margin: 10px 5px 10px 0;
 }
 .imghover_gallery {
