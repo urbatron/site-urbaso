@@ -137,3 +137,57 @@ footer a { word-break: break-word; }
 @media (max-width: 440px) {
   .cert-grid { grid-template-columns: 1fr; }
 }
+
+/* Design pass: denser, stronger composition. */
+.modern-hero { padding: 56px 0 40px !important; background: linear-gradient(135deg, #eef8fc 0%, #ffffff 65%); }
+.hero-layout { grid-template-columns: minmax(0, 1fr) 460px; gap: 30px; }
+.header_slide_text { font-size: clamp(40px, 5vw, 62px); }
+.hero-subtitle { font-size: 22px; color: #536678; }
+.hero-visual img { aspect-ratio: 16 / 11; }
+.benefits-section { padding: 36px 0 48px; }
+.banner li, .banner li:hover, .banner li:nth-child(n) { min-height: 168px; }
+.banner .h3 { font-size: 22px; }
+.banner img { max-height: 96px; }
+.benefits-section + .well { padding-top: 52px; }
+.well, .well1 { padding: 52px 0; }
+.product-list.row { max-width: 100%; }
+.product-list > li { min-height: 320px; padding: 30px !important; }
+.product-list .box_cnt__no-flow_first img { max-height: 132px; }
+.product-list h3 { font-size: 26px; }
+.cert-grid { gap: 14px; }
+.cert-card { min-height: 230px; padding: 10px; }
+.cert-card img { max-height: 300px; }
+.about-card { padding: 28px; }
+.about-card h2 { margin-bottom: 18px; }
+.thanks-section { padding: 44px 0; }
+.letter-card { max-width: 760px; padding: 14px; }
+.content-section { background: var(--urbaso-soft); }
+.budget-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.budget-card { background: #fff; border: 1px solid var(--urbaso-line); border-radius: var(--urbaso-radius); box-shadow: var(--urbaso-shadow); padding: 28px; font-size: 18px; }
+.budget-card h3 { margin-top: 0; color: var(--urbaso-dark); font-size: 28px; line-height: 1.18; }
+.budget-card ul { margin: 18px 0 0; padding-left: 20px; }
+.budget-card li { margin-bottom: 8px; }
+.accent-card { background: linear-gradient(180deg, #ffffff, #f5fbff); border-color: #cdebf8; }
+.work-steps { margin-top: 36px; }
+.work-steps h2 { text-align: center; }
+.steps-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
+.step-card { background: #fff; border: 1px solid var(--urbaso-line); border-radius: var(--urbaso-radius); box-shadow: 0 8px 20px rgba(38,50,63,.06); padding: 22px; font-size: 17px; }
+.step-card span { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: var(--urbaso-blue); color: #fff; font-weight: 700; margin-bottom: 12px; }
+.experience-section { padding-top: 46px; }
+.experience-section .row { max-width: 900px; }
+.experience-section .grid_2 { min-height: 126px; }
+.experience-section .grid_2 img { max-height: 86px; }
+
+@media (max-width: 979px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 620px; }
+  .budget-grid, .steps-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .modern-hero { padding: 40px 0 32px !important; }
+  .benefits-section, .well, .well1 { padding: 38px 0; }
+  .header_slide_text { font-size: 36px; }
+  .hero-subtitle { font-size: 18px; }
+  .product-list > li { min-height: 0; }
+}
