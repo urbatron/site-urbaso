@@ -151,3 +151,95 @@ footer a { word-break: break-word; }
 @media (max-width: 440px) {
   .cert-grid { grid-template-columns: 1fr; }
 }
+
+/* Composition pass: make hero and grids read as one layout, not separate floating blocks. */
+:root { --urbaso-container: 1100px; }
+.wow { visibility: visible !important; animation: none !important; transform: none !important; }
+
+.hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: 34px;
+  align-items: center;
+}
+.hero-copy { min-width: 0; }
+.hero-benefits { min-width: 0; }
+.hero-benefits .banner {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.hero-benefits .banner li {
+  min-height: 152px;
+  padding: 18px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 16px 34px rgba(0,0,0,.16);
+}
+.hero-benefits .banner .h3 { font-size: 18px; }
+.hero-benefits .banner img { max-height: 70px; }
+.hero-benefits .mini-contact-actions { gap: 8px; }
+.hero-benefits .mini-contact-actions a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border: 1px solid var(--urbaso-line);
+  border-radius: 999px;
+  background: #f7fbfe;
+}
+
+.product-list.row {
+  max-width: 900px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.product-list > li { min-height: 285px; }
+
+.cert-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1040px; margin: 0 auto; }
+.cert-card { min-height: 280px; }
+.cert-card img { max-height: 300px; }
+
+.about-card { font-size: 17px; line-height: 1.62; }
+.contact-actions .btn { min-height: 50px; font-size: 17px; }
+
+.letter-card { max-width: 920px; }
+.letter-card img { max-height: none; }
+
+.content-section .article > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.content-section .article > ul li {
+  padding: 16px 18px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(38,50,63,.06);
+}
+.experience-section .row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 780px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.experience-section .grid_2 { min-height: 112px; }
+.experience-section .grid_2 img { max-height: 72px; }
+
+@media (max-width: 979px) {
+  .hero-layout { grid-template-columns: 1fr; gap: 26px; }
+  .hero-benefits .banner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cert-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .experience-section .row { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; }
+}
+
+@media (max-width: 767px) {
+  .hero-layout { gap: 22px; }
+  .hero-benefits .banner { grid-template-columns: 1fr; }
+  .hero-benefits .banner li { min-height: 0; }
+  .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .content-section .article > ul { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .cert-grid { grid-template-columns: 1fr; }
+  .experience-section .row { grid-template-columns: 1fr; }
+}
