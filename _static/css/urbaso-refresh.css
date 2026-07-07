@@ -287,3 +287,49 @@ footer {
   .header_slide_text { text-align: center !important; }
   .hero-subtitle { text-align: center; }
 }
+
+/* Remove legacy absolute banner mechanics that caused hero cards to float over header/text. */
+.hero-benefits .banner,
+.banner {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+.hero-benefits .banner li,
+.banner li {
+  position: static !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  transform: none !important;
+  transition: box-shadow .2s ease, border-color .2s ease !important;
+}
+.hero-benefits .banner li:hover,
+.banner li:hover {
+  height: auto !important;
+  margin-top: 0 !important;
+  padding-bottom: 18px !important;
+  transform: none !important;
+}
+.hero-benefits .banner li:nth-child(n),
+.banner li:nth-child(n) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+.banner li a,
+.hero-benefits .banner li a {
+  position: static !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+.banner li a::before,
+.hero-benefits .banner li a::before {
+  content: none !important;
+}
