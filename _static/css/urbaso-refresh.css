@@ -293,3 +293,196 @@ footer a { word-break: break-word; }
   .contact-phone { justify-content: center; width: 100%; font-size: 22px; }
   .hero-actions .contact-link { flex: 1 1 120px; }
 }
+
+/* Composition tightening pass: wide desktop grid, compact sections, no contact card in benefits. */
+.modern-hero {
+  padding: 54px 0 42px !important;
+}
+.hero-layout {
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr);
+  gap: 34px;
+}
+.hero-copy {
+  max-width: none;
+}
+.header_slide_text {
+  max-width: 720px;
+}
+.hero-actions {
+  gap: 14px;
+  margin-top: 24px;
+}
+.hero-visual {
+  align-self: center;
+}
+.hero-visual img {
+  aspect-ratio: 16 / 10.5;
+}
+.benefits-grid {
+  align-items: stretch;
+}
+.benefit-card {
+  justify-content: flex-start;
+  min-height: 170px;
+  padding: 24px 18px 22px;
+}
+.benefit-card h3 {
+  font-size: 24px;
+}
+.benefit-card p {
+  margin: 0;
+  color: var(--urbaso-muted);
+  font-size: 16px;
+  line-height: 1.45;
+}
+.service-card {
+  min-height: 340px;
+  justify-content: space-between;
+}
+.service-card img {
+  max-height: 150px;
+}
+.service-card h3 {
+  max-width: 420px;
+}
+.cert-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: var(--urbaso-container);
+  gap: 12px;
+}
+.cert-card {
+  min-height: 210px;
+  padding: 8px;
+}
+.cert-card img {
+  max-height: 245px;
+}
+.about-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.about-card {
+  padding: 26px;
+  font-size: 18px;
+}
+.about-person img {
+  max-height: 235px;
+}
+.requisites-card .marked-list li {
+  align-items: flex-start;
+  font-size: 16px;
+}
+.contact-card .contact-phone {
+  font-size: 25px;
+}
+.thanks-section .section-heading {
+  margin-bottom: 18px;
+}
+.letter-card {
+  max-width: 560px;
+}
+.budget-grid {
+  gap: 24px;
+}
+.budget-card {
+  min-height: 100%;
+}
+.steps-grid {
+  gap: 20px;
+}
+.step-card {
+  min-height: 168px;
+}
+.experience-section .row {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: var(--urbaso-container);
+  gap: 14px;
+}
+.experience-section .grid_2 {
+  min-height: 110px;
+  padding: 14px;
+}
+.experience-section .grid_2 img {
+  max-height: 74px;
+}
+footer .well3 {
+  padding: 34px 0 !important;
+}
+footer .contact-list.row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 !important;
+}
+footer .contact-list .grid_4 {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+footer .copyright {
+  padding: 18px 0 26px !important;
+}
+
+@media (min-width: 861px) and (max-width: 1080px) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(330px, .95fr);
+    gap: 24px;
+  }
+  .header_slide_text {
+    font-size: clamp(38px, 4.2vw, 48px);
+  }
+  .hero-subtitle {
+    font-size: 19px;
+  }
+  .benefit-card h3 {
+    font-size: 21px;
+  }
+  .benefit-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 979px) {
+  .cert-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .experience-section .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  footer .contact-list.row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 861px) and (max-width: 979px) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefit-card {
+    min-height: 0;
+  }
+  .cert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cert-card {
+    min-height: 175px;
+  }
+  .about-card {
+    font-size: 17px;
+  }
+  .experience-section .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
