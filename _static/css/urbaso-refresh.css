@@ -242,3 +242,54 @@ footer a { word-break: break-word; }
   .benefits-grid, .service-grid { grid-template-columns: 1fr; }
   .benefit-card, .service-card { min-height: 0; }
 }
+
+/* Contact alignment pass: phone is text, VK/MAX are small links, not phone CTA buttons. */
+.hero-actions,
+.contact-actions,
+.mini-contact-actions {
+  align-items: center;
+}
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--urbaso-dark);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid var(--urbaso-line);
+  border-radius: 999px;
+  background: #f7fbfe;
+  color: var(--urbaso-blue-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero-actions .contact-phone { margin-right: 6px; }
+.mini-contact-actions .contact-phone,
+.contact-actions .contact-phone {
+  justify-content: center;
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+.mini-contact-actions .contact-link,
+.contact-actions .contact-link { width: 100%; }
+.contact-actions { grid-template-columns: 1fr; }
+.about-grid { align-items: stretch; }
+.about-card { display: flex; flex-direction: column; }
+.contact-card p { margin-bottom: 20px; }
+
+@media (max-width: 767px) {
+  .hero-actions { justify-content: center; }
+  .contact-phone { justify-content: center; width: 100%; font-size: 22px; }
+  .hero-actions .contact-link { flex: 1 1 120px; }
+}
