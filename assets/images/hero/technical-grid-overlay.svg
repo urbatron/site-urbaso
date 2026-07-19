@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900" height="750" viewBox="0 0 900 750"
+     fill="none">
+
+  <defs>
+    <pattern id="minorGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50"
+            stroke="#8F99A3"
+            stroke-width="1"
+            opacity="0.11"/>
+    </pattern>
+
+    <pattern id="majorGrid" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="url(#minorGrid)"/>
+      <path d="M 200 0 L 0 0 0 200"
+            stroke="#7E8994"
+            stroke-width="1.4"
+            opacity="0.17"/>
+    </pattern>
+  </defs>
+
+  <!-- Основная координатная сетка -->
+  <rect x="20" y="20" width="860" height="710"
+        fill="url(#majorGrid)"/>
+
+  <!-- Две усиленные координатные линии -->
+  <line x1="450" y1="35" x2="450" y2="715"
+        stroke="#73808B" stroke-width="1.4" opacity="0.22"/>
+  <line x1="35" y1="375" x2="865" y2="375"
+        stroke="#73808B" stroke-width="1.4" opacity="0.22"/>
+
+  <!-- Засечки на центральных осях -->
+  <g stroke="#73808B" stroke-width="1.3" opacity="0.24">
+    <line x1="440" y1="75" x2="460" y2="75"/>
+    <line x1="440" y1="175" x2="460" y2="175"/>
+    <line x1="440" y1="275" x2="460" y2="275"/>
+    <line x1="440" y1="475" x2="460" y2="475"/>
+    <line x1="440" y1="575" x2="460" y2="575"/>
+    <line x1="440" y1="675" x2="460" y2="675"/>
+
+    <line x1="100" y1="365" x2="100" y2="385"/>
+    <line x1="200" y1="365" x2="200" y2="385"/>
+    <line x1="300" y1="365" x2="300" y2="385"/>
+    <line x1="600" y1="365" x2="600" y2="385"/>
+    <line x1="700" y1="365" x2="700" y2="385"/>
+    <line x1="800" y1="365" x2="800" y2="385"/>
+  </g>
+
+  <!-- Незамкнутые технические рамки -->
+  <g stroke="#7E8994" stroke-width="1.3" opacity="0.21">
+    <path d="M70 90 H250 M70 90 V210 M70 210 H155"/>
+    <path d="M655 80 H825 M825 80 V190 M825 190 H745"/>
+    <path d="M95 560 V665 M95 665 H275 M275 665 V620"/>
+    <path d="M625 545 H810 M810 545 V680 M810 680 H700"/>
+  </g>
+
+  <!-- Небольшие пересечения и маркеры -->
+  <g stroke="#6F7B86" stroke-width="1.3" opacity="0.25">
+    <circle cx="450" cy="375" r="8"/>
+    <line x1="432" y1="375" x2="468" y2="375"/>
+    <line x1="450" y1="357" x2="450" y2="393"/>
+
+    <circle cx="185" cy="285" r="5"/>
+    <line x1="173" y1="285" x2="197" y2="285"/>
+    <line x1="185" y1="273" x2="185" y2="297"/>
+
+    <circle cx="725" cy="300" r="5"/>
+    <line x1="713" y1="300" x2="737" y2="300"/>
+    <line x1="725" y1="288" x2="725" y2="312"/>
+  </g>
+
+  <!-- Короткие технические сегменты -->
+  <g stroke="#8A949E" stroke-width="1.2" opacity="0.20">
+    <line x1="520" y1="115" x2="590" y2="115"/>
+    <line x1="520" y1="130" x2="565" y2="130"/>
+    <line x1="305" y1="625" x2="370" y2="625"/>
+    <line x1="305" y1="640" x2="350" y2="640"/>
+    <line x1="110" y1="330" x2="145" y2="330"/>
+    <line x1="755" y1="430" x2="805" y2="430"/>
+  </g>
+</svg>
