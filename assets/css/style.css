@@ -9,66 +9,68 @@ a { color:inherit; text-decoration:none; }
 .max-link:focus-visible,.phone-link:focus-visible,.site-brand:focus-visible { outline:3px solid var(--color-orange); outline-offset:4px; }
 
 @media (min-width:1024px) {
-  .site-header { position:absolute; z-index:20; top:0; left:0; width:100%; height:13.3%; border-bottom:1px solid rgba(16,16,16,.25); }
-  .site-brand { position:absolute; top:22.56%; left:3.7%; display:flex; flex-direction:column; }
+  .hero { position:relative; width:100%; height:100svh; min-height:720px; overflow:hidden; }
+  .hero-stage { position:absolute; inset:0; width:100vw; height:100svh; max-width:none; max-height:none; aspect-ratio:auto; transform:none; overflow:hidden; }
+  .site-header { position:absolute; z-index:20; top:0; left:0; width:100vw; height:13.3svh; min-height:96px; max-height:128px; border-bottom:1px solid rgba(16,16,16,.25); }
+  .site-brand { position:absolute; top:3svh; left:clamp(40px,3.7vw,70px); display:flex; flex-direction:column; }
   .site-brand strong { font-size:min(3vw,4.8svh,46px); font-weight:800; line-height:1; letter-spacing:-.055em; }
   .site-brand span { margin-top:8px; color:#474747; font-size:min(1.17vw,1.88svh,18px); }
-  .site-header__divider { position:absolute; top:18.05%; left:24.5%; height:56.4%; border-left:1px solid #171717; }
-  .site-header__process { position:absolute; top:54.14%; left:29.2%; margin:0; padding-bottom:5px; border-bottom:1px solid #171717; font:min(1.56vw,2.5svh,24px)/1 "Caveat","Segoe Print",cursive; white-space:nowrap; }
+  .site-header__divider { position:absolute; top:2.4svh; left:24.5vw; height:7.5svh; max-height:72px; border-left:1px solid #171717; }
+  .site-header__process { position:absolute; top:7.2svh; left:29.2vw; margin:0; padding-bottom:5px; border-bottom:1px solid #171717; font:min(1.56vw,2.5svh,24px)/1 "Caveat","Segoe Print",cursive; white-space:nowrap; }
   .site-header__contacts { display:contents; }
-  .phone-link { position:absolute; top:43.61%; left:67.4%; font-size:min(1.43vw,2.29svh,22px); font-weight:700; white-space:nowrap; }
-  .max-link--header { position:absolute; top:26.32%; left:81.9%; display:flex; justify-content:center; width:15.5%; height:47.37%; gap:12px; border-radius:6px; font-size:min(1.25vw,2svh,19px); white-space:nowrap; }
+  .phone-link { position:absolute; top:5.8svh; right:18.7vw; font-size:min(1.43vw,2.29svh,22px); font-weight:700; white-space:nowrap; }
+  .max-link--header { position:absolute; top:3.5svh; right:clamp(35px,3vw,58px); display:flex; justify-content:center; width:min(15.5vw,23.75svh); height:min(6.3vw,10.08svh); min-width:205px; min-height:54px; max-width:238px; max-height:61px; gap:12px; border-radius:6px; font-size:min(1.25vw,2svh,19px); white-space:nowrap; }
   .max-link--header img { width:32px; height:32px; }
 
   .hero__collage { position:absolute; z-index:1; inset:0; }
-  .hero__grid { z-index:1; top:14.5%; left:40.5%; width:57%; height:76%; opacity:.7; }
-  .hero__grid-paper { z-index:1; top:14.5%; left:51%; width:40%; transform:rotate(.5deg); }
-  .hero__blue-paper { z-index:2; top:15.5%; left:64.8%; width:18%; transform:rotate(-3deg); }
-  .hero__orange-paper { z-index:2; top:59.7%; left:42.2%; width:13.2%; transform:rotate(-1deg); }
-  .hero__lines-note { z-index:3; top:20%; left:48%; width:14.5%; transform:rotate(1deg); }
-  .hero__lines-tape { z-index:5; top:19.4%; left:48.5%; width:9%; transform:rotate(-10deg); }
-  .hero__wireframe { z-index:3; top:38.5%; left:45%; width:17.8%; transform:rotate(-1deg); }
-  .hero__dashboard { z-index:4; top:17.2%; left:69.7%; width:30%; transform:rotate(-.5deg); box-shadow:0 14px 30px rgba(20,30,50,.13); }
-  .hero__traffic { z-index:4; top:44.8%; left:78.5%; width:20%; box-shadow:0 9px 18px rgba(20,30,50,.12); }
-  .hero__code { z-index:4; top:73%; left:76.4%; width:23%; transform:rotate(.5deg); box-shadow:0 10px 20px rgba(20,30,50,.15); }
-  .hero__portrait { z-index:6; top:23.5%; left:44.5%; width:42%; max-width:none; filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff); }
+  .hero__grid { z-index:1; top:14.5svh; left:40.5vw; width:min(57vw,91.2svh); max-width:876px; height:auto; opacity:.7; }
+  .hero__grid-paper { z-index:1; top:14.5svh; left:51vw; width:min(40vw,64svh); max-width:614px; transform:rotate(.5deg); }
+  .hero__blue-paper { z-index:2; top:15.5svh; left:64.8vw; width:min(18vw,28.8svh); max-width:276px; transform:rotate(-3deg); }
+  .hero__orange-paper { z-index:2; top:59.7svh; left:42.2vw; width:min(13.2vw,21.12svh); max-width:203px; transform:rotate(-1deg); }
+  .hero__lines-note { z-index:3; top:20svh; left:48vw; width:min(14.5vw,23.2svh); max-width:223px; transform:rotate(1deg); }
+  .hero__lines-tape { z-index:5; top:19.4svh; left:48.5vw; width:min(9vw,14.4svh); max-width:138px; transform:rotate(-10deg); }
+  .hero__wireframe { z-index:3; top:38.5svh; left:45vw; width:min(17.8vw,28.48svh); max-width:273px; transform:rotate(-1deg); }
+  .hero__dashboard { z-index:4; top:17.2svh; left:69.7vw; width:min(30vw,48svh); max-width:461px; transform:rotate(-.5deg); box-shadow:0 14px 30px rgba(20,30,50,.13); }
+  .hero__traffic { z-index:4; top:44.8svh; left:78.5vw; width:min(20vw,32svh); max-width:307px; box-shadow:0 9px 18px rgba(20,30,50,.12); }
+  .hero__code { z-index:4; top:73svh; left:76.4vw; width:min(23vw,36.8svh); max-width:353px; transform:rotate(.5deg); box-shadow:0 10px 20px rgba(20,30,50,.15); }
+  .hero__portrait { z-index:6; top:23.5svh; left:44.5vw; width:min(42vw,67.2svh); max-width:645px; filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff); }
 
   .hero__content { display:contents; }
-  .hero__title { position:absolute; z-index:10; top:17.3%; left:5.8%; width:41%; margin:0; font-size:min(4.17vw,6.67svh,64px); font-weight:800; line-height:.97; letter-spacing:-.04em; }
+  .hero__title { position:absolute; z-index:10; top:17.3svh; left:clamp(56px,5.8vw,110px); width:min(41vw,65.625svh); max-width:630px; margin:0; font-size:clamp(48px,min(4.17vw,6.67svh),64px); font-weight:800; line-height:.97; letter-spacing:-.04em; }
   .hero__title span { display:block; white-space:nowrap; }
-  .hero__dots { z-index:8; top:20.5%; left:1.7%; width:1.5%; height:auto; }
-  .hero__underline { z-index:11; top:41.4%; left:4.8%; width:18.1%; height:auto; }
-  .hero__description { position:absolute; z-index:10; top:46%; left:5.8%; width:32.5%; margin:0; color:#303030; font-size:min(1.43vw,2.29svh,22px); font-weight:400; line-height:1.36; }
+  .hero__dots { z-index:8; top:20.5svh; left:clamp(16px,1.7vw,33px); width:min(1.5vw,2.4svh); max-width:23px; height:auto; }
+  .hero__underline { z-index:11; top:41.4svh; left:clamp(46px,4.8vw,92px); width:min(18.1vw,28.96svh); max-width:278px; height:auto; }
+  .hero__description { position:absolute; z-index:10; top:46svh; left:clamp(56px,5.8vw,110px); width:min(32.5vw,52svh); max-width:500px; margin:0; color:#303030; font-size:min(1.43vw,2.29svh,22px); font-weight:400; line-height:1.36; }
 
-  .price-note { position:absolute; z-index:10; top:58.5%; left:1.8%; width:35.8%; height:13.6%; filter:drop-shadow(0 12px 13px rgba(30,30,30,.12)); transform:rotate(-.3deg); }
+  .price-note { position:absolute; z-index:10; top:58.5svh; left:clamp(18px,1.8vw,35px); width:min(35.8vw,57.28svh); max-width:550px; height:min(13.6vw,21.76svh); max-height:131px; filter:drop-shadow(0 12px 13px rgba(30,30,30,.12)); transform:rotate(-.3deg); }
   .price-note img { inset:0; width:100%; height:100%; object-fit:fill; }
   .price-note p { position:absolute; z-index:1; margin:0; }
   .price-note__number { top:18%; left:10%; color:var(--color-blue); font-size:min(5.6vw,8.96svh,86px); font-weight:800; line-height:1; letter-spacing:-.06em; white-space:nowrap; }
   .price-note__text { top:25%; left:54%; font-size:min(1.63vw,2.6svh,25px); font-weight:700; line-height:1.2; white-space:nowrap; }
   .price-note__text span { display:inline-block; padding-bottom:6px; border-bottom:2px solid #111; }
 
-  .sticky-note { position:absolute; z-index:10; top:73.5%; left:4.5%; width:15.5%; height:21.5%; transform:rotate(-2deg); }
+  .sticky-note { position:absolute; z-index:10; top:73.5svh; left:clamp(42px,4.5vw,86px); width:min(15.5vw,24.8svh); max-width:238px; height:min(21.5vw,34.4svh); max-height:206px; transform:rotate(-2deg); }
   .sticky-note__paper { inset:0; width:100%; height:100%; object-fit:fill; }
   .sticky-note__tape { top:-6%; left:-12%; width:42%; transform:rotate(-12deg); }
   .sticky-note p { position:absolute; top:19%; left:18%; width:70%; margin:0; font:min(1.76vw,2.81svh,27px)/1.13 "Caveat","Segoe Print",cursive; }
   .sticky-note p span { position:relative; display:inline-block; margin-top:2px; }
   .sticky-note p span::after { position:absolute; inset:-6px -12px -5px -13px; border:2px solid var(--color-blue); border-radius:48% 52% 50% 45%; content:""; transform:rotate(-5deg); }
-  .max-link--large { position:absolute; z-index:10; top:77.2%; left:21.6%; width:23.5%; height:13.5%; gap:7%; padding-left:8%; border-radius:3px; }
+  .max-link--large { position:absolute; z-index:10; top:77.2svh; left:21.6vw; width:min(23.5vw,37.6svh); max-width:361px; height:min(13.5vw,21.6svh); max-height:130px; gap:7%; padding-left:8%; border-radius:3px; }
   .max-link--large > img:first-child { width:15%; height:auto; }
   .max-link--large strong,.max-link--large small { display:block; }
   .max-link--large strong { font-size:min(1.76vw,2.81svh,27px); line-height:1.1; white-space:nowrap; }
   .max-link--large small { margin-top:5px; font-size:min(1.17vw,1.88svh,18px); font-weight:400; }
-  .max-link__round { z-index:12; top:84.4%; left:41.6%; width:8%; height:auto; }
+  .max-link__round { z-index:12; top:84.4svh; left:41.6vw; width:min(8vw,12.8svh); max-width:123px; height:auto; }
 
   .hero__decorations { position:absolute; z-index:5; inset:0; pointer-events:none; }
-  .hero__curved-arrow { z-index:5; top:45.8%; left:37.7%; width:10%; }
-  .hero__qualities { position:absolute; z-index:8; top:64%; left:86%; width:12%; font:min(1.3vw,2.08svh,20px)/1.18 "Caveat","Segoe Print",cursive; transform:rotate(-2deg); }
-  .hero__qualities-arrow { z-index:5; top:69%; left:82%; width:4%; transform:rotate(-54deg); }
-  .hero__code-note { position:absolute; z-index:8; top:89.3%; left:76.2%; width:22.7%; height:7.5%; }
+  .hero__curved-arrow { z-index:5; top:45.8svh; left:37.7vw; width:min(10vw,16svh); max-width:154px; }
+  .hero__qualities { position:absolute; z-index:8; top:64svh; left:86vw; width:min(12vw,19.2svh); max-width:184px; font:min(1.3vw,2.08svh,20px)/1.18 "Caveat","Segoe Print",cursive; transform:rotate(-2deg); }
+  .hero__qualities-arrow { z-index:5; top:69svh; left:82vw; width:min(4vw,6.4svh); max-width:61px; transform:rotate(-54deg); }
+  .hero__code-note { position:absolute; z-index:8; top:89.3svh; left:76.2vw; width:min(22.7vw,36.32svh); max-width:349px; height:min(7.5vw,12svh); max-height:72px; }
   .hero__code-note > img:first-child { inset:0; width:100%; height:100%; object-fit:fill; }
   .hero__code-note span { position:absolute; z-index:1; top:19%; left:7%; font:min(1.3vw,2.08svh,20px)/1.1 "Caveat","Segoe Print",cursive; }
   .hero__code-note > img:last-child { z-index:1; top:33%; right:5%; width:18%; }
-  .hero__crosshair { z-index:8; top:92%; left:1.1%; width:3%; height:auto; }
+  .hero__crosshair { z-index:8; top:92svh; left:clamp(10px,1.1vw,21px); width:min(3vw,4.8svh); max-width:46px; height:auto; }
 }
 
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:0s!important; animation-duration:0s!important; } }
