@@ -1,79 +1,74 @@
-:root {
-  --color-bg: #f5f2ec;
-  --color-text: #101010;
-  --color-blue: #1755d5;
-  --color-blue-dark: #0d48bf;
-  --color-orange: #f58220;
-  --color-line: rgba(23, 23, 23, .25);
+:root { --color-bg:#f5f2ec; --color-text:#101010; --color-blue:#1755d5; --color-blue-dark:#0d48bf; --color-orange:#f58220; --color-line:rgba(23,23,23,.25); }
+body { min-width:320px; overflow-x:hidden; color:var(--color-text); font-family:"Inter","Manrope",Arial,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.hero { position:relative; width:100%; height:100svh; overflow:hidden; background:var(--color-bg) url('/assets/images/hero/paper-background.webp') center / cover no-repeat; }
+.hero-stage { position:absolute; top:0; left:50%; width:min(100vw,160svh,1536px); aspect-ratio:8 / 5; transform:translateX(-50%); transform-origin:top center; }
+.hero__collage img,.hero__decorations img,.hero__dots,.hero__underline,.price-note img,.sticky-note img,.max-link__round { position:absolute; pointer-events:none; user-select:none; }
+.max-link { display:flex; align-items:center; background:var(--color-blue); color:#fff; font-weight:700; transition:background-color .16s ease,transform .16s ease; }
+.max-link:hover { background:var(--color-blue-dark); transform:translateY(-2px); }
+.max-link:focus-visible,.phone-link:focus-visible,.site-brand:focus-visible { outline:3px solid var(--color-orange); outline-offset:4px; }
+
+@media (min-width:1024px) {
+  .site-header { position:absolute; z-index:20; top:0; left:0; width:100%; height:13.3%; border-bottom:1px solid rgba(16,16,16,.25); }
+  .site-brand { position:absolute; top:22.56%; left:3.7%; display:flex; flex-direction:column; }
+  .site-brand strong { font-size:min(3vw,4.8svh,46px); font-weight:800; line-height:1; letter-spacing:-.055em; }
+  .site-brand span { margin-top:8px; color:#474747; font-size:min(1.17vw,1.88svh,18px); }
+  .site-header__divider { position:absolute; top:18.05%; left:24.5%; height:56.4%; border-left:1px solid #171717; }
+  .site-header__process { position:absolute; top:54.14%; left:29.2%; margin:0; padding-bottom:5px; border-bottom:1px solid #171717; font:min(1.56vw,2.5svh,24px)/1 "Caveat","Segoe Print",cursive; white-space:nowrap; }
+  .site-header__contacts { display:contents; }
+  .phone-link { position:absolute; top:43.61%; left:67.4%; font-size:min(1.43vw,2.29svh,22px); font-weight:700; white-space:nowrap; }
+  .max-link--header { position:absolute; top:26.32%; left:81.9%; display:flex; justify-content:center; width:15.5%; height:47.37%; gap:12px; border-radius:6px; font-size:min(1.25vw,2svh,19px); white-space:nowrap; }
+  .max-link--header img { width:32px; height:32px; }
+
+  .hero__collage { position:absolute; z-index:1; inset:0; }
+  .hero__grid { z-index:1; top:14.5%; left:40.5%; width:57%; height:76%; opacity:.7; }
+  .hero__grid-paper { z-index:1; top:14.5%; left:51%; width:40%; transform:rotate(.5deg); }
+  .hero__blue-paper { z-index:2; top:15.5%; left:64.8%; width:18%; transform:rotate(-3deg); }
+  .hero__orange-paper { z-index:2; top:59.7%; left:42.2%; width:13.2%; transform:rotate(-1deg); }
+  .hero__lines-note { z-index:3; top:20%; left:48%; width:14.5%; transform:rotate(1deg); }
+  .hero__lines-tape { z-index:5; top:19.4%; left:48.5%; width:9%; transform:rotate(-10deg); }
+  .hero__wireframe { z-index:3; top:38.5%; left:45%; width:17.8%; transform:rotate(-1deg); }
+  .hero__dashboard { z-index:4; top:17.2%; left:69.7%; width:30%; transform:rotate(-.5deg); box-shadow:0 14px 30px rgba(20,30,50,.13); }
+  .hero__traffic { z-index:4; top:44.8%; left:78.5%; width:20%; box-shadow:0 9px 18px rgba(20,30,50,.12); }
+  .hero__code { z-index:4; top:73%; left:76.4%; width:23%; transform:rotate(.5deg); box-shadow:0 10px 20px rgba(20,30,50,.15); }
+  .hero__portrait { z-index:6; top:23.5%; left:44.5%; width:42%; max-width:none; filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff); }
+
+  .hero__content { display:contents; }
+  .hero__title { position:absolute; z-index:10; top:17.3%; left:5.8%; width:41%; margin:0; font-size:min(4.17vw,6.67svh,64px); font-weight:800; line-height:.97; letter-spacing:-.04em; }
+  .hero__title span { display:block; white-space:nowrap; }
+  .hero__dots { z-index:8; top:20.5%; left:1.7%; width:1.5%; height:auto; }
+  .hero__underline { z-index:11; top:41.4%; left:4.8%; width:18.1%; height:auto; }
+  .hero__description { position:absolute; z-index:10; top:46%; left:5.8%; width:32.5%; margin:0; color:#303030; font-size:min(1.43vw,2.29svh,22px); font-weight:400; line-height:1.36; }
+
+  .price-note { position:absolute; z-index:10; top:58.5%; left:1.8%; width:35.8%; height:13.6%; filter:drop-shadow(0 12px 13px rgba(30,30,30,.12)); transform:rotate(-.3deg); }
+  .price-note img { inset:0; width:100%; height:100%; object-fit:fill; }
+  .price-note p { position:absolute; z-index:1; margin:0; }
+  .price-note__number { top:18%; left:10%; color:var(--color-blue); font-size:min(5.6vw,8.96svh,86px); font-weight:800; line-height:1; letter-spacing:-.06em; white-space:nowrap; }
+  .price-note__text { top:25%; left:54%; font-size:min(1.63vw,2.6svh,25px); font-weight:700; line-height:1.2; white-space:nowrap; }
+  .price-note__text span { display:inline-block; padding-bottom:6px; border-bottom:2px solid #111; }
+
+  .sticky-note { position:absolute; z-index:10; top:73.5%; left:4.5%; width:15.5%; height:21.5%; transform:rotate(-2deg); }
+  .sticky-note__paper { inset:0; width:100%; height:100%; object-fit:fill; }
+  .sticky-note__tape { top:-6%; left:-12%; width:42%; transform:rotate(-12deg); }
+  .sticky-note p { position:absolute; top:19%; left:18%; width:70%; margin:0; font:min(1.76vw,2.81svh,27px)/1.13 "Caveat","Segoe Print",cursive; }
+  .sticky-note p span { position:relative; display:inline-block; margin-top:2px; }
+  .sticky-note p span::after { position:absolute; inset:-6px -12px -5px -13px; border:2px solid var(--color-blue); border-radius:48% 52% 50% 45%; content:""; transform:rotate(-5deg); }
+  .max-link--large { position:absolute; z-index:10; top:77.2%; left:21.6%; width:23.5%; height:13.5%; gap:7%; padding-left:8%; border-radius:3px; }
+  .max-link--large > img:first-child { width:15%; height:auto; }
+  .max-link--large strong,.max-link--large small { display:block; }
+  .max-link--large strong { font-size:min(1.76vw,2.81svh,27px); line-height:1.1; white-space:nowrap; }
+  .max-link--large small { margin-top:5px; font-size:min(1.17vw,1.88svh,18px); font-weight:400; }
+  .max-link__round { z-index:12; top:84.4%; left:41.6%; width:8%; height:auto; }
+
+  .hero__decorations { position:absolute; z-index:5; inset:0; pointer-events:none; }
+  .hero__curved-arrow { z-index:5; top:45.8%; left:37.7%; width:10%; }
+  .hero__qualities { position:absolute; z-index:8; top:64%; left:86%; width:12%; font:min(1.3vw,2.08svh,20px)/1.18 "Caveat","Segoe Print",cursive; transform:rotate(-2deg); }
+  .hero__qualities-arrow { z-index:5; top:69%; left:82%; width:4%; transform:rotate(-54deg); }
+  .hero__code-note { position:absolute; z-index:8; top:89.3%; left:76.2%; width:22.7%; height:7.5%; }
+  .hero__code-note > img:first-child { inset:0; width:100%; height:100%; object-fit:fill; }
+  .hero__code-note span { position:absolute; z-index:1; top:19%; left:7%; font:min(1.3vw,2.08svh,20px)/1.1 "Caveat","Segoe Print",cursive; }
+  .hero__code-note > img:last-child { z-index:1; top:33%; right:5%; width:18%; }
+  .hero__crosshair { z-index:8; top:92%; left:1.1%; width:3%; height:auto; }
 }
 
-body { min-width: 320px; overflow-x: hidden; color: var(--color-text); font-family: "Inter", "Manrope", Arial, sans-serif; }
-a { color: inherit; text-decoration: none; }
-.hero { position: relative; height: 100svh; min-height: 760px; max-height: 960px; overflow: hidden; isolation: isolate; background: var(--color-bg) url('/assets/images/hero/paper-background.webp') center / cover no-repeat; }
-
-.site-header { position: relative; z-index: 20; display: flex; align-items: center; height: 120px; min-height: 120px; gap: 32px; padding: 0 54px; border-bottom: 1px solid var(--color-line); }
-.site-brand { display: flex; flex: none; flex-direction: column; }
-.site-brand strong { font-size: 44px; font-weight: 900; line-height: .98; letter-spacing: -.055em; }
-.site-brand span { margin-top: 8px; color: #474747; font-size: 18px; }
-.site-header__divider { height: 62px; border-left: 1px solid #171717; }
-.site-header__process { flex: none; margin-left: 2%; padding-bottom: 5px; border-bottom: 1px solid #171717; font: 24px/1 "Caveat", "Segoe Print", cursive; white-space: nowrap; }
-.site-header__contacts { display: flex; align-items: center; gap: 38px; margin-left: auto; }
-.phone-link { font-size: 21px; font-weight: 700; white-space: nowrap; }
-.max-link { display: flex; align-items: center; background: var(--color-blue); color: #fff; font-weight: 700; transition: background-color .16s ease, transform .16s ease; }
-.max-link:hover { background: var(--color-blue-dark); transform: translateY(-2px); }
-.max-link:focus-visible, .phone-link:focus-visible, .site-brand:focus-visible { outline: 3px solid var(--color-orange); outline-offset: 4px; }
-.max-link--header { justify-content: center; width: 230px; height: 60px; gap: 12px; border-radius: 6px; font-size: 18px; white-space: nowrap; }
-.max-link--header img { width: 32px; height: 32px; }
-
-.hero__collage { position: absolute; z-index: 1; inset: 0; }
-.hero__collage img, .hero__decorations img, .hero__dots, .hero__underline, .price-note img, .sticky-note img { position: absolute; pointer-events: none; user-select: none; }
-.hero__grid { z-index: 1; top: 125px; left: 40%; width: 820px; opacity: .62; }
-.hero__grid-paper { z-index: 2; top: 145px; left: 58%; width: 530px; transform: rotate(2deg); }
-.hero__blue-paper { z-index: 2; top: 135px; right: 280px; width: 260px; transform: rotate(-3deg); }
-.hero__orange-paper { z-index: 2; top: 555px; left: 43%; width: 175px; transform: rotate(1deg); }
-.hero__lines-note { z-index: 3; top: 170px; left: 49%; width: 220px; transform: rotate(2deg); }
-.hero__lines-tape { z-index: 3; top: 155px; left: 50%; width: 105px; transform: rotate(-9deg); }
-.hero__wireframe { z-index: 3; top: 365px; left: 48%; width: 275px; transform: rotate(-1.5deg); }
-.hero__dashboard { z-index: 4; top: 145px; right: 18px; width: 500px; box-shadow: 0 14px 30px rgba(20, 30, 50, .13); transform: rotate(-1deg); }
-.hero__traffic { z-index: 4; top: 430px; right: 22px; width: 310px; box-shadow: 0 9px 18px rgba(20, 30, 50, .12); }
-.hero__code { z-index: 4; right: 8px; bottom: 0; width: 370px; box-shadow: 0 10px 20px rgba(20, 30, 50, .15); transform: rotate(1deg); }
-.hero__portrait { z-index: 6; top: 205px; left: 47%; width: min(620px, 42vw); max-width: none; filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff); }
-
-.hero__content { position: absolute; z-index: 10; top: 160px; left: 62px; width: 620px; padding: 0; }
-.hero__title { width: 620px; max-width: 620px; font-size: 62px; font-weight: 900; line-height: .97; letter-spacing: -.04em; }
-.hero__title span { display: block; white-space: nowrap; }
-.hero__dots { z-index: 7; top: 188px; left: 24px; width: 32px; height: 174px; }
-.hero__underline { z-index: 10; top: 405px; left: 58px; width: 292px; height: auto; }
-.hero__description { position: absolute; z-index: 10; top: 263px; left: 0; width: 510px; color: #303030; font-size: 20px; line-height: 1.3; }
-
-.price-note { position: absolute; z-index: 10; top: 555px; left: 28px; width: 555px; height: 135px; filter: drop-shadow(0 12px 13px rgba(30, 30, 30, .12)); transform: rotate(-.3deg); }
-.price-note img { inset: 0; width: 100%; height: 100%; }
-.price-note p { position: absolute; z-index: 1; }
-.price-note__number { top: 17px; left: 10%; color: var(--color-blue); font-size: 80px; font-weight: 900; line-height: 1; letter-spacing: -.06em; }
-.price-note__text { top: 31px; left: 55%; font-size: 24px; font-weight: 800; line-height: 1.25; white-space: nowrap; }
-.price-note__text span { display: inline-block; padding-bottom: 6px; border-bottom: 2px solid #111; }
-
-.sticky-note { position: absolute; z-index: 10; bottom: 18px; left: 55px; width: 250px; transform: rotate(-2deg); }
-.sticky-note__paper { position: relative !important; width: 100%; }
-.sticky-note__tape { top: -2%; left: -6%; width: 42%; transform: rotate(-12deg); }
-.sticky-note p { position: absolute; inset: 19% 12%; font: 29px/1.15 "Caveat", "Segoe Print", cursive; }
-.sticky-note p span { position: relative; display: inline-block; margin-top: 2px; }
-.sticky-note p span::after { position: absolute; inset: -6px -12px -5px -13px; border: 2px solid var(--color-blue); border-radius: 48% 52% 50% 45%; content: ""; transform: rotate(-5deg); }
-.max-link--large { position: absolute; z-index: 10; bottom: 27px; left: 335px; width: 365px; height: 128px; gap: 25px; padding-left: 43px; border-radius: 3px; }
-.max-link--large > img:first-child { width: 54px; height: 54px; }
-.max-link--large strong, .max-link--large small { display: block; }
-.max-link--large strong { font-size: 26px; line-height: 1.1; white-space: nowrap; }
-.max-link--large small { margin-top: 5px; font-size: 18px; font-weight: 400; }
-.max-link__round { position: absolute; right: -48px; bottom: -25px; width: 112px; height: 112px; }
-
-.hero__decorations { position: absolute; z-index: 7; inset: 0; pointer-events: none; }
-.hero__curved-arrow { top: 450px; left: 38%; width: 145px; }
-.hero__qualities { position: absolute; top: 590px; right: 55px; width: 200px; font: 20px/1.22 "Caveat", "Segoe Print", cursive; transform: rotate(-1deg); }
-.hero__qualities-arrow { top: 650px; right: 235px; width: 58px; transform: rotate(-54deg); }
-.hero__code-note { position: absolute; right: 5px; bottom: 6px; width: 360px; height: 64px; }
-.hero__code-note > img:first-child { inset: 0; width: 100%; height: 100%; }
-.hero__code-note span { position: absolute; z-index: 1; top: 10px; left: 9%; font: 19px/1.05 "Caveat", "Segoe Print", cursive; }
-.hero__code-note > img:last-child { z-index: 1; top: 28px; right: 7%; width: 52px; }
-.hero__crosshair { bottom: 1.5%; left: 1.3%; width: 46px; }
-
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; } }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:0s!important; animation-duration:0s!important; } }
