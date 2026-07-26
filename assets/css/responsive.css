@@ -1,10 +1,14 @@
-/*
- * The obsolete responsive rules for the former hero markup were
- * removed. This first refactoring stage intentionally keeps the approved
- * desktop composition; later tablet/mobile layouts can extend these containers.
- */
-@media (max-width:1279px) {
-  .su-hero-v2__header { grid-template-columns:300px minmax(300px,1fr) auto 200px; column-gap:20px; }
-  .su-hero-v2__header-max { width:200px; }
-  .su-hero-v2__layout { grid-template-columns:minmax(650px,780px) minmax(0,var(--hero-artboard-width)); }
+/* Desktop-only refinements. Tablet and mobile are intentionally out of scope. */
+@media (min-width: 1280px) and (max-height: 799px) {
+  .su-hero-v2__content {
+    margin-top: calc(34px + 10px * var(--hero-fluid));
+  }
+
+  .su-hero-v2__description {
+    margin-top: calc(15px + 6px * var(--hero-fluid));
+  }
+
+  .su-hero-v2__price {
+    margin-top: calc(7px + 5px * var(--hero-fluid));
+  }
 }
