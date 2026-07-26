@@ -1,1 +1,17 @@
-(() => { const updateSuHeroMetrics = () => { const hero=document.querySelector('#su-hero-v2'); if(!hero)return; const {innerWidth:w,innerHeight:h}=window; const short=w>=1280&&h<800; hero.classList.toggle('su-hero-v2--short',short); if(w<1024){['--su-scale','--su-center-shift','--su-viewport-height','--su-header-height'].forEach(p=>hero.style.removeProperty(p));return} if(short){hero.style.setProperty('--su-scale','1');hero.style.setProperty('--su-center-shift','0px');hero.style.setProperty('--su-viewport-height',`${h}px`);hero.style.setProperty('--su-header-height','92px');return} const scale=Math.min(1,w/1440,h/900);hero.style.setProperty('--su-scale',scale);hero.style.setProperty('--su-center-shift',`${Math.max(0,w-1440*scale)/2}px`);hero.style.setProperty('--su-viewport-height',`${h}px`);hero.style.setProperty('--su-header-height',`${118*scale}px`) }; addEventListener('DOMContentLoaded',updateSuHeroMetrics);addEventListener('resize',updateSuHeroMetrics,{passive:true});updateSuHeroMetrics() })();
+(() => {
+  const updateSuHero = () => {
+    const hero = document.querySelector('#su-hero-v2');
+    if (!hero) return;
+
+    const short = innerWidth >= 1280 && innerHeight < 800;
+    hero.classList.toggle('su-hero-v2--short', short);
+
+    const artboardSpace = Math.max(0, innerWidth - 780);
+    const scale = Math.min(1, artboardSpace / 756);
+    hero.style.setProperty('--hero-artboard-scale', String(scale));
+  };
+
+  addEventListener('DOMContentLoaded', updateSuHero);
+  addEventListener('resize', updateSuHero, { passive: true });
+  updateSuHero();
+})();
