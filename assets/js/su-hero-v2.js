@@ -5,6 +5,22 @@
   const LEFT_COLUMN_MAX = 780;
   const ARTBOARD_WIDTH = 756;
 
+  const getTabletScale = (hero) => {
+    const artboard = hero.querySelector('.su-hero-v2__artboard');
+    const layout = hero.querySelector('.su-hero-v2__layout');
+    if (!artboard || !layout) return 1;
+
+    const layoutStyle = getComputedStyle(layout);
+    const layoutContentWidth = layout.clientWidth
+      - parseFloat(layoutStyle.paddingLeft)
+      - parseFloat(layoutStyle.paddingRight);
+    const availableWidth = innerWidth < 900
+      ? layoutContentWidth
+      : artboard.parentElement.getBoundingClientRect().right
+        - artboard.getBoundingClientRect().left;
+    return Math.min(1, Math.max(0, availableWidth / ARTBOARD_WIDTH));
+  };
+
   const updateSuHero = () => {
     const hero = document.querySelector('#su-hero-v2');
     if (!hero) return;
@@ -19,7 +35,11 @@
     const leftColumnWidth = LEFT_COLUMN_MIN
       + (LEFT_COLUMN_MAX - LEFT_COLUMN_MIN) * desktopProgress;
     const artboardSpace = Math.max(0, stageWidth - leftColumnWidth);
-    const scale = Math.min(1, artboardSpace / ARTBOARD_WIDTH);
+    const scale = innerWidth >= STAGE_MIN_WIDTH
+      ? Math.min(1, artboardSpace / ARTBOARD_WIDTH)
+      : innerWidth >= 768
+        ? getTabletScale(hero)
+        : Math.min(1, artboardSpace / ARTBOARD_WIDTH);
 
     hero.style.setProperty('--hero-stage-width', `${stageWidth}px`);
     hero.style.setProperty('--hero-left-column', `${leftColumnWidth}px`);
