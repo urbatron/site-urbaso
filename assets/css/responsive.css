@@ -185,14 +185,15 @@
     grid-row: 4;
     justify-self: center;
     margin-top: 24px;
-    margin-bottom: calc(var(--hero-artboard-height) * var(--hero-artboard-scale) - var(--hero-artboard-height));
+    margin-bottom: 0;
   }
   .su-hero-v2__bottom {
+    position: relative;
     grid-row: 5;
     justify-self: center;
     gap: 54px;
     width: min(100%, 650px);
-    margin: 28px 0 30px;
+    margin: 24px 0 30px;
   }
   .su-hero-v2__max,
   .su-hero-v2__max > a { width: 320px; }
