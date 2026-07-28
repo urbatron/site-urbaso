@@ -177,22 +177,23 @@
   .su-hero-v2__layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    width: min(100%, 768px);
+    width: min(100%, 688px);
     height: auto;
     margin-inline: auto;
-    padding: 0 40px;
+    padding-inline: 34px;
   }
 
   .su-hero-v2__content { display: contents; }
-  .su-hero-v2__heading { grid-row: 1; width: 100%; max-width: 650px; margin: 40px auto 0; }
-  .su-hero-v2 h1 { width: 100%; max-width: 650px; font-size: 42px; line-height: .97; }
+  .su-hero-v2__heading { grid-row: 1; width: 100%; max-width: 600px; justify-self: center; margin-top: 38px; }
+  .su-hero-v2 h1 { width: 100%; max-width: 600px; font-size: 42px; line-height: .97; }
   .su-hero-v2 h1 span { white-space: normal; }
   .su-hero-v2__underline { width: 220px; }
   .su-hero-v2__description {
     grid-row: 2;
     width: 100%;
-    max-width: 560px;
-    margin: 24px auto 0;
+    max-width: 600px;
+    justify-self: center;
+    margin: 24px 0 0;
     font-size: 15px;
     line-height: 1.4;
     white-space: normal;
@@ -200,14 +201,38 @@
   .su-hero-v2__price {
     grid-row: 3;
     justify-self: center;
-    width: min(100%, 520px);
-    margin: 24px 0 0;
+    width: min(100%, 550px);
+    margin: 28px 0 0;
   }
   .su-hero-v2__artboard {
+    position: relative;
     grid-row: 4;
     justify-self: center;
-    margin-top: 40px;
+    width: 620px;
+    height: 650px;
+    margin-top: 38px;
     margin-bottom: 0;
+    transform: none;
+  }
+  .su-hero-v2__artboard .dash {
+    display: block;
+    left: 205px;
+    top: 0;
+    width: 385px;
+    transform: rotate(-2deg);
+  }
+  .su-hero-v2__artboard .traffic {
+    display: block;
+    left: 350px;
+    top: 215px;
+    width: 220px;
+    transform: rotate(-1deg);
+  }
+  .su-hero-v2__artboard .portrait {
+    display: block;
+    left: 35px;
+    top: 105px;
+    width: 520px;
   }
   .su-hero-v2__bottom {
     display: contents;
@@ -215,9 +240,9 @@
   .su-hero-v2__max {
     grid-row: 5;
     justify-self: center;
-    width: min(100%, 520px);
+    width: min(100%, 550px);
     height: 96px;
-    margin: 36px 0 42px;
+    margin: 30px 0 44px;
     flex-basis: auto;
   }
   .su-hero-v2__sticky {
