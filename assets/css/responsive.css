@@ -180,18 +180,18 @@
     width: min(100%, 688px);
     height: auto;
     margin-inline: auto;
-    padding-inline: 34px;
+    padding-inline: 40px;
   }
 
   .su-hero-v2__content { display: contents; }
-  .su-hero-v2__heading { grid-row: 1; width: 100%; max-width: 600px; justify-self: center; margin-top: 38px; }
-  .su-hero-v2 h1 { width: 100%; max-width: 600px; font-size: 42px; line-height: .97; }
+  .su-hero-v2__heading { grid-row: 1; width: 100%; max-width: 608px; justify-self: center; margin-top: 36px; }
+  .su-hero-v2 h1 { width: 100%; max-width: 608px; font-size: 42px; line-height: .97; }
   .su-hero-v2 h1 span { white-space: normal; }
   .su-hero-v2__underline { width: 220px; }
   .su-hero-v2__description {
     grid-row: 2;
     width: 100%;
-    max-width: 600px;
+    max-width: 608px;
     justify-self: center;
     margin: 24px 0 0;
     font-size: 15px;
@@ -201,38 +201,41 @@
   .su-hero-v2__price {
     grid-row: 3;
     justify-self: center;
-    width: min(100%, 550px);
-    margin: 28px 0 0;
+    width: min(100%, 540px);
+    margin: 26px 0 0;
   }
   .su-hero-v2__artboard {
     position: relative;
     grid-row: 4;
     justify-self: center;
-    width: 620px;
-    height: 650px;
-    margin-top: 38px;
+    width: 560px;
+    height: 610px;
+    margin-top: 34px;
     margin-bottom: 0;
     transform: none;
   }
   .su-hero-v2__artboard .dash {
     display: block;
-    left: 205px;
+    left: 190px;
     top: 0;
-    width: 385px;
+    width: 335px;
     transform: rotate(-2deg);
+    z-index: 2;
   }
   .su-hero-v2__artboard .traffic {
     display: block;
-    left: 350px;
-    top: 215px;
-    width: 220px;
+    left: 330px;
+    top: 180px;
+    width: 190px;
     transform: rotate(-1deg);
+    z-index: 4;
   }
   .su-hero-v2__artboard .portrait {
     display: block;
-    left: 35px;
-    top: 105px;
-    width: 520px;
+    left: 50px;
+    top: 82px;
+    width: 455px;
+    z-index: 3;
   }
   .su-hero-v2__bottom {
     display: contents;
@@ -240,14 +243,16 @@
   .su-hero-v2__max {
     grid-row: 5;
     justify-self: center;
-    width: min(100%, 550px);
+    width: min(100%, 540px);
     height: 96px;
-    margin: 30px 0 44px;
+    margin: 26px 0 44px;
     flex-basis: auto;
+    position: relative;
+    z-index: 1;
   }
   .su-hero-v2__sticky {
     display: none;
   }
   .su-hero-v2__max > a { width: 100%; height: 96px; }
-  .su-hero-v2__max > img { right: -24px; }
+  .su-hero-v2__max > img { right: -18px; }
 }
