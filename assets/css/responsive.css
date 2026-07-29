@@ -185,7 +185,7 @@
     max-width: none;
     justify-self: stretch;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 24px;
     font-size: 19px;
     line-height: 1.42;
     white-space: normal;
@@ -194,14 +194,14 @@
     grid-column: 1 / -1;
     grid-row: 3;
     justify-self: center;
-    width: min(100%, 488px);
+    width: min(100%, 535px);
     height: 104px;
-    margin: 57px auto 0;
+    margin: 32px auto 0;
     position: relative;
     z-index: 50;
   }
   .su-hero-v2__price > div {
-    grid-template-columns: 210px 1fr;
+    grid-template-columns: 236px 1fr;
     gap: 14px;
     padding: 9px 22px 9px 58px;
   }
@@ -255,9 +255,22 @@
     flex-basis: auto;
     position: relative;
     z-index: 1;
+    transform: translateX(-28px);
   }
   .su-hero-v2__sticky {
-    display: none;
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 4;
+    justify-self: end;
+    align-self: start;
+    width: 185px;
+    margin-top: -4px;
+    margin-right: -4px;
+    flex-basis: auto;
+    transform: rotate(-2deg) scale(.72);
+    transform-origin: top right;
+    position: relative;
+    z-index: 30;
   }
   .su-hero-v2__max > a { width: 100%; height: 90px; }
   .su-hero-v2__max > img { right: -18px; }
