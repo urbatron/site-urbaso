@@ -198,6 +198,7 @@
     height: 104px;
     margin: 32px auto 0;
     position: relative;
+    left: -30px;
     z-index: 50;
   }
   .su-hero-v2__price > div {
@@ -255,7 +256,7 @@
     flex-basis: auto;
     position: relative;
     z-index: 1;
-    transform: translateX(-28px);
+    transform: translateX(-30px);
   }
   .su-hero-v2__sticky {
     display: block;
@@ -264,7 +265,7 @@
     justify-self: end;
     align-self: start;
     width: 185px;
-    margin-top: -4px;
+    margin-top: -84px;
     margin-right: -4px;
     flex-basis: auto;
     transform: rotate(-2deg) scale(.72);
