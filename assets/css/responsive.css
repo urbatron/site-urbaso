@@ -162,28 +162,31 @@
   }
 
   .su-hero-v2__layout {
+    position: relative;
     display: grid;
     grid-template-columns: 290px minmax(0, 1fr);
-    column-gap: 24px;
-    width: min(100%, 728px);
+    grid-template-rows: max-content max-content max-content max-content;
+    column-gap: 20px;
+    width: min(100%, 744px);
     height: auto;
     margin-inline: auto;
-    padding-inline: 24px;
+    padding-inline: 16px;
   }
 
   .su-hero-v2__content { display: contents; }
   .su-hero-v2__heading { grid-column: 2; grid-row: 1; width: 100%; max-width: none; justify-self: stretch; margin-top: 34px; }
-  .su-hero-v2 h1 { width: 100%; max-width: none; font-size: 34px; line-height: .98; }
+  .su-hero-v2 h1 { width: 100%; max-width: none; font-size: 39px; line-height: .98; }
   .su-hero-v2 h1 span { white-space: normal; }
-  .su-hero-v2__underline { width: 185px; }
+  .su-hero-v2__underline { width: 200px; }
   .su-hero-v2__description {
     grid-column: 2;
     grid-row: 2;
     width: 100%;
     max-width: none;
     justify-self: stretch;
-    margin: 18px 0 0;
-    font-size: 14px;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 19px;
     line-height: 1.42;
     white-space: normal;
   }
@@ -197,22 +200,36 @@
     z-index: 50;
   }
   .su-hero-v2__artboard {
-    position: relative;
-    grid-column: 1;
-    grid-row: 1 / 3;
-    justify-self: start;
-    align-self: start;
+    position: absolute;
+    left: 16px;
+    top: 34px;
     width: 290px;
-    height: 430px;
-    margin-top: 34px;
-    margin-bottom: 0;
+    height: 560px;
+    margin: 0;
     transform: none;
+    z-index: 10;
   }
   .su-hero-v2__artboard .portrait {
     display: block;
     left: 0;
     top: 0;
     width: 290px;
+    z-index: 20;
+  }
+  .su-hero-v2__artboard .code {
+    display: block;
+    left: 122px;
+    top: 364px;
+    width: 300px;
+    transform: rotate(2deg);
+    z-index: 50;
+  }
+  .su-hero-v2__artboard .code-note {
+    display: block;
+    left: 97px;
+    top: 455px;
+    width: 265px;
+    z-index: 100;
   }
   .su-hero-v2__bottom {
     display: contents;
