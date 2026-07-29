@@ -198,7 +198,7 @@
     height: 104px;
     margin: 32px auto 0;
     position: relative;
-    left: -30px;
+    left: -109px;
     z-index: 50;
   }
   .su-hero-v2__price > div {
@@ -265,7 +265,7 @@
     justify-self: end;
     align-self: start;
     width: 185px;
-    margin-top: -84px;
+    margin-top: -117px;
     margin-right: -4px;
     flex-basis: auto;
     transform: rotate(-2deg) scale(.72);
