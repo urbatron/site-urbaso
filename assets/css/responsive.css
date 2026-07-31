@@ -215,8 +215,24 @@
   }
 
   .su-hero-v2__content { display: contents; }
-  .su-hero-v2__heading { grid-column: 2; grid-row: 1; width: 100%; max-width: none; justify-self: stretch; margin-top: 34px; }
-  .su-hero-v2 h1 { width: 100%; max-width: none; font-size: 39px; line-height: .98; }
+  .su-hero-v2__heading {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    margin-top: 34px;
+    position: relative;
+    z-index: 200;
+  }
+  .su-hero-v2 h1 {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    max-width: none;
+    font-size: 39px;
+    line-height: .98;
+  }
   .su-hero-v2 h1 span { white-space: normal; }
   .su-hero-v2__underline { width: 200px; }
   .su-hero-v2__description {
