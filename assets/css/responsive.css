@@ -356,11 +356,12 @@
   .su-hero-v2::before {
     left: 34px;
     top: 12px;
-    height: calc(100% - 24px);
+    bottom: 0;
+    height: auto;
     background:
       linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center top / 1px 42px no-repeat,
-      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 76px / 1px 104px no-repeat,
-      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 218px / 1px calc(100% - 218px) no-repeat;
+      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 7px / 1px 104px no-repeat,
+      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 279px / 1px calc(100% - 218px) no-repeat;
     z-index: 1;
   }
 
