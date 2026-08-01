@@ -415,7 +415,7 @@
     grid-row: 1;
     width: 100%;
     max-width: none;
-    margin: 24px 0 0;
+    margin: 24px 0 0 35px;
     z-index: 100;
   }
 
@@ -438,7 +438,7 @@
   .su-hero-v2__underline {
     width: 180px;
     max-width: 55%;
-    margin: 2px 0 0 -5px;
+    margin: -1px 0 0 -3px;
   }
 
   .su-hero-v2__description {
@@ -447,7 +447,7 @@
     grid-row: 2;
     width: 100%;
     max-width: none;
-    margin: 15px 0 0;
+    margin: 15px 0 0 35px;
     padding: 0;
     font-size: 13px;
     line-height: 1.38;
@@ -480,9 +480,16 @@
   }
 
   .su-hero-v2__price > div > span:last-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 2px;
-    font-size: 13px;
-    line-height: 1.12;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.14;
+    white-space: nowrap;
+    margin-left: 8px;
   }
 
   .su-hero-v2__price > div > span:last-child::after {
@@ -498,7 +505,7 @@
     justify-self: center;
     width: min(100%, 354px);
     height: 285px;
-    margin: 8px auto 0;
+    margin: 26px 0 0 63px;
     left: auto;
     top: auto;
     transform: none;
@@ -509,6 +516,49 @@
     display: none;
   }
 
+  .su-hero-v2__artboard .grid-paper-top {
+    display: block;
+    left: -18px;
+    top: -419px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .su-hero-v2__artboard .lines {
+    display: block;
+    left: -37px;
+    top: -21px;
+    width: 175px;
+    z-index: 1;
+  }
+
+  .su-hero-v2__artboard .wire {
+    display: block;
+    left: -30px;
+    top: 47px;
+    width: 219px;
+    transform: rotate(-10deg);
+    z-index: 2;
+  }
+
+  .su-hero-v2__artboard .dash {
+    display: block;
+    left: 160px;
+    top: -32px;
+    width: 333px;
+    transform: translateY(7px) rotate(-3deg);
+    z-index: 3;
+  }
+
+  .su-hero-v2__artboard .code {
+    display: block;
+    left: 214px;
+    top: 172px;
+    width: 300px;
+    transform: rotate(2deg);
+    z-index: 10;
+  }
+
   .su-hero-v2__artboard .portrait {
     display: block;
     left: 4px;
@@ -516,6 +566,16 @@
     width: 245px;
     max-width: 70vw;
     z-index: 20;
+  }
+
+  .su-hero-v2__artboard .orange,
+  .su-hero-v2__artboard .arrow,
+  .su-hero-v2__artboard .blue,
+  .su-hero-v2__artboard .blue-tape,
+  .su-hero-v2__artboard .traffic,
+  .su-hero-v2__artboard .code-note,
+  .su-hero-v2__artboard .services-arrow-up {
+    display: none;
   }
 
   .su-hero-v2__sticky {
