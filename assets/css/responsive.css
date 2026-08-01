@@ -356,12 +356,20 @@
   .su-hero-v2::before {
     left: 34px;
     top: 12px;
-    bottom: 0;
-    height: auto;
+    height: calc(100% - 24px);
     background:
-      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center top / 1px 42px no-repeat,
-      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 7px / 1px 104px no-repeat,
-      linear-gradient(rgba(124, 124, 123, .35), rgba(124, 124, 123, .35)) center 279px / 1px calc(100% - 218px) no-repeat;
+      linear-gradient(
+        rgba(124, 124, 123, .35),
+        rgba(124, 124, 123, .35)
+      ) center top / 1px 112px no-repeat,
+      linear-gradient(
+        rgba(124, 124, 123, .35),
+        rgba(124, 124, 123, .35)
+      ) center 280px / 1px 104px no-repeat,
+      linear-gradient(
+        rgba(124, 124, 123, .35),
+        rgba(124, 124, 123, .35)
+      ) center 278px / 1px calc(100% - 218px) no-repeat;
     z-index: 1;
   }
 
@@ -655,10 +663,6 @@
   }
 
   .su-hero-v2 > .cross {
-    display: block;
-    left: 18px;
-    top: 650px;
-    width: 32px;
-    z-index: 3;
+    display: none;
   }
 }
