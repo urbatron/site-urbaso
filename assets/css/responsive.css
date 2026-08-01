@@ -368,7 +368,7 @@
     grid-column: 1;
     grid-row: 1;
     align-self: center;
-    margin: 0;
+    margin: 0 0 0 35px;
   }
 
   .su-hero-v2__brand b {
