@@ -342,3 +342,240 @@
     display: none;
   }
 }
+
+/* Mobile: a clean, single-column hero composed independently of desktop geometry. */
+@media (max-width: 767px) {
+  .su-hero-v2 {
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
+    padding-bottom: 18px;
+  }
+
+  .su-hero-v2__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 64px;
+    align-items: center;
+    column-gap: 12px;
+    width: 100%;
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .su-hero-v2__brand {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    margin: 0;
+  }
+
+  .su-hero-v2__brand b {
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  .su-hero-v2__phone {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+    font-size: 13px;
+  }
+
+  .su-hero-v2__brand span,
+  .su-hero-v2__route,
+  .su-hero-v2__header-max,
+  .su-hero-v2__header i {
+    display: none;
+  }
+
+  .su-hero-v2__layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(5, max-content);
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    min-height: 0;
+    margin-inline: auto;
+    padding-inline: 18px;
+  }
+
+  .su-hero-v2__content,
+  .su-hero-v2__bottom {
+    display: contents;
+  }
+
+  .su-hero-v2__heading {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: none;
+    margin: 24px 0 0;
+    z-index: 100;
+  }
+
+  .su-hero-v2 h1 {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-size: clamp(32px, 8.7vw, 36px);
+    line-height: .98;
+    letter-spacing: -.04em;
+    z-index: 100;
+  }
+
+  .su-hero-v2 h1 span {
+    display: block;
+    white-space: normal;
+  }
+
+  .su-hero-v2__underline {
+    width: 180px;
+    max-width: 55%;
+    margin: 2px 0 0 -5px;
+  }
+
+  .su-hero-v2__description {
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: none;
+    margin: 15px 0 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.38;
+    white-space: normal;
+    z-index: 100;
+  }
+
+  .su-hero-v2__price {
+    position: relative;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    width: min(100%, 350px);
+    height: 78px;
+    margin: 16px auto 0;
+    left: auto;
+    transform: rotate(-1.3deg);
+    z-index: 60;
+  }
+
+  .su-hero-v2__price > div {
+    grid-template-columns: 158px minmax(0, 1fr);
+    gap: 7px;
+    padding: 7px 13px 7px 23px;
+  }
+
+  .su-hero-v2__price > div > span:first-child {
+    font-size: 57px;
+    line-height: .9;
+  }
+
+  .su-hero-v2__price > div > span:last-child {
+    gap: 2px;
+    font-size: 13px;
+    line-height: 1.12;
+  }
+
+  .su-hero-v2__price > div > span:last-child::after {
+    bottom: -13px;
+    width: 145px;
+    height: 13px;
+  }
+
+  .su-hero-v2__artboard {
+    position: relative;
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+    width: min(100%, 354px);
+    height: 285px;
+    margin: 8px auto 0;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: 10;
+  }
+
+  .su-hero-v2__artboard > * {
+    display: none;
+  }
+
+  .su-hero-v2__artboard .portrait {
+    display: block;
+    left: 4px;
+    top: 0;
+    width: 245px;
+    max-width: 70vw;
+    z-index: 20;
+  }
+
+  .su-hero-v2__sticky {
+    display: block;
+    position: relative;
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: end;
+    align-self: start;
+    width: 185px;
+    margin-top: 105px;
+    margin-right: -16px;
+    flex-basis: auto;
+    transform: rotate(-2deg) scale(.60);
+    transform-origin: top right;
+    z-index: 40;
+  }
+
+  .su-hero-v2__max {
+    position: relative;
+    grid-column: 1;
+    grid-row: 5;
+    justify-self: center;
+    width: min(100%, 350px);
+    height: 78px;
+    margin: 4px auto 12px;
+    flex-basis: auto;
+    transform: none;
+    z-index: 50;
+  }
+
+  .su-hero-v2__max > a {
+    width: 100%;
+    height: 78px;
+    padding: 0 42px 0 20px;
+    gap: 12px;
+  }
+
+  .su-hero-v2__max > a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .su-hero-v2__max b {
+    font-size: 20px;
+  }
+
+  .su-hero-v2__max small {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .su-hero-v2__max > img {
+    right: -8px;
+    bottom: -5px;
+    width: 68px;
+  }
+
+  .su-hero-v2 > .dots,
+  .su-hero-v2 > .cross {
+    display: none;
+  }
+}
