@@ -662,7 +662,9 @@
     z-index: 3;
   }
 
-  .su-hero-v2 > .cross {
-    display: none;
+  .su-hero-v2 > img.cross[src$="pricel.webp"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
 }
