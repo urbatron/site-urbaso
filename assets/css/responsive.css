@@ -688,9 +688,18 @@
     z-index: 10;
   }
 
+  .su-hero-v2__price > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 13px 7px 23px;
+  }
+
   .su-hero-v2__price > div > span:first-child {
+    flex: 0 0 auto;
     font-size: 55px;
     line-height: .9;
+    transform: none;
   }
 
   .su-hero-v2__price > div > span:last-child {
@@ -703,7 +712,8 @@
     font-weight: 700;
     line-height: 1.14;
     white-space: nowrap;
-    margin-left: 8px;
+    flex: 0 0 auto;
+    margin-left: 0;
   }
 
   .su-hero-v2__price > div > span:last-child::after {
