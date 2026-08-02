@@ -763,6 +763,7 @@
     height: auto;
     min-height: 0;
     overflow: hidden;
+    padding-bottom: 0;
   }
 
   .su-hero-v2__header {
@@ -775,7 +776,12 @@
     padding: 0 36px;
   }
 
-  .su-hero-v2__brand { grid-column: 1; grid-row: 1; align-self: center; margin-top: 0; }
+  .su-hero-v2__brand {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    margin: 0;
+  }
   .su-hero-v2__brand b { font-size: 33px; line-height: 1; }
   .su-hero-v2__phone { grid-column: 2; grid-row: 1; align-self: center; justify-self: end; font-size: 17px; }
   .su-hero-v2__brand span,
@@ -837,7 +843,9 @@
     grid-template-rows: max-content max-content max-content max-content;
     column-gap: 20px;
     width: min(100%, 744px);
+    max-width: 744px;
     height: auto;
+    min-height: 0;
     margin-inline: auto;
     padding-inline: 16px;
   }
@@ -849,7 +857,7 @@
     width: 100%;
     max-width: none;
     justify-self: stretch;
-    margin-top: 34px;
+    margin: 34px 0 0;
     position: relative;
     z-index: 200;
   }
@@ -921,6 +929,7 @@
     left: 27px;
     top: 0;
     width: 290px;
+    max-width: none;
     z-index: 20;
   }
   .su-hero-v2__artboard .code {
