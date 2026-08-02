@@ -712,3 +712,34 @@
     height: 13px;
   }
 }
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .su-hero-v2 h1 {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-size: clamp(32px, 8.7vw, 33px);
+    line-height: .98;
+    letter-spacing: -.04em;
+    z-index: 100;
+  }
+
+  .su-hero-v2__price > div > span:first-child {
+    font-size: 55px;
+    line-height: .9;
+  }
+
+  .su-hero-v2__price > div > span:last-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+}
