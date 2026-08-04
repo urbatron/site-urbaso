@@ -916,6 +916,10 @@
   }
   .su-hero-v2__artboard {
     position: absolute;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: start;
+    align-self: start;
     left: 16px;
     top: 34px;
     width: 290px;
