@@ -43,5 +43,68 @@
     </section>
   </main>
   <script src="./assets/js/su-hero-v2.js"></script>
+  <script>
+    (() => {
+      if (new URLSearchParams(window.location.search).get('debug') !== 'viewport') return;
+
+      const landscapeQuery = '(orientation: landscape) and (min-width: 600px) and (max-width: 899px) and (max-height: 500px)';
+      const panel = document.createElement('pre');
+
+      Object.assign(panel.style, {
+        position: 'fixed',
+        left: '8px',
+        top: '8px',
+        zIndex: '999999',
+        margin: '0',
+        maxWidth: 'calc(100vw - 16px)',
+        padding: '10px',
+        border: '1px solid #000',
+        background: '#fff',
+        color: '#000',
+        fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+        fontSize: '12px',
+        lineHeight: '1.4',
+        whiteSpace: 'pre-wrap',
+        pointerEvents: 'none'
+      });
+
+      const dimensions = (width, height) => `${width} × ${height}`;
+      const update = () => {
+        const root = document.documentElement;
+        const viewport = window.visualViewport;
+        const orientation = window.screen.orientation;
+
+        panel.textContent = [
+          `inner: ${dimensions(window.innerWidth, window.innerHeight)}`,
+          `client: ${dimensions(root.clientWidth, root.clientHeight)}`,
+          `visualViewport: ${viewport ? dimensions(viewport.width, viewport.height) : 'unavailable'}`,
+          `visualViewport.scale: ${viewport ? viewport.scale : 'unavailable'}`,
+          `devicePixelRatio: ${window.devicePixelRatio}`,
+          `screen: ${dimensions(window.screen.width, window.screen.height)}`,
+          `screen.orientation.type: ${orientation ? orientation.type : 'unavailable'}`,
+          `screen.orientation.angle: ${orientation ? orientation.angle : 'unavailable'}`,
+          `orientation landscape: ${window.matchMedia('(orientation: landscape)').matches}`,
+          `max-width 767px: ${window.matchMedia('(max-width: 767px)').matches}`,
+          `min-width 600px: ${window.matchMedia('(min-width: 600px)').matches}`,
+          `max-width 899px: ${window.matchMedia('(max-width: 899px)').matches}`,
+          `max-height 500px: ${window.matchMedia('(max-height: 500px)').matches}`,
+          `full landscape query: ${window.matchMedia(landscapeQuery).matches}`
+        ].join('\n');
+      };
+
+      document.body.append(panel);
+      update();
+      window.addEventListener('resize', update);
+      window.addEventListener('orientationchange', () => {
+        update();
+        window.setTimeout(update, 300);
+      });
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', update);
+        window.visualViewport.addEventListener('scroll', update);
+      }
+    })();
+  </script>
 </body>
 </html>
