@@ -5,7 +5,7 @@
 @media (min-width:1280px) and (max-height:799px){.su-hero-v2{height:100dvh;min-height:0}.su-hero-v2--short{height:100dvh;min-height:0}}
 
 /* Services collage. Every numbered rule is intentionally independent for easy art direction. */
-.su-services-v2{position:relative;overflow:hidden;min-height:0;margin-top:-1px;padding:24px 32px 90px;background:transparent;color:#101010}
+.su-services-v2{position:relative;min-height:0;margin-top:-1px;padding:24px 32px 90px;background:transparent;color:#101010}
 .su-services-v2__container{position:relative;width:min(1240px,100%);margin-inline:auto}
 .su-services-v2__grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:34px;row-gap:24px}
 .su-services-v2__card{position:relative;left:auto;top:auto;display:grid;grid-column:span 2;place-items:center;width:100%;aspect-ratio:1.24;transform:none;isolation:isolate}
