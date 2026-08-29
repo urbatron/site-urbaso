@@ -1014,7 +1014,7 @@
 /* Services collage: two columns on tablets. */
 @media (min-width: 768px) and (max-width: 1024px) {
   .su-services-v2 { min-height: 0; padding: 64px 40px 88px; }
-  .su-services-v2__container { width: min(100%, 860px); }
+  .su-services-v2__container { width: min(100%, 760px); }
   .su-services-v2__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 44px; }
   .su-services-v2__card { left: auto; top: auto; grid-column: auto; width: 100%; transform: none; }
   .su-services-v2__card--11 { grid-column: 1 / -1; width: calc((100% - 44px) / 2); justify-self: center; }
