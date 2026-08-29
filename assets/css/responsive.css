@@ -1,3 +1,31 @@
+/* Desktop-only vertical spacing for the lower half of the hero collage. */
+@media (min-width: 1280px) {
+  .su-hero-v2 {
+    --hero-lower-shift: 250px;
+  }
+
+  .su-hero-v2__description,
+  .su-hero-v2__price,
+  .su-hero-v2__bottom,
+  .su-hero-v2__artboard .wire,
+  .su-hero-v2__artboard .arrow,
+  .su-hero-v2__artboard .grid-paper-bottom,
+  .su-hero-v2__artboard .orange,
+  .su-hero-v2__artboard .traffic,
+  .su-hero-v2__artboard .services,
+  .su-hero-v2__artboard .services-arrow-up,
+  .su-hero-v2__artboard .services-arrow-right,
+  .su-hero-v2__artboard .code,
+  .su-hero-v2__artboard .code-note,
+  .su-hero-v2 > .cross {
+    translate: 0 var(--hero-lower-shift);
+  }
+
+  .su-services-v2 {
+    margin-top: -94px;
+  }
+}
+
 /* Desktop-only refinements. */
 @media (min-width: 1280px) and (max-height: 799px) {
   .su-hero-v2__content {
