@@ -1,24 +1,37 @@
-/* Desktop-only vertical spacing for the lower half of the hero collage. */
+/* Desktop-only progressive spacing for the hero collage rows. */
 @media (min-width: 1280px) {
   .su-hero-v2 {
-    --hero-lower-shift: 250px;
+    --hero-row-gap: 50px;
   }
 
-  .su-hero-v2__description,
-  .su-hero-v2__price,
-  .su-hero-v2__bottom,
+  .su-hero-v2__content {
+    row-gap: var(--hero-row-gap);
+  }
+
   .su-hero-v2__artboard .wire,
-  .su-hero-v2__artboard .arrow,
+  .su-hero-v2__artboard .traffic,
+  .su-hero-v2__artboard .arrow {
+    translate: 0 var(--hero-row-gap);
+  }
+
   .su-hero-v2__artboard .grid-paper-bottom,
   .su-hero-v2__artboard .orange,
-  .su-hero-v2__artboard .traffic,
   .su-hero-v2__artboard .services,
   .su-hero-v2__artboard .services-arrow-up,
-  .su-hero-v2__artboard .services-arrow-right,
-  .su-hero-v2__artboard .code,
-  .su-hero-v2__artboard .code-note,
+  .su-hero-v2__artboard .services-arrow-right {
+    translate: 0 calc(var(--hero-row-gap) * 2);
+  }
+
+  .su-hero-v2__artboard .code {
+    translate: 0 calc(var(--hero-row-gap) * 3);
+  }
+
+  .su-hero-v2__artboard .code-note {
+    translate: 0 calc(var(--hero-row-gap) * 4);
+  }
+
   .su-hero-v2 > .cross {
-    translate: 0 var(--hero-lower-shift);
+    translate: 0 calc(var(--hero-row-gap) * 5);
   }
 
   .su-services-v2 {
