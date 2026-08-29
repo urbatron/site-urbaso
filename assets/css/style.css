@@ -6,12 +6,12 @@
 
 /* Services collage. Every numbered rule is intentionally independent for easy art direction. */
 .su-services-v2{position:relative;min-height:0;margin-top:-1px;padding:24px 32px 90px;background:transparent;color:#101010}
-.su-services-v2__container{position:relative;width:min(1240px,100%);margin-inline:auto}
-.su-services-v2__grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:34px;row-gap:24px}
-.su-services-v2__card{position:relative;left:auto;top:auto;display:grid;grid-column:span 2;place-items:center;width:100%;aspect-ratio:1.24;transform:none;isolation:isolate}
+.su-services-v2__container{position:relative;width:min(1040px,100%);margin-inline:auto}
+.su-services-v2__grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:32px;row-gap:18px}
+.su-services-v2__card{position:relative;left:auto;top:auto;display:grid;grid-column:span 2;place-items:center;width:100%;aspect-ratio:1.55;transform:none;isolation:isolate}
 .su-services-v2__sheet{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;filter:drop-shadow(0 5px 4px rgba(45,39,29,.08))}
-.su-services-v2__icon{position:absolute;left:50%;top:21%;width:29%;max-height:38%;transform:translateX(-50%);object-fit:contain;z-index:1}
-.su-services-v2__card h2{position:absolute;left:8%;right:8%;bottom:12%;margin:0;text-align:center;font:600 clamp(25px,2vw,31px)/1.02 Caveat,"Segoe Print","Bradley Hand",cursive;z-index:2}
+.su-services-v2__icon{position:absolute;left:13%;top:50%;width:20%;max-width:72px;max-height:48%;transform:translateY(-50%);object-fit:contain;z-index:1}
+.su-services-v2__card h2{position:absolute;left:40%;right:8%;top:50%;bottom:auto;margin:0;transform:translateY(-50%);text-align:left;font:600 clamp(21px,1.65vw,27px)/1.05 Caveat,"Segoe Print","Bradley Hand",cursive;z-index:2}
 .su-services-v2__card--1{left:auto;top:auto;width:100%;transform:none;z-index:4}
 .su-services-v2__card--2{left:auto;top:auto;width:100%;transform:none;z-index:3}
 .su-services-v2__card--3{left:auto;top:auto;width:100%;transform:none;z-index:4}
