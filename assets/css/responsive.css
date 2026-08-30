@@ -1,151 +1,214 @@
 /* Desktop-only progressive spacing for the hero collage rows. */
 @media (min-width: 1280px) {
+  /*
+   * Desktop art direction uses a 12-column, 24px baseline system.
+   * The hero remains in normal flow; the services canvas is positioned from
+   * four shared horizontal anchors rather than from independent grid cells.
+   */
   .su-hero-v2 {
-    --hero-row-gap: 50px;
+    --hero-row-gap: 0px;
+    height: 1112px;
+    min-height: 1112px;
   }
 
   .su-hero-v2__content {
-    row-gap: var(--hero-row-gap);
+    row-gap: 0;
+  }
+
+  .su-hero-v2__description {
+    margin-top: calc(24px + 4px * var(--hero-fluid));
+  }
+
+  .su-hero-v2__price {
+    margin-top: calc(16px + 4px * var(--hero-fluid));
+    z-index: 5;
+  }
+
+  .su-hero-v2__bottom {
+    margin-top: 12px;
+  }
+
+  .su-hero-v2__max {
+    margin-top: 44px;
+    z-index: 7;
   }
 
   .su-hero-v2__artboard .wire,
   .su-hero-v2__artboard .traffic,
-  .su-hero-v2__artboard .arrow {
-    translate: 0 var(--hero-row-gap);
-  }
-
+  .su-hero-v2__artboard .arrow,
   .su-hero-v2__artboard .grid-paper-bottom,
   .su-hero-v2__artboard .orange,
   .su-hero-v2__artboard .services,
   .su-hero-v2__artboard .services-arrow-up,
-  .su-hero-v2__artboard .services-arrow-right {
-    translate: 0 calc(var(--hero-row-gap) * 2);
-  }
-
-  .su-hero-v2__artboard .code {
-    translate: 0 calc(var(--hero-row-gap) * 3);
-  }
-
+  .su-hero-v2__artboard .services-arrow-right,
+  .su-hero-v2__artboard .code,
   .su-hero-v2__artboard .code-note {
-    translate: 0 calc(var(--hero-row-gap) * 4);
-  }
-
-  .su-hero-v2 > .cross {
-    translate: 0 calc(var(--hero-row-gap) * 5);
-  }
-
-  .su-hero-v2__artboard .code {
-    left: 440px;
-    top: 495px;
-  }
-
-  .su-hero-v2__artboard .code-note {
-    left: 409px;
-    top: 628px;
-  }
-
-  .su-hero-v2__artboard .services {
-    top: 368px;
-    font: 19px / 1.05 Caveat, "Segoe Print", "Bradley Hand", cursive;
-  }
-
-  .su-hero-v2__artboard .services-arrow-right {
-    top: 460px;
-    width: 193px;
-  }
-
-  .su-hero-v2__artboard .services-arrow-up {
-    left: 482px;
-    top: 368px;
-    width: 66px;
-  }
-
-  .su-hero-v2__artboard .traffic {
-    left: 468px;
-    top: 213px;
-    width: 246px;
+    translate: none;
   }
 
   .su-hero-v2__artboard .dash {
     left: 311px;
     top: 11px;
-    width: 387px;
+    width: 374px;
+    z-index: 3;
   }
 
-  .su-hero-v2__max {
-    margin-top: 58px;
+  .su-hero-v2__artboard .traffic {
+    left: 454px;
+    top: 226px;
+    width: 238px;
+    z-index: 4;
+  }
+
+  .su-hero-v2__artboard .services {
+    left: 530px;
+    top: 390px;
+    font: 18px / 1.05 Caveat, "Segoe Print", "Bradley Hand", cursive;
+    z-index: 5;
+  }
+
+  .su-hero-v2__artboard .services-arrow-up {
+    left: 478px;
+    top: 382px;
+    width: 62px;
+    z-index: 5;
+  }
+
+  .su-hero-v2__artboard .services-arrow-right {
+    left: 518px;
+    top: 474px;
+    width: 184px;
+    z-index: 5;
+  }
+
+  .su-hero-v2__artboard .code {
+    left: 430px;
+    top: 548px;
+    z-index: 4;
+  }
+
+  .su-hero-v2__artboard .code-note {
+    left: 399px;
+    top: 681px;
+    z-index: 6;
+  }
+
+  .su-hero-v2 > .cross {
+    top: 900px;
+    translate: none;
+    z-index: 2;
   }
 
   .su-services-v2 {
-    margin-top: -176px;
+    margin-top: -240px;
+    padding: 0 32px 120px;
   }
 
-  .su-services-v2__card--1 {
-    left: -81px;
-    top: -163px;
-    transform: rotate(-10deg);
+  .su-services-v2__container {
+    width: min(1184px, 100%);
   }
 
-  .su-services-v2__card--2 {
-    left: -26px;
-    top: -65px;
-    transform: rotate(5deg);
+  .su-services-v2__grid {
+    display: block;
+    min-height: 1320px;
+    z-index: 3;
   }
 
-  .su-services-v2__card--3 {
+  .su-services-v2__card {
+    --card-x: 0px;
+    --card-y: 0px;
+    --card-rotate: 0deg;
+    --card-z: 3;
+    position: absolute;
+    left: var(--card-x);
+    top: var(--card-y);
+    width: clamp(292px, 25.8vw, 336px);
+    transform: rotate(var(--card-rotate));
+    transform-origin: center;
+    z-index: var(--card-z);
+  }
+
+  .su-services-v2__sheet {
+    filter: drop-shadow(0 6px 7px rgba(45, 39, 29, .075));
+  }
+
+  .su-services-v2__card h2 {
+    font-size: clamp(22px, 1.65vw, 26px);
+    line-height: 1.02;
+  }
+
+  /* Group 1 — a descending bridge from portrait and CTA into services. */
+  .su-services-v2__card--1 { --card-x: 2%; --card-y: 16px; --card-rotate: -5deg; --card-z: 4; }
+  .su-services-v2__card--2 { --card-x: 35.5%; --card-y: 104px; --card-rotate: 2deg; --card-z: 3; }
+  .su-services-v2__card--3 { --card-x: 70.5%; --card-y: 176px; --card-rotate: -1deg; --card-z: 4; }
+
+  /* Group 2 — the central counter-wave. */
+  .su-services-v2__card--4 { --card-x: 8%; --card-y: 350px; --card-rotate: 1deg; --card-z: 3; }
+  .su-services-v2__card--5 { --card-x: 39%; --card-y: 420px; --card-rotate: -6deg; --card-z: 5; }
+  .su-services-v2__card--6 { --card-x: 69%; --card-y: 372px; --card-rotate: 3deg; --card-z: 3; }
+
+  /* Group 3 — stable lower anchors with one directional accent. */
+  .su-services-v2__card--7 { --card-x: 3%; --card-y: 696px; --card-rotate: -2deg; --card-z: 3; }
+  .su-services-v2__card--8 { --card-x: 35%; --card-y: 640px; --card-rotate: 0deg; --card-z: 4; }
+  .su-services-v2__card--9 { --card-x: 68%; --card-y: 724px; --card-rotate: 5deg; --card-z: 3; }
+
+  /* Group 4 — an offset editorial cadence, not an incomplete grid row. */
+  .su-services-v2__card--10 { --card-x: 18%; --card-y: 1016px; --card-rotate: 2deg; --card-z: 4; }
+  .su-services-v2__card--11 { --card-x: 55%; --card-y: 956px; --card-rotate: -3deg; --card-z: 3; }
+
+  .su-services-v2__decor {
+    z-index: 2;
+  }
+
+  .su-services-v2__arrow {
+    opacity: .78;
+    z-index: 2;
+  }
+
+  .su-services-v2__arrow--1 {
+    left: 27%;
+    top: 188px;
+    width: 112px;
+    transform: rotate(9deg);
+  }
+
+  .su-services-v2__arrow--2 {
+    left: 62%;
+    top: 246px;
+    width: 118px;
+    transform: rotate(-5deg);
+  }
+
+  .su-services-v2__arrow--3 {
+    display: none;
+  }
+
+  .su-services-v2__arrow--4 {
+    left: 30%;
+    top: 548px;
+    width: 108px;
+    transform: rotate(-6deg);
+  }
+
+  .su-services-v2__arrow--5 {
+    left: 61%;
+    top: 590px;
+    width: 112px;
+    transform: rotate(8deg);
+  }
+
+  .su-services-v2__arrow--6 {
+    left: 29%;
+    top: 886px;
+    width: 118px;
     transform: rotate(3deg);
   }
 
-  .su-services-v2__card--4 {
-    left: -50px;
-    top: -111px;
-    width: 100%;
-    z-index: 3;
-    transform: rotate(4deg);
-  }
-
-  .su-services-v2__card--5 {
-    left: -55px;
-    top: -62px;
-    width: 100%;
-    z-index: 4;
-    transform: rotate(-8deg);
-  }
-
-  .su-services-v2__card--6 {
-    left: -53px;
-    top: -24px;
-    width: 100%;
-    z-index: 3;
-    transform: rotate(-13deg);
-  }
-
-  .su-services-v2__card--7 {
-    left: -83px;
-    top: -85px;
-    transform: rotate(-5deg);
-  }
-
-  .su-services-v2__card--8 {
-    left: -31px;
-    top: -74px;
-    transform: rotate(-5deg);
-  }
-
-  .su-services-v2__card--9 {
-    left: 37px;
-    top: -75px;
-    transform: rotate(-9deg);
-  }
-
-  .su-services-v2__card--10 {
-    left: -107px;
-    top: -130px;
-  }
-
-  .su-services-v2__card--11 {
-    left: -39px;
-    top: -136px;
+  .su-services-v2__arrow--7 {
+    left: 79%;
+    top: 1128px;
+    width: 122px;
+    transform: rotate(10deg);
   }
 }
 
