@@ -34,8 +34,49 @@
     translate: 0 calc(var(--hero-row-gap) * 5);
   }
 
+  .su-hero-v2__artboard .code {
+    left: 440px;
+    top: 495px;
+  }
+
+  .su-hero-v2__artboard .code-note {
+    left: 409px;
+    top: 628px;
+  }
+
+  .su-hero-v2__artboard .services {
+    top: 368px;
+    font: 21px / 1.05 Caveat, "Segoe Print", "Bradley Hand", cursive;
+  }
+
+  .su-hero-v2__artboard .services-arrow-right {
+    top: 460px;
+    width: 193px;
+  }
+
+  .su-hero-v2__artboard .services-arrow-up {
+    left: 482px;
+    top: 368px;
+    width: 66px;
+  }
+
+  .su-hero-v2__artboard .traffic {
+    left: 450px;
+    top: 192px;
+  }
+
+  .su-hero-v2__artboard .dash {
+    left: 311px;
+    top: 11px;
+    width: 387px;
+  }
+
+  .su-hero-v2__max {
+    margin-top: 58px;
+  }
+
   .su-services-v2 {
-    margin-top: -94px;
+    margin-top: -176px;
   }
 }
 
