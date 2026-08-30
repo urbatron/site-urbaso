@@ -110,7 +110,7 @@
 
   .su-services-v2__grid {
     display: block;
-    min-height: 1320px;
+    min-height: 1136px;
     z-index: 3;
   }
 
@@ -118,12 +118,13 @@
     --card-x: 0px;
     --card-y: 0px;
     --card-rotate: 0deg;
+    --card-scale: 1;
     --card-z: 3;
     position: absolute;
     left: var(--card-x);
     top: var(--card-y);
     width: clamp(292px, 25.8vw, 336px);
-    transform: rotate(var(--card-rotate));
+    transform: rotate(var(--card-rotate)) scale(var(--card-scale));
     transform-origin: center;
     z-index: var(--card-z);
   }
@@ -137,24 +138,24 @@
     line-height: 1.02;
   }
 
-  /* Group 1 — a descending bridge from portrait and CTA into services. */
-  .su-services-v2__card--1 { --card-x: 2%; --card-y: 16px; --card-rotate: -5deg; --card-z: 4; }
-  .su-services-v2__card--2 { --card-x: 35.5%; --card-y: 104px; --card-rotate: 2deg; --card-z: 3; }
-  .su-services-v2__card--3 { --card-x: 70.5%; --card-y: 176px; --card-rotate: -1deg; --card-z: 4; }
+  /* Group 1 — an irregular bridge from portrait and CTA into services. */
+  .su-services-v2__card--1 { --card-x: 3%; --card-y: 32px; --card-rotate: -1deg; --card-scale: .96; --card-z: 4; }
+  .su-services-v2__card--2 { --card-x: 31%; --card-y: 154px; --card-rotate: 3deg; --card-z: 3; }
+  .su-services-v2__card--3 { --card-x: 70%; --card-y: calc(120px + 160px * var(--hero-fluid)); --card-rotate: 1deg; --card-z: 4; }
 
-  /* Group 2 — the central counter-wave. */
-  .su-services-v2__card--4 { --card-x: 8%; --card-y: 350px; --card-rotate: 1deg; --card-z: 3; }
-  .su-services-v2__card--5 { --card-x: 39%; --card-y: 420px; --card-rotate: -6deg; --card-z: 5; }
-  .su-services-v2__card--6 { --card-x: 69%; --card-y: 372px; --card-rotate: 3deg; --card-z: 3; }
+  /* Group 2 — a compressed counter-wave with one paper-edge overlap. */
+  .su-services-v2__card--4 { --card-x: 7%; --card-y: 310px; --card-rotate: 1deg; --card-z: 3; }
+  .su-services-v2__card--5 { --card-x: 34%; --card-y: 370px; --card-rotate: -6deg; --card-scale: 1.06; --card-z: 5; }
+  .su-services-v2__card--6 { --card-x: 70%; --card-y: 520px; --card-rotate: 3deg; --card-z: 3; }
 
-  /* Group 3 — stable lower anchors with one directional accent. */
-  .su-services-v2__card--7 { --card-x: 3%; --card-y: 696px; --card-rotate: -2deg; --card-z: 3; }
-  .su-services-v2__card--8 { --card-x: 35%; --card-y: 640px; --card-rotate: 0deg; --card-z: 4; }
-  .su-services-v2__card--9 { --card-x: 68%; --card-y: 724px; --card-rotate: 5deg; --card-z: 3; }
+  /* Group 3 — offset lower anchors rather than a visible third row. */
+  .su-services-v2__card--7 { --card-x: 4%; --card-y: 610px; --card-rotate: -3deg; --card-z: 3; }
+  .su-services-v2__card--8 { --card-x: 37%; --card-y: 526px; --card-rotate: 0deg; --card-scale: 1.05; --card-z: 5; }
+  .su-services-v2__card--9 { --card-x: 70%; --card-y: 750px; --card-rotate: 4deg; --card-scale: .96; --card-z: 3; }
 
-  /* Group 4 — an offset editorial cadence, not an incomplete grid row. */
-  .su-services-v2__card--10 { --card-x: 18%; --card-y: 1016px; --card-rotate: 2deg; --card-z: 4; }
-  .su-services-v2__card--11 { --card-x: 55%; --card-y: 956px; --card-rotate: -3deg; --card-z: 3; }
+  /* Group 4 — a close, asymmetric sign-off with a second edge overlap. */
+  .su-services-v2__card--10 { --card-x: 21%; --card-y: 786px; --card-rotate: 2deg; --card-z: 4; }
+  .su-services-v2__card--11 { --card-x: 54%; --card-y: 842px; --card-rotate: -3deg; --card-z: 3; }
 
   .su-services-v2__decor {
     z-index: 2;
@@ -166,17 +167,14 @@
   }
 
   .su-services-v2__arrow--1 {
-    left: 27%;
-    top: 188px;
-    width: 112px;
-    transform: rotate(9deg);
+    left: 26%;
+    top: 246px;
+    width: 104px;
+    transform: rotate(12deg);
   }
 
   .su-services-v2__arrow--2 {
-    left: 62%;
-    top: 246px;
-    width: 118px;
-    transform: rotate(-5deg);
+    display: none;
   }
 
   .su-services-v2__arrow--3 {
@@ -184,31 +182,28 @@
   }
 
   .su-services-v2__arrow--4 {
-    left: 30%;
-    top: 548px;
-    width: 108px;
-    transform: rotate(-6deg);
+    left: 61%;
+    top: 500px;
+    width: 102px;
+    transform: rotate(-10deg);
   }
 
   .su-services-v2__arrow--5 {
-    left: 61%;
-    top: 590px;
-    width: 112px;
-    transform: rotate(8deg);
+    display: none;
   }
 
   .su-services-v2__arrow--6 {
-    left: 29%;
-    top: 886px;
-    width: 118px;
-    transform: rotate(3deg);
+    left: 31%;
+    top: 722px;
+    width: 114px;
+    transform: rotate(7deg);
   }
 
   .su-services-v2__arrow--7 {
-    left: 79%;
-    top: 1128px;
-    width: 122px;
-    transform: rotate(10deg);
+    left: 82%;
+    top: 996px;
+    width: 108px;
+    transform: rotate(7deg);
   }
 }
 
