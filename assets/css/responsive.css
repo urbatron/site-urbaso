@@ -137,6 +137,16 @@
     top: -75px;
     transform: rotate(-9deg);
   }
+
+  .su-services-v2__card--10 {
+    left: -107px;
+    top: -130px;
+  }
+
+  .su-services-v2__card--11 {
+    left: -39px;
+    top: -136px;
+  }
 }
 
 /* Desktop-only refinements. */
