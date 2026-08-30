@@ -405,7 +405,7 @@
   .su-services-v2 .su-services-v2__grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     column-gap: clamp(12px, 2vw, 28px);
-    row-gap: clamp(18px, 2.2vw, 28px);
+    row-gap: clamp(42px, 4.6vw, 58px);
   }
 
   .su-services-v2 .su-services-v2__card {
@@ -413,23 +413,60 @@
     width: 100%;
   }
 
-  .su-services-v2 .su-services-v2__card--1 { transform: translate(-2%, 5%) rotate(-6deg); }
-  .su-services-v2 .su-services-v2__card--2 { transform: translate(1%, -2%) rotate(3deg); }
-  .su-services-v2 .su-services-v2__card--3 { transform: translate(2%, 4%) rotate(2deg); }
-  .su-services-v2 .su-services-v2__card--4 { transform: translate(3%, -4%) rotate(4deg); }
-  .su-services-v2 .su-services-v2__card--5 { transform: translate(-2%, 4%) rotate(-5deg); }
-  .su-services-v2 .su-services-v2__card--6 { transform: translate(-1%, -2%) rotate(-7deg); }
-  .su-services-v2 .su-services-v2__card--7 { transform: translate(-2%, 3%) rotate(-4deg); }
-  .su-services-v2 .su-services-v2__card--8 { transform: translate(2%, -3%) rotate(-3deg); }
-  .su-services-v2 .su-services-v2__card--9 { transform: translate(1%, 3%) rotate(-5deg); }
+  .su-services-v2 .su-services-v2__card--1 {
+    width: 103%;
+    transform: translate(-6%, clamp(-34px, -2.7vw, -24px)) rotate(-10deg);
+    z-index: 7;
+  }
+  .su-services-v2 .su-services-v2__card--2 {
+    width: 96%;
+    transform: translate(3%, clamp(24px, 2.4vw, 31px)) rotate(5deg);
+    z-index: 3;
+  }
+  .su-services-v2 .su-services-v2__card--3 {
+    width: 105%;
+    transform: translate(4%, clamp(-24px, -1.8vw, -16px)) rotate(1deg);
+    z-index: 5;
+  }
+  .su-services-v2 .su-services-v2__card--4 {
+    transform: translate(5%, clamp(29px, 2.8vw, 38px)) rotate(6deg);
+    z-index: 3;
+  }
+  .su-services-v2 .su-services-v2__card--5 {
+    width: 104%;
+    transform: translate(-4%, clamp(-34px, -2.5vw, -23px)) rotate(-7deg);
+    z-index: 8;
+  }
+  .su-services-v2 .su-services-v2__card--6 {
+    width: 97%;
+    transform: translate(1%, clamp(34px, 3.2vw, 43px)) rotate(-10deg);
+    z-index: 4;
+  }
+  .su-services-v2 .su-services-v2__card--7 {
+    transform: translate(-5%, clamp(-29px, -2.2vw, -20px)) rotate(-4deg);
+    z-index: 6;
+  }
+  .su-services-v2 .su-services-v2__card--8 {
+    width: 106%;
+    transform: translate(-1%, clamp(28px, 2.8vw, 37px)) rotate(1deg);
+    z-index: 4;
+  }
+  .su-services-v2 .su-services-v2__card--9 {
+    width: 98%;
+    transform: translate(5%, clamp(-22px, -1.6vw, -14px)) rotate(7deg);
+    z-index: 7;
+  }
   .su-services-v2 .su-services-v2__card--10 {
     grid-column: 2 / span 2;
-    transform: translate(-3%, -1%) rotate(2deg);
+    width: 103%;
+    transform: translate(-20%, clamp(-39px, -3vw, -27px)) rotate(5deg);
+    z-index: 8;
   }
   .su-services-v2 .su-services-v2__card--11 {
     grid-column: 4 / span 2;
-    width: 100%;
-    transform: translate(3%, -3%) rotate(-2deg);
+    width: 98%;
+    transform: translate(19%, clamp(24px, 2.5vw, 33px)) rotate(-6deg);
+    z-index: 5;
   }
 
   .su-services-v2 .su-services-v2__card h2 {
@@ -437,16 +474,48 @@
   }
 
   .su-services-v2 .su-services-v2__arrow {
-    width: clamp(54px, 6.5vw, 82px);
-    opacity: 0.82;
+    opacity: 0.96;
   }
-  .su-services-v2 .su-services-v2__arrow--1 { left: 29%; top: 14%; transform: rotate(18deg); }
-  .su-services-v2 .su-services-v2__arrow--2 { left: 63%; top: 17%; transform: rotate(-9deg); }
-  .su-services-v2 .su-services-v2__arrow--3 { left: 11%; top: 48%; transform: rotate(22deg); }
-  .su-services-v2 .su-services-v2__arrow--4 { left: 47%; top: 45%; transform: rotate(-12deg); }
-  .su-services-v2 .su-services-v2__arrow--5 { left: 82%; top: 49%; transform: rotate(8deg); }
-  .su-services-v2 .su-services-v2__arrow--6 { left: 28%; top: 78%; transform: rotate(-5deg); }
-  .su-services-v2 .su-services-v2__arrow--7 { left: 65%; top: 79%; transform: rotate(12deg); }
+  .su-services-v2 .su-services-v2__arrow--1 {
+    left: -5%;
+    top: 8%;
+    width: clamp(88px, 9.2vw, 118px);
+    transform: scaleX(-1) rotate(38deg);
+  }
+  .su-services-v2 .su-services-v2__arrow--2 {
+    display: none;
+  }
+  .su-services-v2 .su-services-v2__arrow--3 {
+    left: 27%;
+    top: 32%;
+    width: clamp(72px, 7.5vw, 96px);
+    transform: rotate(19deg);
+  }
+  .su-services-v2 .su-services-v2__arrow--4 {
+    left: 92%;
+    top: 27%;
+    width: clamp(82px, 8.5vw, 108px);
+    transform: rotate(24deg);
+  }
+  .su-services-v2 .su-services-v2__arrow--5 {
+    left: 78%;
+    top: 57%;
+    width: clamp(105px, 10.5vw, 134px);
+    transform: rotate(-8deg);
+  }
+  .su-services-v2 .su-services-v2__arrow--6 {
+    left: -7%;
+    top: 69%;
+    width: clamp(96px, 10vw, 128px);
+    transform: rotate(17deg);
+  }
+  .su-services-v2 .su-services-v2__arrow--7 {
+    left: 67%;
+    top: 88%;
+    width: clamp(68px, 7vw, 90px);
+    transform: rotate(14deg);
+    z-index: 9;
+  }
 }
 
 /* Tablet portrait: content and the existing artboard become one natural column. */
