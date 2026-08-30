@@ -81,10 +81,14 @@
   }
 
   .su-services-v2__card--1 {
+    left: -81px;
+    top: -163px;
     transform: rotate(-10deg);
   }
 
   .su-services-v2__card--2 {
+    left: -26px;
+    top: -65px;
     transform: rotate(5deg);
   }
 
@@ -109,11 +113,29 @@
   }
 
   .su-services-v2__card--6 {
-    left: -117px;
+    left: -53px;
     top: -24px;
     width: 100%;
     z-index: 3;
     transform: rotate(-13deg);
+  }
+
+  .su-services-v2__card--7 {
+    left: -83px;
+    top: -85px;
+    transform: rotate(-5deg);
+  }
+
+  .su-services-v2__card--8 {
+    left: -31px;
+    top: -74px;
+    transform: rotate(-5deg);
+  }
+
+  .su-services-v2__card--9 {
+    left: 37px;
+    top: -75px;
+    transform: rotate(-9deg);
   }
 }
 
