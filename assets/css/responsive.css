@@ -286,13 +286,12 @@
     width: 100%;
     height: auto;
     min-height: 0;
-    margin-top: var(--tablet-hero-offset);
   }
 
   .su-hero-v2__content {
     width: auto;
     min-width: 0;
-    margin: clamp(28px, 3vw, 38px) 0 0;
+    margin: 0;
     padding-left: var(--tablet-gutter);
   }
 
@@ -300,6 +299,10 @@
   .su-hero-v2 h1 {
     width: auto;
     max-width: 100%;
+  }
+
+  .su-hero-v2__heading {
+    margin-top: 70px;
   }
 
   .su-hero-v2 h1 {
@@ -315,9 +318,9 @@
   }
   .su-hero-v2__description {
     width: auto;
-    margin-top: clamp(17px, 1.5vw, 20px);
+    margin-top: 50px;
     padding-right: 12px;
-    font-size: clamp(17px, 1.55vw, 20px);
+    font-size: 21px;
     line-height: 1.36;
     white-space: normal;
   }
@@ -325,7 +328,7 @@
   .su-hero-v2__price {
     width: min(clamp(420px, 39vw, 490px), calc(100% + 8px));
     height: clamp(84px, 7.2vw, 92px);
-    margin: clamp(10px, 1vw, 13px) 0 0 clamp(-20px, -1.5vw, -14px);
+    margin: 72px 0 0 clamp(-20px, -1.5vw, -14px);
   }
 
   .su-hero-v2__price > div {
@@ -387,7 +390,6 @@
   }
   .su-hero-v2__artboard {
     height: calc(var(--hero-artboard-height) * var(--hero-artboard-scale));
-    margin-top: clamp(22px, 2.75vw, 35px);
     margin-bottom: 0;
   }
 
