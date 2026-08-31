@@ -410,6 +410,45 @@
     z-index: 100;
   }
 
+  .su-hero-v2__artboard .services {
+    left: 533px;
+    top: 454px;
+    width: 140px;
+    font: 18px / 1.05 Caveat, "Segoe Print", "Bradley Hand", cursive;
+    transform: rotate(2deg);
+    z-index: 12;
+  }
+
+  .su-hero-v2__artboard .services-arrow-up {
+    left: 486px;
+    top: 440px;
+    width: 59px;
+    transform: rotate(-20deg);
+    z-index: 13;
+  }
+
+  .su-hero-v2__artboard .services-arrow-right {
+    left: 527px;
+    top: 534px;
+    width: 174px;
+    transform: rotate(-2deg);
+    z-index: 13;
+  }
+
+  .su-hero-v2__artboard .traffic {
+    left: 448px;
+    top: 247px;
+    width: 231px;
+    transform: rotate(-2deg);
+  }
+
+  .su-hero-v2__artboard .dash {
+    left: 311px;
+    top: 9px;
+    width: 346px;
+    transform: translateY(7px) rotate(-3deg);
+  }
+
   .su-hero-v2 > .dots,
   .su-hero-v2 > .cross {
     translate: 0 var(--tablet-hero-offset);
@@ -504,41 +543,41 @@
   }
   .su-services-v2 .su-services-v2__arrow--1 {
     left: -5%;
-    top: 8%;
+    top: 16%;
     width: clamp(88px, 9.2vw, 118px);
-    transform: scaleX(-1) rotate(38deg);
+    transform: scaleX(-1) rotate(42deg);
   }
   .su-services-v2 .su-services-v2__arrow--2 {
     display: none;
   }
   .su-services-v2 .su-services-v2__arrow--3 {
-    left: 27%;
-    top: 32%;
-    width: clamp(72px, 7.5vw, 96px);
-    transform: rotate(19deg);
+    left: 30%;
+    top: 46%;
+    width: clamp(72px, 8.5vw, 96px);
+    transform: rotate(-4deg);
   }
   .su-services-v2 .su-services-v2__arrow--4 {
-    left: 92%;
-    top: 27%;
+    left: 97%;
+    top: 17%;
     width: clamp(82px, 8.5vw, 108px);
-    transform: rotate(24deg);
+    transform: rotate(28deg);
   }
   .su-services-v2 .su-services-v2__arrow--5 {
-    left: 78%;
-    top: 57%;
-    width: clamp(105px, 10.5vw, 134px);
-    transform: rotate(-8deg);
+    left: 88%;
+    top: 73%;
+    width: clamp(75px, 7.5vw, 134px);
+    transform: rotate(32deg);
   }
   .su-services-v2 .su-services-v2__arrow--6 {
-    left: -7%;
-    top: 69%;
+    left: 1%;
+    top: 73%;
     width: clamp(96px, 10vw, 128px);
-    transform: rotate(17deg);
+    transform: rotate(35deg);
   }
   .su-services-v2 .su-services-v2__arrow--7 {
-    left: 67%;
-    top: 88%;
-    width: clamp(68px, 7vw, 90px);
+    left: 45%;
+    top: 87%;
+    width: clamp(68px, 5vw, 90px);
     transform: rotate(14deg);
     z-index: 9;
   }
