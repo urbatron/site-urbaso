@@ -2,6 +2,7 @@
   --blue: #1755d5;
 }
 html {
+  overflow-x: hidden;
   background: #f7f5ef;
 }
 body {
