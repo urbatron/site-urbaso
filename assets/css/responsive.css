@@ -1587,61 +1587,61 @@
     width: 100%;
   }
   .su-services-v2__card--1 {
-    width: 105%;
-    transform: translate(-3%, -32px) rotate(-7deg);
+    width: 108%;
+    transform: translate(-6%, -52px) rotate(-9deg);
     z-index: 8;
   }
   .su-services-v2__card--2 {
-    width: 98%;
-    transform: translate(3%, 16px) rotate(5deg);
+    width: 96%;
+    transform: translate(6%, 30px) rotate(4deg);
     z-index: 4;
   }
   .su-services-v2__card--3 {
-    width: 101%;
-    transform: translate(2%, 20px) rotate(3deg);
+    width: 100%;
+    transform: translate(-4%, 40px) rotate(2deg);
     z-index: 5;
   }
   .su-services-v2__card--4 {
-    width: 105%;
-    transform: translate(-1%, -26px) rotate(-6deg);
+    width: 109%;
+    transform: translate(5%, -48px) rotate(-9deg);
     z-index: 8;
   }
   .su-services-v2__card--5 {
-    width: 104%;
-    transform: translate(-3%, -24px) rotate(-5deg);
+    width: 103%;
+    transform: translate(-7%, -38px) rotate(-4deg);
     z-index: 7;
   }
   .su-services-v2__card--6 {
-    width: 99%;
-    transform: translate(3%, 28px) rotate(6deg);
+    width: 96%;
+    transform: translate(7%, 44px) rotate(7deg);
     z-index: 4;
   }
   .su-services-v2__card--7 {
-    width: 105%;
-    transform: translate(-2%, 18px) rotate(-6deg);
+    width: 109%;
+    transform: translate(-5%, 32px) rotate(-8deg);
     z-index: 8;
   }
   .su-services-v2__card--8 {
-    width: 100%;
-    transform: translate(2%, -24px) rotate(3deg);
+    width: 98%;
+    transform: translate(6%, -42px) rotate(2deg);
     z-index: 5;
   }
   .su-services-v2__card--9 {
     width: 103%;
-    transform: translate(-3%, -26px) rotate(5deg);
+    transform: translate(-7%, -42px) rotate(6deg);
     z-index: 7;
   }
   .su-services-v2__card--10 {
     grid-column: auto;
-    width: 104%;
-    transform: translate(2%, 24px) rotate(-5deg);
+    width: 106%;
+    transform: translate(7%, 36px) rotate(-6deg);
     z-index: 4;
   }
   .su-services-v2__card--11 {
     grid-column: 2;
-    width: 104%;
+    width: 105%;
     justify-self: start;
-    transform: translate(-10%, -38px) rotate(-7deg);
+    transform: translate(-18%, -52px) rotate(-8deg);
     z-index: 8;
   }
   .su-services-v2__arrow {
