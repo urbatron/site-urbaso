@@ -679,7 +679,7 @@
     column-gap: 24px;
     width: min(100%, 820px);
     height: auto;
-    min-height: clamp(720px, 90vw, 790px);
+    min-height: clamp(735px, 88vw, 775px);
     margin-inline: auto;
     padding-inline: 24px;
   }
@@ -693,7 +693,7 @@
     width: 100%;
     max-width: none;
     justify-self: stretch;
-    margin-top: 52px;
+    margin-top: 48px;
     position: relative;
     z-index: 200;
   }
@@ -718,7 +718,7 @@
     max-width: none;
     justify-self: stretch;
     margin: 0;
-    padding-top: 34px;
+    padding-top: 30px;
     font-size: clamp(18px, 2.25vw, 20px);
     line-height: 1.38;
     white-space: normal;
@@ -730,7 +730,7 @@
     justify-self: center;
     width: min(100%, 500px);
     height: 96px;
-    margin: 70px auto 0;
+    margin: 64px auto 0;
     position: relative;
     left: -72px;
     z-index: 50;
@@ -757,7 +757,7 @@
   .su-hero-v2__artboard {
     position: absolute;
     left: 24px;
-    top: 52px;
+    top: 48px;
     width: 310px;
     height: 650px;
     margin: 0;
@@ -787,7 +787,7 @@
     justify-self: center;
     width: min(100%, 480px);
     height: 86px;
-    margin: 74px auto 44px;
+    margin: 68px auto 48px;
     flex-basis: auto;
     position: relative;
     z-index: 10;
@@ -800,7 +800,7 @@
     justify-self: end;
     align-self: start;
     width: 185px;
-    margin-top: -103px;
+    margin-top: -99px;
     margin-right: 2px;
     flex-basis: auto;
     transform: rotate(-2deg) scale(0.68);
@@ -1571,77 +1571,77 @@
 /* Tablet portrait: an irregular two-column services collage. */
 @media (min-width: 768px) and (max-width: 899px) {
   .su-services-v2 {
-    margin-top: -68px;
-    padding: 46px 24px 96px;
+    margin-top: -58px;
+    padding: 50px 30px 104px;
   }
   .su-services-v2__container {
-    width: min(100%, 740px);
+    width: min(100%, 728px);
   }
   .su-services-v2__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 22px;
-    row-gap: 30px;
+    column-gap: 30px;
+    row-gap: 38px;
   }
   .su-services-v2__card {
     grid-column: auto;
     width: 100%;
   }
   .su-services-v2__card--1 {
-    width: 108%;
-    transform: translate(-6%, -38px) rotate(-10deg);
+    width: 105%;
+    transform: translate(-3%, -32px) rotate(-7deg);
     z-index: 8;
   }
   .su-services-v2__card--2 {
-    width: 96%;
-    transform: translate(7%, 18px) rotate(6deg);
+    width: 98%;
+    transform: translate(3%, 16px) rotate(5deg);
     z-index: 4;
   }
   .su-services-v2__card--3 {
-    width: 102%;
-    transform: translate(-3%, 24px) rotate(3deg);
+    width: 101%;
+    transform: translate(2%, 20px) rotate(3deg);
     z-index: 5;
   }
   .su-services-v2__card--4 {
-    width: 109%;
-    transform: translate(6%, -30px) rotate(-9deg);
+    width: 105%;
+    transform: translate(-1%, -26px) rotate(-6deg);
     z-index: 8;
   }
   .su-services-v2__card--5 {
-    width: 105%;
-    transform: translate(-7%, -28px) rotate(-5deg);
+    width: 104%;
+    transform: translate(-3%, -24px) rotate(-5deg);
     z-index: 7;
   }
   .su-services-v2__card--6 {
-    width: 97%;
-    transform: translate(8%, 32px) rotate(8deg);
+    width: 99%;
+    transform: translate(3%, 28px) rotate(6deg);
     z-index: 4;
   }
   .su-services-v2__card--7 {
-    width: 110%;
-    transform: translate(-4%, 20px) rotate(-8deg);
+    width: 105%;
+    transform: translate(-2%, 18px) rotate(-6deg);
     z-index: 8;
   }
   .su-services-v2__card--8 {
-    width: 99%;
-    transform: translate(7%, -26px) rotate(2deg);
+    width: 100%;
+    transform: translate(2%, -24px) rotate(3deg);
     z-index: 5;
   }
   .su-services-v2__card--9 {
-    width: 101%;
-    transform: translate(-6%, -30px) rotate(7deg);
+    width: 103%;
+    transform: translate(-3%, -26px) rotate(5deg);
     z-index: 7;
   }
   .su-services-v2__card--10 {
     grid-column: auto;
-    width: 107%;
-    transform: translate(9%, 28px) rotate(-6deg);
+    width: 104%;
+    transform: translate(2%, 24px) rotate(-5deg);
     z-index: 4;
   }
   .su-services-v2__card--11 {
     grid-column: 2;
-    width: 108%;
+    width: 104%;
     justify-self: start;
-    transform: translate(-15%, -46px) rotate(-9deg);
+    transform: translate(-10%, -38px) rotate(-7deg);
     z-index: 8;
   }
   .su-services-v2__arrow {
