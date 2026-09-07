@@ -1805,7 +1805,7 @@
   }
 }
 
-@media (orientation: portrait) and (min-width: 390px) and (max-width: 390px) {
+@media (min-width: 390px) and (max-width: 390px) {
   .su-hero-v2__heading {
     width: calc(100% - 35px);
     max-width: calc(100% - 35px);
