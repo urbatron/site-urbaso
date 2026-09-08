@@ -761,13 +761,13 @@ main {
 .su-work-v1 {
   position: relative;
   width: 100%;
-  margin-top: -55px;
+  margin-top: -145px;
   padding: 20px 32px 100px;
   background: transparent;
   color: #101010;
 }
 .su-work-v1__container {
-  width: min(1260px, 100%);
+  width: min(1380px, 100%);
   margin-inline: auto;
 }
 .su-work-v1__heading {
@@ -777,28 +777,29 @@ main {
 .su-work-v1__heading h2 {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
-  font-size: 74px;
+  font-size: 82px;
   font-weight: 800;
-  line-height: 0.94;
+  line-height: 0.93;
   letter-spacing: -0.045em;
 }
 .su-work-v1__underline {
   display: block;
-  width: 325px;
+  width: 350px;
   height: auto;
-  margin: 6px 0 0 -3px;
+  margin: 7px 0 0 -4px;
 }
 .su-work-v1__subtitle {
-  margin: 16px 0 0;
+  margin: 17px 0 0;
   font-family: Inter, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
 }
 .su-work-v1__banner {
   position: relative;
-  width: 100%;
-  margin-top: 30px;
+  width: 105%;
+  margin-top: 14px;
+  margin-left: -2.5%;
 }
 .su-work-v1__paper {
   display: block;
@@ -812,6 +813,7 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   padding: 4.3% 6% 4.8%;
+  transform: translateY(-2%);
 }
 .su-work-v1__item {
   position: relative;
@@ -831,15 +833,15 @@ main {
 .su-work-v1__up-to {
   color: #1755d5;
   font-family: Inter, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 800;
   line-height: 1;
-  margin-bottom: -7px;
+  margin-bottom: -8px;
 }
 .su-work-v1__project-number strong {
   color: #1755d5;
   font-family: Arial, Inter, sans-serif;
-  font-size: 132px;
+  font-size: 136px;
   font-weight: 800;
   line-height: 0.82;
   letter-spacing: -0.06em;
@@ -850,44 +852,44 @@ main {
   font-weight: 600;
 }
 .su-work-v1__script--projects {
-  margin-top: 17px;
-  font-size: 41px;
-  line-height: 0.92;
+  margin-top: 18px;
+  font-size: 44px;
+  line-height: 0.91;
 }
 .su-work-v1__time-number {
   color: #1755d5;
   font-family: Arial, Inter, sans-serif;
-  font-size: 128px;
+  font-size: 134px;
   font-weight: 800;
-  line-height: 0.84;
+  line-height: 0.83;
   letter-spacing: -0.06em;
   white-space: nowrap;
 }
 .su-work-v1__script--time {
-  margin-top: 17px;
-  font-size: 41px;
-  line-height: 0.95;
+  margin-top: 18px;
+  font-size: 44px;
+  line-height: 0.94;
 }
 .su-work-v1__small {
   margin-top: 10px;
   font-family: Inter, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
 }
 .su-work-v1__reports-icon {
   display: block;
-  width: 132px;
+  width: 150px;
   height: auto;
   margin: 0 auto;
 }
 .su-work-v1__script--reports {
   margin-top: 12px;
-  font-size: 41px;
-  line-height: 0.95;
+  font-size: 44px;
+  line-height: 0.94;
 }
 .su-work-v1__small--reports {
   margin-top: 11px;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.18;
 }
