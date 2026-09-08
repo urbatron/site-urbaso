@@ -1807,3 +1807,9 @@
     display: none;
   }
 }
+
+@media (max-width: 1279px) {
+  .su-work-v1 {
+    display: none;
+  }
+}
