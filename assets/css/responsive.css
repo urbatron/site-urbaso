@@ -319,10 +319,10 @@
   }
   .su-hero-v2__description {
     width: auto;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 20px;
     padding-right: 12px;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.36;
     white-space: normal;
   }
@@ -330,7 +330,7 @@
   .su-hero-v2__price {
     width: min(clamp(420px, 39vw, 490px), calc(100% + 8px));
     height: clamp(84px, 7.2vw, 92px);
-    margin: 72px 0 0 clamp(-20px, -1.5vw, -14px);
+    margin: 47px 0 0 clamp(-20px, -1.5vw, -14px);
   }
 
   .su-hero-v2__price > div {
@@ -344,6 +344,7 @@
   }
   .su-hero-v2__price > div > span:last-child {
     font-size: clamp(13px, 1.15vw, 15px);
+    left: 9px;
   }
   .su-hero-v2__bottom {
     gap: clamp(8px, 1.55vw, 20px);
