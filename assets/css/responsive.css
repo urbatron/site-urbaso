@@ -1915,53 +1915,53 @@
     line-height: 1.3;
   }
   .su-work-v1__banner {
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 0;
+    width: 104%;
+    margin-top: 18px;
+    margin-left: -2%;
   }
   .su-work-v1__content {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-    padding: 4% 6.5% 4.5%;
-    transform: translateY(-3%);
+    padding: 4.5% 6.5% 5%;
+    transform: translateY(-4%);
   }
   .su-work-v1__up-to {
     margin-bottom: -5px;
-    font-size: 22px;
+    font-size: 20px;
   }
   .su-work-v1__project-number strong {
-    font-size: 88px;
+    font-size: 84px;
     line-height: 0.82;
   }
   .su-work-v1__script--projects {
-    margin-top: 9px;
-    font-size: 29px;
+    margin-top: 8px;
+    font-size: 27px;
     line-height: 0.92;
   }
   .su-work-v1__time-number {
-    font-size: 90px;
+    font-size: 86px;
     line-height: 0.83;
   }
   .su-work-v1__script--time {
-    margin-top: 9px;
-    font-size: 29px;
+    margin-top: 8px;
+    font-size: 27px;
     line-height: 0.94;
   }
   .su-work-v1__small {
-    margin-top: 5px;
+    margin-top: 4px;
     font-size: 15px;
     line-height: 1.2;
   }
   .su-work-v1__reports-icon {
-    width: 98px;
+    width: 92px;
   }
   .su-work-v1__script--reports {
-    margin-top: 6px;
-    font-size: 29px;
+    margin-top: 5px;
+    font-size: 27px;
     line-height: 0.94;
   }
   .su-work-v1__small--reports {
-    margin-top: 5px;
+    margin-top: 4px;
     font-size: 15px;
     line-height: 1.18;
   }
