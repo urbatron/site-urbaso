@@ -303,6 +303,7 @@
 
   .su-hero-v2__heading {
     margin-top: 70px;
+    left: 20px;
   }
 
   .su-hero-v2 h1 {
@@ -319,6 +320,7 @@
   .su-hero-v2__description {
     width: auto;
     margin-top: 50px;
+    margin-left: 20px;
     padding-right: 12px;
     font-size: 21px;
     line-height: 1.36;
