@@ -1810,8 +1810,8 @@
 
 @media (min-width: 900px) and (max-width: 1279px) {
   .su-work-v1 {
-    margin-top: -95px;
-    padding: 20px 36px 90px;
+    margin-top: -72px;
+    padding: 20px 36px 88px;
   }
   .su-work-v1__container {
     width: 100%;
@@ -1823,8 +1823,8 @@
     letter-spacing: -0.045em;
   }
   .su-work-v1__underline {
-    width: clamp(250px, 22vw, 280px);
-    margin: 6px 0 0 -3px;
+    width: clamp(242px, 21vw, 270px);
+    margin: 5px 0 0 -3px;
   }
   .su-work-v1__subtitle {
     margin-top: 14px;
@@ -1832,9 +1832,9 @@
     line-height: 1.3;
   }
   .su-work-v1__banner {
-    width: 102%;
-    margin-top: 20px;
-    margin-left: -1%;
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 0;
   }
   .su-work-v1__paper {
     width: 100%;
@@ -1843,47 +1843,47 @@
   .su-work-v1__content {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-    padding: 4.5% 7% 5%;
+    padding: 5% 7.5% 5.3%;
     transform: translateY(-2%);
   }
   .su-work-v1__up-to {
     margin-bottom: -6px;
-    font-size: clamp(25px, 2.15vw, 28px);
+    font-size: clamp(24px, 2vw, 27px);
   }
   .su-work-v1__project-number strong {
-    font-size: clamp(108px, 8.9vw, 114px);
+    font-size: clamp(102px, 8.4vw, 108px);
     line-height: 0.82;
   }
   .su-work-v1__script--projects {
-    margin-top: 14px;
-    font-size: clamp(34px, 2.85vw, 36px);
+    margin-top: 13px;
+    font-size: clamp(32px, 2.7vw, 35px);
     line-height: 0.92;
   }
   .su-work-v1__time-number {
-    font-size: clamp(108px, 8.9vw, 114px);
+    font-size: clamp(102px, 8.4vw, 108px);
     line-height: 0.83;
   }
   .su-work-v1__script--time {
-    margin-top: 14px;
-    font-size: clamp(34px, 2.85vw, 36px);
+    margin-top: 13px;
+    font-size: clamp(32px, 2.7vw, 35px);
     line-height: 0.94;
   }
   .su-work-v1__small {
-    margin-top: 8px;
-    font-size: clamp(16px, 1.4vw, 18px);
+    margin-top: 7px;
+    font-size: clamp(15px, 1.35vw, 17px);
     line-height: 1.2;
   }
   .su-work-v1__reports-icon {
-    width: clamp(116px, 9.6vw, 122px);
+    width: clamp(110px, 9.2vw, 118px);
   }
   .su-work-v1__script--reports {
-    margin-top: 10px;
-    font-size: clamp(34px, 2.85vw, 36px);
+    margin-top: 9px;
+    font-size: clamp(32px, 2.7vw, 35px);
     line-height: 0.94;
   }
   .su-work-v1__small--reports {
-    margin-top: 8px;
-    font-size: clamp(16px, 1.4vw, 18px);
+    margin-top: 7px;
+    font-size: clamp(15px, 1.35vw, 17px);
     line-height: 1.18;
   }
 }
