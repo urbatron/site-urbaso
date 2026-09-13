@@ -1968,8 +1968,15 @@
 }
 
 @media (max-width: 767px) {
+  .su-hero-v2__price > div > span:first-child {
+    font-size: 50px;
+    line-height: 0.9;
+  }
+  .su-hero-v2__price > div > span:last-child {
+    margin-left: 8px;
+  }
   .su-work-v1 {
-    margin-top: -145px;
+    margin-top: -110px;
     padding: 18px 14px 56px;
   }
   .su-work-v1__container {
