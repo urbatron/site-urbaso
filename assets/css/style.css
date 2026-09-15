@@ -1049,37 +1049,37 @@ main {
   }
 
   .su-results-v1__case-arrow {
-    left: -4%;
-    top: 17%;
-    width: 13%;
+    left: 56%;
+    top: 19%;
+    width: 15%;
   }
 
   .su-results-v1__case-marks {
-    right: 13%;
-    top: 5%;
-    width: 8%;
+    right: 1.5%;
+    top: 9%;
+    width: 9%;
   }
 
   .su-results-v1__case-content {
     position: absolute;
-    left: 9.5%;
-    top: 29%;
+    left: 8%;
+    top: 39.5%;
     z-index: 2;
-    width: 50%;
+    width: 57%;
     font-family: Inter, Arial, sans-serif;
   }
 
   .su-results-v1__case-content h3 {
     margin: 0;
-    font-size: clamp(31px, 2.55vw, 39px);
+    font-size: clamp(34px, 2.7vw, 41px);
     font-weight: 800;
     line-height: 1;
     letter-spacing: -0.035em;
   }
 
   .su-results-v1__case-subtitle {
-    margin: 7px 0 17px;
-    font-size: clamp(14px, 1.15vw, 17px);
+    margin: 9px 0 22px;
+    font-size: clamp(17px, 1.25vw, 19px);
     line-height: 1.25;
   }
 
@@ -1087,13 +1087,13 @@ main {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    font-size: clamp(13px, 1.05vw, 16px);
+    font-size: clamp(18px, 1.32vw, 20px);
     line-height: 1.2;
   }
 
   .su-results-v1__table th,
   .su-results-v1__table td {
-    padding: 9px 7px;
+    padding: 12px 6px;
     border: 0;
     border-bottom: 1px solid rgba(16, 16, 16, 0.18);
     text-align: left;
@@ -1128,9 +1128,9 @@ main {
     position: relative;
     display: inline-flex;
     flex-direction: column;
-    margin-top: 16px;
+    margin-top: 21px;
     font-family: Caveat, "Segoe Print", "Bradley Hand", cursive;
-    font-size: clamp(21px, 1.75vw, 27px);
+    font-size: clamp(29px, 2.15vw, 33px);
     font-weight: 600;
     line-height: 1;
     transform: rotate(-1deg);
