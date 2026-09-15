@@ -1160,6 +1160,7 @@ main {
     top: -217.3%;
     display: block;
     width: 106.26%;
+    max-width: none;
     height: auto;
   }
 
