@@ -959,7 +959,7 @@ main {
   .su-results-v1__facts {
     position: relative;
     z-index: 3;
-    padding: 9px 0 0 8px;
+    padding: 40px 0 0 8px;
   }
 
   .su-results-v1__fact + .su-results-v1__fact {
@@ -981,6 +981,12 @@ main {
     width: 320px;
     height: 70px;
     margin: 8px 0 0 -10px;
+  }
+
+  .su-results-v1__fact:first-child .su-results-v1__fact-caption {
+    width: 350px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .su-results-v1__fact-caption img {
@@ -1006,6 +1012,10 @@ main {
     line-height: 1;
     white-space: nowrap;
     transform: rotate(-1deg);
+  }
+
+  .su-results-v1__fact:first-child .su-results-v1__fact-caption span {
+    font-size: clamp(30px, 2.2vw, 32px);
   }
 
   .su-results-v1__fact-caption--projects {
