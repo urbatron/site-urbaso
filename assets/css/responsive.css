@@ -2746,3 +2746,9 @@
     text-align: left;
   }
 }
+
+@media (min-width: 600px) {
+  .su-results-v1__conclusion--mobile {
+    display: none;
+  }
+}
