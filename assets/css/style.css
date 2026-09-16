@@ -894,9 +894,9 @@ main {
   line-height: 1.18;
 }
 
-/* Desktop results collage. Its assets remain server-hosted in /images/four. */
+/* Results collage. Its assets remain server-hosted in /assets/images/four. */
 .su-results-v1 {
-  display: none;
+  display: block;
 }
 
 @media (min-width: 1280px) {
