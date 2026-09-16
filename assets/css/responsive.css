@@ -442,6 +442,11 @@
   .su-results-v1__fact + .su-results-v1__fact {
     margin-top: 30px;
   }
+  .su-results-v1__fact:first-child .su-results-v1__fact-caption span {
+    padding-right: 28px;
+    padding-left: 28px;
+    font-size: clamp(22px, 2.1vw, 25px);
+  }
   .su-results-v1__companies {
     margin-top: 39px;
   }
@@ -475,8 +480,14 @@
     white-space: nowrap;
   }
   .su-results-v1__conclusion {
+    width: max-content;
+    max-width: 100%;
     margin-top: 14px;
     font-size: clamp(20px, 2.15vw, 27px);
+    line-height: 1.15;
+  }
+  .su-results-v1__conclusion-text > span {
+    display: block;
   }
 }
 
