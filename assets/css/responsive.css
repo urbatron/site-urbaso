@@ -814,6 +814,18 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 599px) {
+  .su-results-v1__number {
+    font-size: clamp(64px, 18vw, 72px);
+  }
+
+  .su-results-v1__fact:first-child .su-results-v1__fact-caption span {
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: clamp(15px, 4.1vw, 18px);
+  }
+}
+
 @media (max-width: 359px) {
   .su-results-v1__facts {
     grid-template-columns: 1fr;
