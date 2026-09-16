@@ -211,6 +211,10 @@
 
 /* Results: the desktop collage is unchanged above 1280px; smaller layouts use
    real element dimensions so the case remains readable without scaling it. */
+.su-results-v1__conclusion--mobile {
+  display: none;
+}
+
 @media (max-width: 1279px) {
   .su-results-v1 {
     position: relative;
@@ -748,21 +752,22 @@
     display: contents;
     margin-top: 0;
   }
-  .su-results-v1__case-content h3 {
+  .su-results-v1__case-copy {
     position: absolute;
     left: 8%;
     top: calc((100vw - 28px) * 0.395);
     z-index: 2;
     width: 54%;
+  }
+  .su-results-v1__case-content h3 {
+    position: static;
+    width: auto;
     font-size: clamp(19px, 6.2vw, 27px);
   }
   .su-results-v1__case-subtitle {
-    position: absolute;
-    left: 8%;
-    top: calc((100vw - 28px) * 0.445);
-    z-index: 2;
-    width: 49%;
-    margin: 0;
+    position: static;
+    width: 91%;
+    margin: 7px 0 0;
     font-size: clamp(10px, 3vw, 14px);
     line-height: 1.15;
   }
@@ -785,14 +790,18 @@
   .su-results-v1__table tr > :nth-child(3) {
     font-variant-numeric: tabular-nums;
   }
-  .su-results-v1__conclusion {
-    position: absolute;
-    left: 8%;
-    top: calc((100vw - 28px) * 0.51);
-    z-index: 2;
-    width: 48%;
+  .su-results-v1__conclusion--default {
+    display: none;
+  }
+  .su-results-v1__conclusion--mobile {
+    position: relative;
+    left: auto;
+    top: auto;
+    z-index: auto;
+    display: inline-flex;
+    width: 89%;
     max-width: none;
-    margin: 0;
+    margin: 11px 0 0;
     font-size: clamp(17px, 5.1vw, 23px);
     line-height: 0.95;
   }
