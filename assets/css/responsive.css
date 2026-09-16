@@ -539,6 +539,139 @@
   }
 }
 
+/* Results composition for portrait tablets. Keep this override isolated from
+   both the approved desktop collage and the compact mobile layout. */
+@media (min-width: 600px) and (max-width: 899px) {
+  .su-results-v1 {
+    padding: 24px 20px 72px;
+  }
+
+  .su-results-v1__layout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .su-results-v1__case {
+    order: 1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .su-results-v1__case-art {
+    width: 100%;
+    height: auto;
+  }
+
+  .su-results-v1__case-arrow {
+    left: 49%;
+    top: 20%;
+    width: 13%;
+  }
+
+  .su-results-v1__case-marks {
+    right: 1.5%;
+    top: 9%;
+    width: 9%;
+  }
+
+  .su-results-v1__case-content {
+    position: absolute;
+    left: 8%;
+    top: 39.5%;
+    width: 62.5%;
+    margin-top: 0;
+  }
+
+  .su-results-v1__case-content h3 {
+    font-size: clamp(27px, 4.15vw, 34px);
+    line-height: 1;
+  }
+
+  .su-results-v1__case-subtitle {
+    margin: 5px 0 clamp(8px, 1.5vw, 12px);
+    font-size: clamp(13px, 1.95vw, 16px);
+    line-height: 1.2;
+  }
+
+  .su-results-v1__table {
+    font-size: clamp(16px, 2.35vw, 18px);
+    line-height: 1.15;
+  }
+
+  .su-results-v1__table th,
+  .su-results-v1__table td {
+    padding: clamp(6px, 1vw, 8px) 3px;
+  }
+
+  .su-results-v1__conclusion {
+    width: max-content;
+    max-width: 100%;
+    margin-top: clamp(9px, 1.5vw, 12px);
+    font-size: clamp(20px, 3vw, 24px);
+    line-height: 1.05;
+  }
+
+  .su-results-v1__conclusion-text > span {
+    display: block;
+  }
+
+  .su-results-v1__conclusion-line {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .su-results-v1__facts {
+    position: relative;
+    z-index: 3;
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 24px;
+    margin-top: clamp(-42px, -4.8vw, -29px);
+    padding-top: 4px;
+  }
+
+  .su-results-v1__fact {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .su-results-v1__number {
+    font-size: clamp(88px, 13.5vw, 112px);
+  }
+
+  .su-results-v1__fact-caption,
+  .su-results-v1__fact-caption--projects {
+    width: min(100%, 280px);
+    height: 58px;
+    margin: 7px auto 0;
+  }
+
+  .su-results-v1__fact-caption span,
+  .su-results-v1__fact:first-child .su-results-v1__fact-caption span {
+    padding: 0 12px 4px;
+    font-size: clamp(22px, 3.15vw, 25px);
+  }
+
+  .su-results-v1__companies {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+
+  .su-results-v1__companies p {
+    margin-bottom: 12px;
+  }
+
+  .su-results-v1__company-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 24px;
+    width: 100%;
+    font-size: clamp(17px, 2.35vw, 19px);
+    text-align: left;
+  }
+}
+
 @media (max-width: 599px) {
   .su-results-v1 {
     padding: 20px 14px 56px;
