@@ -1,6 +1,105 @@
 :root {
   --blue: #1755d5;
 }
+
+/* Benefits. Every rule is scoped to the fifth section. */
+.su-benefits-v1 {
+  width: 100%;
+  padding: 0 32px 120px;
+  color: #101010;
+}
+.su-benefits-v1__container {
+  width: min(1380px, 100%);
+  margin-inline: auto;
+}
+.su-benefits-v1__title {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 82px;
+  font-weight: 800;
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+}
+.su-benefits-v1__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(54px, 5vw, 82px);
+  align-items: stretch;
+  margin-top: 58px;
+}
+.su-benefits-v1__primary {
+  position: relative;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.su-benefits-v1__primary-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.su-benefits-v1__primary-copy {
+  position: absolute;
+  z-index: 1;
+  left: 12.5%;
+  right: 12%;
+  top: 45%;
+  color: #fff;
+}
+.su-benefits-v1__primary-copy h3 {
+  margin: 0;
+  font-family: Caveat, "Segoe Print", "Bradley Hand", cursive;
+  font-size: clamp(49px, 4vw, 62px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.su-benefits-v1__primary-copy p {
+  max-width: 470px;
+  margin: 28px 0 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(19px, 1.55vw, 23px);
+  line-height: 1.35;
+}
+.su-benefits-v1__list {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  min-width: 0;
+}
+.su-benefits-v1__item {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 25px;
+  align-items: center;
+  min-width: 0;
+  padding: 23px 0;
+}
+.su-benefits-v1__number {
+  display: block;
+  width: 124px;
+  max-height: 132px;
+  object-fit: contain;
+}
+.su-benefits-v1__copy h3 {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(28px, 2.15vw, 34px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.su-benefits-v1__copy p {
+  margin: 13px 0 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(18px, 1.4vw, 21px);
+  font-weight: 400;
+  line-height: 1.35;
+}
+.su-benefits-v1__divider {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 html {
   overflow-x: hidden;
   background: #f7f5ef;
