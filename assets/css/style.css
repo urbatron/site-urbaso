@@ -100,6 +100,16 @@
   width: 100%;
   height: auto;
 }
+@media (min-width: 1280px) {
+  .su-benefits-v1__number {
+    align-self: start;
+    justify-self: center;
+    width: 88px;
+  }
+  .su-benefits-v1__primary-copy p span {
+    display: block;
+  }
+}
 html {
   overflow-x: hidden;
   background: #f7f5ef;
