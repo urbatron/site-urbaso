@@ -2879,7 +2879,7 @@
   .su-benefits-v1__primary-copy {
     left: 12%;
     right: 11%;
-    top: 44%;
+    top: calc(44% - 20px);
   }
   .su-benefits-v1__primary-copy h3 {
     font-size: clamp(35px, 11vw, 47px);
