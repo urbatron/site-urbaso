@@ -2766,6 +2766,12 @@
 }
 
 /* Fifth section: retain the paired composition through 900px. */
+@media (max-width: 1279px) {
+  .su-benefits-v1__primary-copy p span:last-child {
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 900px) and (max-width: 1279px) {
   .su-benefits-v1 {
     padding: 0 28px 94px;
