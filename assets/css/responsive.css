@@ -2912,6 +2912,9 @@
 }
 
 @media (max-width: 359px) {
+  .su-benefits-v1__title {
+    font-size: 35px;
+  }
   .su-benefits-v1__primary-copy h3 {
     font-size: 34px;
   }
