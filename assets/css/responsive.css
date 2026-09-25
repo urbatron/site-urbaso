@@ -2786,6 +2786,24 @@
 }
 
 @media (min-width: 900px) and (max-width: 1279px) {
+  .su-qualification-v1__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 56%) minmax(0, 1fr);
+    column-gap: clamp(32px, 4vw, 48px);
+    align-items: start;
+  }
+  .su-qualification-v1__title {
+    grid-row: 1 / span 2;
+  }
+  .su-qualification-v1__description {
+    margin-top: 0;
+  }
+  .su-qualification-v1__all {
+    margin-top: 27px;
+  }
+  .su-qualification-v1__previews {
+    margin-top: clamp(32px, 3.5vw, 40px);
+  }
   .su-benefits-v1 {
     padding: 0 28px 94px;
   }
