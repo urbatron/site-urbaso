@@ -110,6 +110,178 @@
     display: block;
   }
 }
+
+/* Qualification. Every rule is scoped to the sixth section and its viewer. */
+.su-qualification-v1 {
+  width: 100%;
+  padding: 0 32px 120px;
+  color: #101010;
+}
+.su-qualification-v1__container {
+  display: grid;
+  grid-template-columns: minmax(350px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(42px, 4.2vw, 72px);
+  align-items: start;
+  width: min(1380px, 100%);
+  margin-inline: auto;
+}
+.su-qualification-v1__title {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(54px, 3.55vw, 62px);
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+.su-qualification-v1__description {
+  margin: 31px 0 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1.28;
+}
+.su-qualification-v1__all,
+.su-qualification-v1__original {
+  color: #1755d5;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.su-qualification-v1__all {
+  display: inline-block;
+  margin-top: 27px;
+  font-size: 23px;
+}
+.su-qualification-v1__previews {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 1.8vw, 30px);
+  min-width: 0;
+}
+.su-qualification-v1__certificate {
+  display: grid;
+  grid-template-rows: 286px auto;
+  gap: 17px;
+  min-width: 0;
+  margin: 0;
+}
+.su-qualification-v1__preview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  height: 286px;
+}
+.su-qualification-v1__preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  filter: drop-shadow(0 3px 4px rgba(26, 28, 34, 0.12));
+}
+.su-qualification-v1__certificate figcaption {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 1.25;
+  text-align: center;
+}
+.su-qualification-v1__dialog {
+  width: min(1120px, calc(100vw - 48px));
+  max-width: none;
+  height: min(900px, calc(100vh - 48px));
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  color: #101010;
+  border: 0;
+  background: #f7f5ef;
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.32);
+}
+.su-qualification-v1__dialog::backdrop {
+  background: rgba(12, 15, 22, 0.76);
+}
+.su-qualification-v1__viewer {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  height: 100%;
+  padding: 22px 26px 19px;
+}
+.su-qualification-v1__viewer-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 17px;
+}
+.su-qualification-v1__viewer-heading {
+  min-width: 0;
+}
+.su-qualification-v1__counter {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 15px;
+}
+.su-qualification-v1__viewer-heading h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.su-qualification-v1__close,
+.su-qualification-v1__arrow {
+  flex: 0 0 auto;
+  color: #101010;
+  border: 1px solid rgba(16, 16, 16, 0.25);
+  background: transparent;
+  cursor: pointer;
+}
+.su-qualification-v1__close {
+  width: 42px;
+  height: 42px;
+  font-size: 32px;
+  line-height: 36px;
+}
+.su-qualification-v1__document {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 50px;
+  gap: 20px;
+  align-items: center;
+  min-height: 0;
+}
+.su-qualification-v1__full-image {
+  display: block;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.su-qualification-v1__arrow {
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+}
+.su-qualification-v1__close:hover,
+.su-qualification-v1__arrow:hover {
+  border-color: #1755d5;
+  color: #1755d5;
+}
+.su-qualification-v1__close:focus-visible,
+.su-qualification-v1__arrow:focus-visible,
+.su-qualification-v1__all:focus-visible,
+.su-qualification-v1__preview:focus-visible,
+.su-qualification-v1__original:focus-visible {
+  outline: 3px solid #1755d5;
+  outline-offset: 3px;
+}
+.su-qualification-v1__viewer-footer {
+  padding-top: 16px;
+  text-align: center;
+}
+.su-qualification-v1__original {
+  font-size: 16px;
+}
 html {
   overflow-x: hidden;
   background: #f7f5ef;
