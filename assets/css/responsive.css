@@ -2783,13 +2783,6 @@
   .su-qualification-v1__previews {
     margin-top: 44px;
   }
-  .su-qualification-v1__certificate,
-  .su-qualification-v1__preview {
-    height: auto;
-  }
-  .su-qualification-v1__certificate {
-    grid-template-rows: minmax(220px, 32vw) auto;
-  }
 }
 
 @media (min-width: 900px) and (max-width: 1279px) {
@@ -2901,9 +2894,6 @@
     grid-template-columns: 1fr;
     gap: 32px;
     margin-top: 36px;
-  }
-  .su-qualification-v1__certificate {
-    grid-template-rows: minmax(270px, 105vw) auto;
   }
   .su-qualification-v1__dialog {
     width: calc(100vw - 20px);
