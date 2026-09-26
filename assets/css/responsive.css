@@ -2984,6 +2984,9 @@
 }
 
 @media (max-width: 359px) {
+  .su-qualification-v1__title {
+    font-size: 36px;
+  }
   .su-benefits-v1__title {
     font-size: 35px;
   }
