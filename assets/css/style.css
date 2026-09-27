@@ -437,6 +437,7 @@
 .su-references-v1__letter-link:focus-visible,
 .su-references-v1__letter figcaption a:focus-visible,
 .su-references-v1__close:focus-visible,
+.su-references-v1__zoom:focus-visible,
 .su-references-v1__viewer-footer a:focus-visible {
   outline: 3px solid #1755d5;
   outline-offset: 4px;
@@ -474,6 +475,23 @@
   font-size: 21px;
   line-height: 1.25;
 }
+.su-references-v1__viewer-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  align-items: center;
+}
+.su-references-v1__zoom {
+  min-height: 42px;
+  padding: 8px 15px;
+  color: #1755d5;
+  border: 1px solid rgba(23, 85, 213, .45);
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  cursor: pointer;
+}
 .su-references-v1__close {
   flex: 0 0 auto;
   width: 42px;
@@ -498,6 +516,19 @@
   height: 100%;
   object-fit: contain;
 }
+.su-references-v1__dialog--zoomed .su-references-v1__image-area {
+  display: block;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.su-references-v1__dialog--zoomed .su-references-v1__image-area img {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: auto;
+  object-fit: initial;
+}
 .su-references-v1__viewer-footer {
   padding-top: 14px;
   text-align: center;
@@ -517,6 +548,10 @@
   .su-references-v1__description { margin-top: 38px; font-size: 20px; }
   .su-references-v1__button { min-height: 59px; margin-top: 29px; font-size: 19px; }
   .su-references-v1__arrow { left: 44.5%; top: 20%; width: clamp(48px, 5.5vw, 66px); }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) {
+  .su-references-v1__arrow { left: calc(43% + 16px); }
 }
 
 @media (max-width: 899px) {
@@ -546,10 +581,13 @@
   .su-references-v1__letter figcaption { margin-top: 26px; font-size: 17px; }
   .su-references-v1__dialog { width: calc(100vw - 20px); height: calc(100vh - 20px); }
   .su-references-v1__viewer { padding: 13px 11px; }
-  .su-references-v1__viewer-header { gap: 10px; padding-bottom: 11px; }
+  .su-references-v1__viewer-header { flex-wrap: wrap; gap: 10px; padding-bottom: 11px; }
   .su-references-v1__viewer-header h3 { font-size: 16px; }
+  .su-references-v1__viewer-actions { width: 100%; gap: 6px; justify-content: flex-end; }
+  .su-references-v1__zoom { min-height: 40px; padding: 7px 9px; font-size: 14px; }
   .su-references-v1__close { width: 40px; height: 40px; }
   .su-references-v1__viewer-footer { padding-top: 10px; }
+  .su-references-v1__dialog--zoomed .su-references-v1__image-area img { width: 760px; max-width: none; }
 }
 
 @media (max-width: 359px) {

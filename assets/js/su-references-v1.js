@@ -4,11 +4,20 @@
 
   const dialog = section.querySelector('.su-references-v1__dialog');
   const closeButton = section.querySelector('.su-references-v1__close');
+  const zoomButton = section.querySelector('.su-references-v1__zoom');
+  const imageArea = section.querySelector('.su-references-v1__image-area');
   const triggers = section.querySelectorAll('[data-su-references-open]');
   let opener = null;
   let scrollY = 0;
   let savedBodyStyles = null;
   let savedHtmlOverflow = '';
+
+  const setZoomed = (zoomed) => {
+    dialog.classList.toggle('su-references-v1__dialog--zoomed', zoomed);
+    zoomButton.textContent = zoomed ? 'Показать целиком' : 'Увеличить';
+    zoomButton.setAttribute('aria-pressed', String(zoomed));
+    imageArea.scrollTo(0, 0);
+  };
 
   const lockPage = () => {
     scrollY = window.scrollY;
@@ -45,6 +54,7 @@
 
   const openLetter = (trigger) => {
     opener = trigger;
+    setZoomed(false);
     lockPage();
     dialog.showModal();
     closeButton.focus();
@@ -59,6 +69,9 @@
   });
 
   closeButton.addEventListener('click', () => dialog.close());
+  zoomButton.addEventListener('click', () => {
+    setZoomed(!dialog.classList.contains('su-references-v1__dialog--zoomed'));
+  });
 
   dialog.addEventListener('click', (event) => {
     if (event.target !== dialog) return;
