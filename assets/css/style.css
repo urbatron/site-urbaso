@@ -550,15 +550,17 @@
   .su-references-v1__arrow { left: 44.5%; top: 20%; width: clamp(48px, 5.5vw, 66px); }
 }
 
-@media (min-width: 1280px) and (max-width: 1366px) {
+@media (min-width: 1280px) {
   .su-references-v1__arrow {
-    left: calc(43% + 14vw - 163.2px);
-  }
-}
-
-@media (min-width: 1367px) and (max-width: 1495px) {
-  .su-references-v1__arrow {
-    left: calc(43% + 324.422px - 21.7vw);
+    left: calc(
+      43% + max(
+        0px,
+        min(
+          calc(14vw - 163.2px),
+          calc(324.422px - 21.7vw)
+        )
+      )
+    );
   }
 }
 
