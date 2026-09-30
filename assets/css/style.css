@@ -1879,6 +1879,11 @@ main {
   .su-situations-v1__tab, .su-situations-v1__panel, .su-situations-v1__line { animation: none; transition: none; }
 }
 
+/* Reduce only the desktop gap between the seventh and eighth sections. */
+@media (min-width: 1200px) {
+  .su-references-v1 { padding-bottom: 72px; }
+}
+
 /* Eighth section desktop composition. Keep tablet and phone layouts untouched. */
 @media (min-width: 1200px) {
   .su-situations-v1 { padding: 7px 24px; }
