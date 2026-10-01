@@ -1799,6 +1799,7 @@ main {
 .su-situations-v1__container { width: min(1380px, 100%); margin-inline: auto; }
 .su-situations-v1__header h2 { margin: 0; font-family: Inter, Arial, sans-serif; font-size: clamp(64px, 6vw, 86px); font-weight: 800; line-height: .94; letter-spacing: -.05em; }
 .su-situations-v1__header p { margin: 18px 0 0; font: 400 22px/1.3 Inter, Arial, sans-serif; }
+.su-situations-v1__tablet-title-break { display: none; }
 .su-situations-v1__layout { display: grid; grid-template-columns: minmax(300px, 36%) minmax(0, 1fr); gap: clamp(35px, 4vw, 66px); align-items: start; margin-top: 48px; }
 .su-situations-v1__tabs { display: grid; gap: 15px; padding-top: 72px; }
 .su-situations-v1__tab { width: 100%; min-height: 112px; border: 0; padding: 24px 12% 25px; cursor: pointer; color: #101010; background: center/100% 100% no-repeat; font: 700 clamp(20px, 1.65vw, 25px)/1.18 Inter, Arial, sans-serif; text-align: left; overflow-wrap: normal; transition: color 180ms ease, filter 180ms ease; }
@@ -1890,7 +1891,8 @@ main {
     height: 620px;
   }
   .su-situations-v1__header { grid-column: 1; grid-row: 1; align-self: start; }
-  .su-situations-v1__header h2 { font-size: 64px; }
+  .su-situations-v1__header h2 { font-size: 56px; line-height: .94; }
+  .su-situations-v1__tablet-title-break { display: block; }
   .su-situations-v1__header p { margin-top: 10px; font-size: 18px; }
   .su-situations-v1__layout { display: contents; margin-top: 0; }
   .su-situations-v1__tabs {
