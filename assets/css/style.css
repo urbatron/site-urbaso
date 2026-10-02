@@ -1881,8 +1881,8 @@ main {
   .su-situations-v1__tab, .su-situations-v1__panel, .su-situations-v1__line { animation: none; transition: none; }
 }
 
-/* Eighth section: content-driven paper composition for 360–479px only. */
-@media (min-width: 360px) and (max-width: 479px) {
+/* Eighth section: content-driven paper composition for 320–479px only. */
+@media (min-width: 320px) and (max-width: 479px) {
   .su-situations-v1 { padding: 24px 14px; }
   .su-situations-v1__header h2 {
     font-size: 44px; line-height: .94; white-space: nowrap;
@@ -1966,7 +1966,7 @@ main {
   }
 }
 
-@media (min-width: 360px) and (max-width: 389px) {
+@media (min-width: 320px) and (max-width: 389px) {
   .su-situations-v1__header h2 { font-size: calc(13.333vw - 8px); }
   .su-situations-v1__narrow-answer-break { display: block; }
 }
