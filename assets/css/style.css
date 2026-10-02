@@ -1909,24 +1909,24 @@ main {
     background-repeat: no-repeat; background-size: 100% auto; transform: translateX(-50%);
   }
   .su-situations-v1__paper-part--top {
-    top: 0; height: 213px; background-position: top center;
+    top: 0; height: calc(58.84vw - 16.48px); background-position: top center;
   }
   .su-situations-v1__paper-part--middle {
-    top: 211px; bottom: 34px; height: auto;
-    border: solid transparent; border-width: 0 27px; background: none;
+    top: calc(58.29vw - 16.32px); bottom: calc(9.39vw - 2.63px); height: auto;
+    border: solid transparent; border-width: 0 calc(7.46vw - 2.09px); background: none;
     border-image-source: url('/assets/images/eight/5.webp');
     border-image-slice: 620 75 220 75 fill;
-    border-image-width: 0 27px;
+    border-image-width: 0 calc(7.46vw - 2.09px);
     border-image-repeat: stretch;
   }
   .su-situations-v1__paper-part--middle::after { content: none; }
   .su-situations-v1__paper-part--bottom {
-    bottom: 0; height: 36px; background-position: bottom center;
+    bottom: 0; height: calc(9.94vw - 2.78px); background-position: bottom center;
   }
 
   .su-situations-v1__panels {
     position: relative; z-index: 4; width: calc(100% - 52px); margin-inline: auto;
-    padding: 195px 0 50px;
+    padding: calc(48.5vw + 6.42px) 0 50px;
   }
   .su-situations-v1__note {
     top: 18px; right: auto; left: 10px; width: 94px;
