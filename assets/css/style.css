@@ -1965,6 +1965,10 @@ main {
   }
 }
 
+@media (min-width: 360px) and (max-width: 389px) {
+  .su-situations-v1__header h2 { font-size: calc(13.333vw - 8px); }
+}
+
 /* Eighth section: textured paper composition for 480–599px only. */
 @media (min-width: 480px) and (max-width: 599px) {
   .su-situations-v1 { padding: 24px 14px; }
