@@ -1823,6 +1823,7 @@ main {
 .su-situations-v1__panel[hidden] { display: none; }
 .su-situations-v1__panel h3 { max-width: 72%; margin: 0; font-size: clamp(29px, 2.5vw, 39px); font-weight: 800; line-height: 1.06; letter-spacing: -.035em; }
 .su-situations-v1__desktop-break { display: none; }
+.su-situations-v1__narrow-answer-break { display: none; }
 .su-situations-v1__line { display: block; width: min(67%, 475px); height: 16px; margin: 7px 0 14px; object-fit: fill; pointer-events: none; animation: su-situations-line-in 230ms ease-out; transform-origin: left; }
 .su-situations-v1__lead { max-width: 85%; margin: 0; font-size: clamp(17px, 1.45vw, 21px); line-height: 1.35; }
 .su-situations-v1 dl { display: grid; gap: 15px; margin: 25px 0 0; }
@@ -1967,6 +1968,7 @@ main {
 
 @media (min-width: 360px) and (max-width: 389px) {
   .su-situations-v1__header h2 { font-size: calc(13.333vw - 8px); }
+  .su-situations-v1__narrow-answer-break { display: block; }
 }
 
 /* Eighth section: textured paper composition for 480–599px only. */
