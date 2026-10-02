@@ -1896,7 +1896,7 @@ main {
     min-height: 90px; padding: 14px 8%; font-size: 18px; line-height: 1.15;
   }
   .su-situations-v1__answer {
-    width: 100%; height: 780px; min-height: 0;
+    width: 100%; height: auto; min-height: 0;
     margin: 18px auto 0; aspect-ratio: auto; background: none;
   }
 
@@ -1913,19 +1913,25 @@ main {
     top: 0; height: 266px; background-position: top center;
   }
   .su-situations-v1__paper-part--middle {
-    top: 264px; height: 473px; background-position: center -264px;
+    top: 264px;
+    bottom: 43px;
+    height: auto;
+    border: solid transparent;
+    border-width: 0 34px;
+    background: none;
+    border-image-source: url('/assets/images/eight/5.webp');
+    border-image-slice: 620 75 220 75 fill;
+    border-image-width: 0 34px;
+    border-image-repeat: stretch;
   }
-  .su-situations-v1__paper-part--middle::after {
-    content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 208px;
-    background: url('/assets/images/eight/5.webp') center -300px / 452px auto no-repeat;
-  }
+  .su-situations-v1__paper-part--middle::after { content: none; }
   .su-situations-v1__paper-part--bottom {
     bottom: 0; height: 45px; background-position: bottom center;
   }
 
   .su-situations-v1__panels {
     position: relative; z-index: 4; width: 388px; margin-inline: auto;
-    padding: 175px 0 55px;
+    padding: 226px 0 55px;
   }
   .su-situations-v1__note {
     top: 15px; right: max(0px, calc(50% - 224px)); width: 76px;
