@@ -1,0 +1,103 @@
+/* Section nine is isolated from the accepted sections and their breakpoints. */
+.su-contacts-v1 {
+  padding: clamp(56px, 6vw, 100px) 32px 40px;
+  color: #101010;
+}
+.su-contacts-v1__container { width: min(1380px, 100%); margin-inline: auto; }
+.su-contacts-v1 h2 {
+  margin: 0;
+  font-size: clamp(48px, 5.6vw, 82px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.su-contacts-v1__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(32px, 4.5vw, 72px);
+  margin-top: 38px;
+}
+.su-contacts-v1__notice { position: relative; min-width: 0; container-type: inline-size; }
+.su-contacts-v1__paper { width: 100%; height: auto; pointer-events: none; }
+.su-contacts-v1__identity { position: absolute; top: 18%; left: 12%; right: 8%; }
+.su-contacts-v1__name { font-size: 7.1cqw; font-weight: 800; line-height: 1.04; letter-spacing: -.035em; }
+.su-contacts-v1__specialty { margin-top: 1.4cqw; font-size: max(11px, 3.15cqw); line-height: 1.3; }
+.su-contacts-v1__phone {
+  display: inline-block;
+  margin-top: 3.5cqw;
+  color: #0048ff;
+  font-size: 7.25cqw;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.su-contacts-v1__strips {
+  position: absolute;
+  top: 64%; left: 6%; width: 62%; height: 30%;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  transform: rotate(-2.1deg);
+  pointer-events: none;
+}
+.su-contacts-v1__strips span {
+  justify-self: center; align-self: center;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  color: #0048ff; font-size: 2.65cqw; font-weight: 700; white-space: nowrap;
+}
+/* The supplied paper already contains the arrow. Only show the lettering
+   from 2.webp so the finished notice has exactly one arrow. Originals stay intact. */
+.su-contacts-v1__note {
+  position: absolute; top: 45%; right: 2%; width: 17%;
+  aspect-ratio: 300 / 180; overflow: hidden; pointer-events: none;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 60% 90%, 60% 100%, 0 100%);
+}
+.su-contacts-v1__note img { width: 100%; max-width: none; }
+.su-contacts-v1__save {
+  position: absolute; left: 67%; top: 57%; width: 31%; height: 40%;
+  border-radius: 8px; cursor: pointer;
+  transition: box-shadow .18s ease, background-color .18s ease;
+}
+.su-contacts-v1__save:hover { background: rgb(0 72 255 / 4%); box-shadow: 0 5px 16px rgb(0 72 255 / 12%); }
+.su-contacts-v1__message { padding-top: 10%; }
+.su-contacts-v1 h3 { font-size: clamp(34px, 3.7vw, 54px); font-weight: 800; line-height: 1.02; letter-spacing: -.035em; }
+.su-contacts-v1__message p { margin-top: 24px; font-size: clamp(19px, 1.75vw, 25px); line-height: 1.38; }
+.su-contacts-v1__max {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 450px; min-height: 68px;
+  margin-top: 44px; padding: 18px 24px;
+  background: #0048ff; color: #fff;
+  font-size: clamp(20px, 1.8vw, 26px); font-weight: 700;
+  line-height: 1.2; text-align: center; text-decoration: none;
+  transition: background-color .18s ease;
+}
+.su-contacts-v1__max:hover { background: #003cce; }
+.su-contacts-v1 a:focus-visible { outline: 3px solid #0048ff; outline-offset: 5px; }
+.su-contacts-v1__details { display: flex; gap: 42px; margin: 52px 0 0 12px; font-size: 14px; line-height: 1.5; }
+.su-contacts-v1__details p + p { border-left: 1px solid #9b9b95; padding-left: 42px; }
+.su-contacts-v1__details span { white-space: nowrap; }
+@media (max-width: 1023px) {
+  .su-contacts-v1 { padding-inline: 24px; }
+  .su-contacts-v1 h2 { font-size: clamp(40px, 6.1vw, 60px); }
+  .su-contacts-v1__layout { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px; margin-top: 28px; }
+  .su-contacts-v1 h3 { font-size: clamp(29px, 3.7vw, 38px); }
+  .su-contacts-v1__message p { margin-top: 18px; font-size: 18px; }
+  .su-contacts-v1__max { min-height: 56px; margin-top: 26px; padding-inline: 12px; font-size: 19px; }
+  .su-contacts-v1__details { margin-top: 36px; margin-left: 0; }
+}
+@media (max-width: 699px) {
+  .su-contacts-v1 { padding: 46px 14px 28px; }
+  .su-contacts-v1 h2 { max-width: 540px; font-size: clamp(40px, 10.7vw, 60px); line-height: .98; }
+  .su-contacts-v1__layout { display: flex; flex-direction: column; gap: 32px; margin-top: 26px; }
+  .su-contacts-v1__notice { width: min(560px, 100%); align-self: center; }
+  .su-contacts-v1__message { padding: 0 8px; width: 100%; }
+  .su-contacts-v1 h3 { font-size: clamp(34px, 8.5vw, 44px); }
+  .su-contacts-v1__message p { font-size: 18px; }
+  .su-contacts-v1__max { max-width: none; margin-top: 24px; min-height: 58px; font-size: 20px; }
+  .su-contacts-v1__details { flex-direction: column; gap: 18px; margin: 36px 8px 0; font-size: 13px; }
+  .su-contacts-v1__details p + p { border-left: 0; padding-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .su-contacts-v1__save, .su-contacts-v1__max { transition: none; }
+}

@@ -1,0 +1,2 @@
+# vCard 3.0 uses CRLF; preserve it on every platform and allow it in whitespace checks.
+assets/contacts/*.vcf -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

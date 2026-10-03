@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Проверка размеров сайта</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 14px/1.4 Arial, sans-serif; color: #20232a; background: #e5e7eb; }
+    header { padding: 12px 16px; background: #fff; border-bottom: 1px solid #bbc0c9; }
+    h1 { margin: 0 0 8px; font-size: 18px; }
+    form, nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+    nav { margin-top: 8px; }
+    label { display: flex; align-items: center; gap: 5px; }
+    input, select, button { font: inherit; }
+    input[type="number"] { width: 76px; padding: 5px; }
+    select, button { min-height: 32px; padding: 4px 8px; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 3px solid #0048ff; outline-offset: 2px; }
+    #status { display: block; margin-top: 8px; font-variant-numeric: tabular-nums; }
+    #stage { padding: 16px; overflow: auto; }
+    #screen { position: relative; margin-inline: auto; background: #fff; box-shadow: 0 0 0 1px #8c929d; }
+    iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: top left; background: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Проверка размеров опубликованного сайта</h1>
+    <form id="settings">
+      <label>Размер
+        <select id="preset">
+          <option value="320,800">320 × 800</option>
+          <option value="360,800">360 × 800</option>
+          <option value="390,844">390 × 844</option>
+          <option value="430,932">430 × 932</option>
+          <option value="768,1024">768 × 1024</option>
+          <option value="1024,768">1024 × 768</option>
+          <option value="1366,768" selected>1366 × 768</option>
+          <option value="1920,1080">1920 × 1080</option>
+          <option value="custom">Другой размер</option>
+        </select>
+      </label>
+      <label>Ширина <input id="width" type="number" min="280" max="2560" step="1" value="1366" required></label>
+      <label>Высота <input id="height" type="number" min="400" max="1600" step="1" value="768" required></label>
+      <label>Секция
+        <select id="section">
+          <option value="contacts">9. Контакты</option>
+          <option value="situations">8. А если у меня…</option>
+          <option value="references">7. Рекомендации</option>
+          <option value="qualification">6. Квалификация</option>
+          <option value="benefits">5. Преимущества</option>
+          <option value="results">4. Опыт и результаты</option>
+          <option value="work">3. Как я работаю</option>
+          <option value="services">2. Услуги</option>
+          <option value="hero">1. Первый экран</option>
+        </select>
+      </label>
+      <label><input id="fit" type="checkbox" checked> Вписать в окно</label>
+      <button type="submit">Показать</button>
+    </form>
+    <nav aria-label="Управление просмотром">
+      <button id="start" type="button">К началу секции</button>
+      <button id="previous" type="button">Предыдущий экран</button>
+      <button id="next" type="button">Следующий экран</button>
+      <button id="refresh" type="button">Обновить сайт</button>
+      <a href="../#contacts" target="_blank" rel="noopener">Открыть сайт отдельно</a>
+    </nav>
+    <output id="status" aria-live="polite">Загрузка сайта…</output>
+  </header>
+  <main id="stage">
+    <div id="screen"><iframe id="site" title="Сайт в выбранном размере"></iframe></div>
+  </main>
+  <script>
+    'use strict';
+    const frame = document.getElementById('site');
+    const screen = document.getElementById('screen');
+    const stage = document.getElementById('stage');
+    const widthInput = document.getElementById('width');
+    const heightInput = document.getElementById('height');
+    const preset = document.getElementById('preset');
+    const section = document.getElementById('section');
+    const fit = document.getElementById('fit');
+    const status = document.getElementById('status');
+    const selectors = {
+      contacts: '#contacts', situations: '.su-situations-v1', references: '.su-references-v1',
+      qualification: '.su-qualification-v1', benefits: '.su-benefits-v1', results: '.su-results-v1',
+      work: '.su-work-v1', services: '.su-services-v2', hero: '#su-hero-v2'
+    };
+    let loaded = false;
+    let scale = 1;
+    let revision = 0;
+
+    function fitFrame() {
+      const width = Math.min(2560, Math.max(280, Math.round(Number(widthInput.value) || 1366)));
+      const height = Math.min(1600, Math.max(400, Math.round(Number(heightInput.value) || 768)));
+      const availableHeight = Math.max(300, window.innerHeight - document.querySelector('header').offsetHeight - 32);
+      scale = fit.checked ? Math.min(1, Math.max(1, stage.clientWidth - 32) / width, availableHeight / height) : 1;
+      frame.style.width = width + 'px';
+      frame.style.height = height + 'px';
+      frame.style.transform = 'scale(' + scale + ')';
+      screen.style.width = width * scale + 'px';
+      screen.style.height = height * scale + 'px';
+      stage.style.height = availableHeight + 32 + 'px';
+    }
+    function report() {
+      if (!loaded) return;
+      const win = frame.contentWindow;
+      status.textContent = 'Окно сайта: ' + win.innerWidth + ' × ' + win.innerHeight
+        + ' px; область страницы: ' + frame.contentDocument.documentElement.clientWidth
+        + ' px; масштаб просмотра: ' + Math.round(scale * 100) + '%. '
+        + 'Проверяется раскладка в текущем браузере, без эмуляции другого браузера и сенсорного экрана.';
+    }
+    async function showSection() {
+      const current = ++revision;
+      fitFrame();
+      if (!loaded) return;
+      await frame.contentDocument.fonts.ready;
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      if (current !== revision) return;
+      const target = frame.contentDocument.querySelector(selectors[section.value]);
+      if (!target) { status.textContent = 'Секция не найдена в опубликованной версии.'; return; }
+      frame.contentWindow.scrollTo({top: target.getBoundingClientRect().top + frame.contentWindow.scrollY, behavior: 'instant'});
+      report();
+    }
+    document.getElementById('settings').addEventListener('submit', event => {
+      event.preventDefault(); showSection();
+    });
+    preset.addEventListener('change', () => {
+      if (preset.value === 'custom') return;
+      [widthInput.value, heightInput.value] = preset.value.split(',');
+      showSection();
+    });
+    [widthInput, heightInput].forEach(input => input.addEventListener('input', () => { preset.value = 'custom'; }));
+    section.addEventListener('change', showSection);
+    fit.addEventListener('change', () => { fitFrame(); report(); });
+    document.getElementById('start').addEventListener('click', showSection);
+    document.getElementById('previous').addEventListener('click', () => {
+      if (loaded) frame.contentWindow.scrollBy({top: -frame.contentWindow.innerHeight * .8, behavior: 'instant'});
+    });
+    document.getElementById('next').addEventListener('click', () => {
+      if (loaded) frame.contentWindow.scrollBy({top: frame.contentWindow.innerHeight * .8, behavior: 'instant'});
+    });
+    document.getElementById('refresh').addEventListener('click', () => {
+      loaded = false; status.textContent = 'Загрузка сайта…';
+      frame.src = '../?layout-check=' + Date.now() + '#contacts';
+    });
+    frame.addEventListener('load', () => { loaded = true; showSection(); });
+    window.addEventListener('resize', () => { fitFrame(); report(); });
+    fitFrame();
+    frame.src = '../#contacts';
+  </script>
+</body>
+</html>
