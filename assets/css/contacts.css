@@ -26,7 +26,7 @@
 .su-contacts-v1__phone {
   display: inline-block;
   margin-top: 3.5cqw;
-  color: #0048ff;
+  color: var(--blue);
   font-size: 7.25cqw;
   font-weight: 800;
   line-height: 1.1;
@@ -44,7 +44,7 @@
 .su-contacts-v1__strips span {
   justify-self: center; align-self: center;
   writing-mode: vertical-rl; transform: rotate(180deg);
-  color: #0048ff; font-size: 2.65cqw; font-weight: 700; white-space: nowrap;
+  color: var(--blue); font-size: 2.65cqw; font-weight: 700; white-space: nowrap;
 }
 /* The supplied paper already contains the arrow. Only show the lettering
    from 2.webp so the finished notice has exactly one arrow. Originals stay intact. */
@@ -67,13 +67,13 @@
   display: flex; align-items: center; justify-content: center;
   width: 100%; max-width: 450px; min-height: 68px;
   margin-top: 44px; padding: 18px 24px;
-  background: #0048ff; color: #fff;
+  background: var(--blue); color: #fff;
   font-size: clamp(20px, 1.8vw, 26px); font-weight: 700;
   line-height: 1.2; text-align: center; text-decoration: none;
   transition: background-color .18s ease;
 }
 .su-contacts-v1__max:hover { background: #003cce; }
-.su-contacts-v1 a:focus-visible { outline: 3px solid #0048ff; outline-offset: 5px; }
+.su-contacts-v1 a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
 .su-contacts-v1__details { display: flex; gap: 42px; margin: 52px 0 0 12px; font-size: 14px; line-height: 1.5; }
 .su-contacts-v1__details p + p { border-left: 1px solid #9b9b95; padding-left: 42px; }
 .su-contacts-v1__details span { white-space: nowrap; }
