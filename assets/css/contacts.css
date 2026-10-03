@@ -73,8 +73,6 @@
   transition: background-color .18s ease;
 }
 .su-contacts-v1__max:hover { background: #003cce; }
-.su-contacts-v1__channels { display: grid; gap: 6px; margin-top: 18px; font-size: 16px; font-style: normal; line-height: 1.5; }
-.su-contacts-v1__channels a { width: fit-content; max-width: 100%; color: #0048ff; overflow-wrap: anywhere; text-underline-offset: 3px; }
 .su-contacts-v1 a:focus-visible { outline: 3px solid #0048ff; outline-offset: 5px; }
 .su-contacts-v1__details { display: flex; gap: 42px; margin: 52px 0 0 12px; font-size: 14px; line-height: 1.5; }
 .su-contacts-v1__details p + p { border-left: 1px solid #9b9b95; padding-left: 42px; }
