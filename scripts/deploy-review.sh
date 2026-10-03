@@ -50,7 +50,8 @@ git_remote() {
 git_remote fetch --no-tags origin "refs/heads/$review:refs/remotes/origin/$review"
 [ "$(git rev-parse "refs/remotes/origin/$review")" = "$target" ] || stop 'В удалённой рабочей ветке другой коммит'
 git merge-base --is-ancestor "$previous" "$target" || stop 'Обновление не является fast-forward'
-git diff --check "$previous" "$target"
+# The previous checkout may not yet have .gitattributes for the CRLF vCard.
+git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check "$previous" "$target"
 if git show-ref --verify --quiet "refs/heads/$review"; then
   git merge-base --is-ancestor "$review" "$target" || stop 'Локальная рабочая ветка разошлась с целевой'
 fi
