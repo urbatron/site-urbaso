@@ -1,0 +1,239 @@
+/* Visual harmony experiment. Load after the accepted section styles.
+   Section compositions, paper geometry and interaction logic remain in their
+   original files; this layer owns typography and the rhythm between sections. */
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: Caveat;
+  src: url('../fonts/caveat-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --su-font-text: Inter, Arial, sans-serif;
+  --su-font-hand: Caveat, 'Segoe Print', 'Bradley Hand', cursive;
+  --su-title-size: clamp(64px, 5vw, 72px);
+  --su-title-compact: clamp(48px, 3.6vw, 54px);
+  --su-copy-size: 22px;
+  --su-caption-size: 18px;
+  --su-section-space: 96px;
+  --su-heading-space: 44px;
+  --su-page-inset: 32px;
+  --su-button-size: 20px;
+  --su-button-height: 64px;
+  --su-blue-hover: #0038cf;
+}
+
+body {
+  font-family: var(--su-font-text);
+  font-optical-sizing: auto;
+}
+
+/* The hero keeps its own artboard scale. Section titles share one role. */
+.su-work-v1__heading h2,
+.su-results-v1__heading h2,
+.su-benefits-v1__title,
+.su-references-v1__title,
+.su-situations-v1__header h2,
+.su-contacts-v1 h2 {
+  font-size: var(--su-title-size);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+/* This heading lives beside certificates, in a deliberately narrower column. */
+.su-qualification-v1__title {
+  font-size: var(--su-title-compact);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.su-work-v1,
+.su-results-v1,
+.su-benefits-v1,
+.su-qualification-v1,
+.su-references-v1 {
+  padding-inline: var(--su-page-inset);
+  padding-bottom: var(--su-section-space);
+}
+
+/* One side owns each inter-section gap; don't add two sets of padding. */
+.su-results-v1 { padding-top: 0; }
+.su-situations-v1 {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-inline: var(--su-page-inset);
+}
+.su-contacts-v1 {
+  padding-top: var(--su-section-space);
+  padding-inline: var(--su-page-inset);
+}
+.su-benefits-v1__layout,
+.su-contacts-v1__layout { margin-top: var(--su-heading-space); }
+
+.su-work-v1__subtitle,
+.su-qualification-v1__description,
+.su-references-v1__description,
+.su-contacts-v1__message p {
+  font-size: var(--su-copy-size);
+  line-height: 1.4;
+}
+.su-work-v1__subtitle { margin-top: 16px; }
+.su-qualification-v1__description { margin-top: 24px; }
+.su-qualification-v1__all {
+  margin-top: 24px;
+  font-size: var(--su-copy-size);
+  line-height: 1.4;
+}
+.su-references-v1__description { margin-top: 40px; }
+.su-qualification-v1__certificate figcaption,
+.su-references-v1__letter figcaption {
+  font-size: var(--su-caption-size);
+  line-height: 1.4;
+}
+.su-benefits-v1__copy h3 {
+  font-size: clamp(28px, 2.15vw, 32px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+.su-benefits-v1__copy p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+.su-contacts-v1__message h3 {
+  font-size: clamp(36px, 2.8vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+/* Handwritten accents now use the same real Cyrillic font on every device. */
+.su-benefits-v1__primary-copy h3,
+.su-work-v1__script {
+  font-family: var(--su-font-hand);
+  font-weight: 600;
+}
+.su-work-v1__underline { width: min(320px, 56%); }
+
+/* Free-standing CTAs share a size; the button inside the FAQ paper retains
+   the dimensions needed to fit that composition. */
+.su-references-v1__button,
+.su-contacts-v1__max {
+  width: min(100%, 400px);
+  min-height: var(--su-button-height);
+  padding: 16px 24px;
+  margin-top: 32px;
+  font-family: var(--su-font-text);
+  font-size: var(--su-button-size);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+.su-references-v1__button,
+.su-contacts-v1__max,
+.su-situations-v1 footer a,
+.su-hero-v2__header-max,
+.su-hero-v2__max a {
+  background-color: var(--blue);
+  border-radius: 2px;
+}
+.su-references-v1__button:hover,
+.su-contacts-v1__max:hover,
+.su-situations-v1 footer a:hover,
+.su-hero-v2__header-max:hover,
+.su-hero-v2__max a:hover { background-color: var(--su-blue-hover); }
+
+.su-qualification-v1__all,
+.su-qualification-v1__original,
+.su-references-v1__letter figcaption a,
+.su-references-v1__viewer-footer a {
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+main a[class]:focus-visible,
+main button[class]:focus-visible {
+  outline: 3px solid #f28b20;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1280px) {
+  .su-work-v1__small { font-size: 20px; line-height: 1.3; }
+}
+
+/* A fixed height in the desktop FAQ reserves room for its four paper tabs. */
+@media (min-width: 1024px) {
+  .su-situations-v1__header h2 {
+    font-size: clamp(54px, 4.5vw, 64px);
+  }
+}
+
+@media (orientation: portrait) and (max-width: 767px) {
+  .su-hero-v2__description {
+    width: calc(100% - 42px);
+  }
+  .su-hero-v2__description br { display: none; }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  :root {
+    --su-title-size: clamp(48px, 5.6vw, 64px);
+    --su-title-compact: var(--su-title-size);
+    --su-copy-size: 20px;
+    --su-section-space: 80px;
+    --su-heading-space: 32px;
+    --su-page-inset: 28px;
+    --su-button-size: 19px;
+    --su-button-height: 60px;
+  }
+  .su-work-v1__underline { width: min(240px, 56%); }
+  .su-benefits-v1__copy h3 { font-size: clamp(24px, 2.5vw, 30px); }
+  .su-benefits-v1__copy p { font-size: 18px; }
+  .su-qualification-v1__previews { margin-top: var(--su-heading-space); }
+}
+
+@media (min-width: 900px) and (max-width: 1279px) {
+  .su-qualification-v1__description { margin-top: 0; }
+  .su-qualification-v1__all { margin-top: 20px; }
+}
+
+@media (max-width: 599px) {
+  :root {
+    --su-title-size: clamp(36px, 10vw, 44px);
+    --su-title-compact: var(--su-title-size);
+    --su-copy-size: 18px;
+    --su-caption-size: 17px;
+    --su-section-space: 64px;
+    --su-heading-space: 24px;
+    --su-page-inset: 14px;
+    --su-button-size: 18px;
+    --su-button-height: 56px;
+  }
+  .su-work-v1__subtitle { margin-top: 12px; font-size: 16px; }
+  .su-work-v1__underline { width: min(180px, 56%); }
+  .su-benefits-v1__copy h3 { font-size: clamp(22px, 6.4vw, 26px); }
+  .su-benefits-v1__copy p { margin-top: 8px; font-size: 17px; }
+  .su-qualification-v1__description,
+  .su-qualification-v1__all { margin-top: 20px; }
+  .su-qualification-v1__previews { margin-top: 28px; }
+  .su-references-v1__description { margin-top: 32px; }
+  .su-references-v1__button,
+  .su-contacts-v1__max { margin-top: 24px; }
+  .su-contacts-v1__message h3 { font-size: 32px; }
+}
+
+/* Keep the longest single-line question inside a 320px phone's text area. */
+@media (max-width: 389px) {
+  .su-situations-v1__header h2 {
+    font-size: clamp(33px, 10.2vw, 38px);
+  }
+}

@@ -1,5 +1,5 @@
 :root {
-  --blue: #1755d5;
+  --blue: #0048ff;
 }
 
 /* Benefits. Every rule is scoped to the fifth section. */
@@ -141,7 +141,7 @@
 }
 .su-qualification-v1__all,
 .su-qualification-v1__original {
-  color: #1755d5;
+  color: var(--blue);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -281,15 +281,15 @@
 }
 .su-qualification-v1__close:hover,
 .su-qualification-v1__arrow:hover {
-  border-color: #1755d5;
-  color: #1755d5;
+  border-color: var(--blue);
+  color: var(--blue);
 }
 .su-qualification-v1__close:focus-visible,
 .su-qualification-v1__arrow:focus-visible,
 .su-qualification-v1__all:focus-visible,
 .su-qualification-v1__preview:focus-visible,
 .su-qualification-v1__original:focus-visible {
-  outline: 3px solid #1755d5;
+  outline: 3px solid var(--blue);
   outline-offset: 3px;
 }
 .su-qualification-v1__viewer-footer {
@@ -363,7 +363,7 @@
   padding: 17px 35px;
   color: #fff;
   border-radius: 7px;
-  background: #1755d5;
+  background: var(--blue);
   font-size: 21px;
   font-weight: 700;
   line-height: 1.1;
@@ -420,7 +420,7 @@
   display: block;
   width: fit-content;
   margin: 13px auto 0;
-  color: #1755d5;
+  color: var(--blue);
   text-underline-offset: 3px;
 }
 .su-references-v1__title-second {
@@ -457,7 +457,7 @@
 .su-references-v1__close:focus-visible,
 .su-references-v1__zoom:focus-visible,
 .su-references-v1__viewer-footer a:focus-visible {
-  outline: 3px solid #1755d5;
+  outline: 3px solid var(--blue);
   outline-offset: 4px;
 }
 .su-references-v1__dialog {
@@ -502,7 +502,7 @@
 .su-references-v1__zoom {
   min-height: 42px;
   padding: 8px 15px;
-  color: #1755d5;
+  color: var(--blue);
   border: 1px solid rgba(23, 85, 213, .45);
   background: transparent;
   font-size: 16px;
@@ -1436,7 +1436,7 @@ main {
   align-items: center;
 }
 .su-work-v1__up-to {
-  color: #1755d5;
+  color: var(--blue);
   font-family: Inter, Arial, sans-serif;
   font-size: 34px;
   font-weight: 800;
@@ -1444,7 +1444,7 @@ main {
   margin-bottom: -8px;
 }
 .su-work-v1__project-number strong {
-  color: #1755d5;
+  color: var(--blue);
   font-family: Arial, Inter, sans-serif;
   font-size: 136px;
   font-weight: 800;
@@ -1462,7 +1462,7 @@ main {
   line-height: 0.91;
 }
 .su-work-v1__time-number {
-  color: #1755d5;
+  color: var(--blue);
   font-family: Arial, Inter, sans-serif;
   font-size: 134px;
   font-weight: 800;
