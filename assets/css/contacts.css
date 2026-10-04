@@ -44,7 +44,7 @@
 .su-contacts-v1__strips span {
   justify-self: center; align-self: center;
   writing-mode: vertical-rl; transform: rotate(180deg);
-  color: var(--blue); font-size: 2.65cqw; font-weight: 700; white-space: nowrap;
+  color: var(--blue); font-size: 2.1cqw; font-weight: 700; white-space: nowrap;
 }
 /* The supplied paper already contains the arrow. Only show the lettering
    from 2.webp so the finished notice has exactly one arrow. Originals stay intact. */
