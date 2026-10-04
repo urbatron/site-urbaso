@@ -3009,3 +3009,65 @@
     font-size: 22px;
   }
 }
+
+/* Keep a document and its original-file link together on phones/tablets.
+   The dynamic viewport excludes browser chrome; overflow is a fallback for
+   very short landscape windows or enlarged text. Desktop viewers are intact. */
+@media (max-width: 1199px) {
+  .su-qualification-v1__dialog,
+  .su-references-v1__dialog {
+    --su-document-space: calc(100vh - 20px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    height: auto;
+    max-height: var(--su-document-space);
+    max-width: calc(100vw - 20px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    inset-block-start: env(safe-area-inset-top, 0px);
+    inset-block-end: env(safe-area-inset-bottom, 0px);
+    inset-inline-start: env(safe-area-inset-left, 0px);
+    inset-inline-end: env(safe-area-inset-right, 0px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  @supports (height: 100dvh) {
+    .su-qualification-v1__dialog,
+    .su-references-v1__dialog {
+      --su-document-space: calc(100dvh - 20px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    }
+  }
+  .su-qualification-v1__viewer,
+  .su-references-v1__viewer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .su-qualification-v1__document,
+  .su-qualification-v1__image-area {
+    height: auto;
+  }
+  .su-qualification-v1__full-image,
+  .su-references-v1__image-area img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: max(80px, calc(var(--su-document-space) - 220px));
+  }
+  .su-qualification-v1__viewer-footer,
+  .su-references-v1__viewer-footer {
+    padding-top: 8px;
+  }
+  .su-qualification-v1__original,
+  .su-references-v1__viewer-footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: 0;
+  }
+  .su-references-v1__dialog--zoomed .su-references-v1__image-area {
+    flex: 0 0 auto;
+    height: max(80px, calc(var(--su-document-space) - 220px));
+  }
+  .su-references-v1__dialog--zoomed .su-references-v1__image-area img {
+    width: max(100%, 760px);
+    max-width: none;
+    max-height: none;
+  }
+}

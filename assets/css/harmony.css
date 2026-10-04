@@ -248,3 +248,69 @@ main button[class]:focus-visible {
     font-size: clamp(33px, 10.2vw, 38px);
   }
 }
+
+/* Keep every line inside the drawn circle, including the first word. The
+   percentages follow the paper when the tablet layout reduces its size. */
+.su-hero-v2__sticky p {
+  left: 14%;
+  top: 32%;
+  width: 64%;
+  line-height: 1.05;
+  text-align: center;
+  transform: none;
+}
+.su-hero-v2__sticky-circle { left: 6%; top: 25%; width: 82%; }
+
+@media (min-width: 1280px) {
+  .su-hero-v2__route { font-size: 24px; line-height: 1.15; }
+}
+
+/* Reserve a separate strip for the decorative round MAX badge. */
+.su-hero-v2__max > a {
+  justify-content: center;
+  padding-inline: 24px 62px;
+  gap: 12px;
+}
+.su-hero-v2__max > a img { width: 32px; height: 32px; flex: 0 0 32px; }
+.su-hero-v2__max b { font-size: 24px; }
+@media (min-width: 900px) and (max-width: 1279px) {
+  .su-hero-v2__max > a { padding-inline: 16px 60px; gap: 10px; }
+  .su-hero-v2__max > a img { width: 26px; height: 26px; flex: 0 0 26px; }
+  .su-hero-v2__max b { font-size: 16px; }
+}
+@media (max-width: 767px) {
+  .su-hero-v2__price > div {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 8px;
+    padding: 7px 16px 7px 22px;
+  }
+  .su-hero-v2__price > div > span:first-child {
+    font-size: clamp(38px, 11.8vw, 50px);
+    transform: none;
+  }
+  .su-hero-v2__price > div > span:last-child {
+    margin-left: 0;
+    left: auto;
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
+  .su-hero-v2__price > div > span:last-child::after {
+    width: 100%;
+    max-width: 132px;
+  }
+  .su-hero-v2__max > a {
+    justify-content: center;
+    padding-inline: 16px 58px;
+    gap: 10px;
+  }
+  .su-hero-v2__max > a img {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+  .su-hero-v2__max b { font-size: clamp(16px, 4.6vw, 20px); }
+  .su-hero-v2__max > img { width: 56px; right: -6px; }
+}
+@media (orientation: portrait) and (max-width: 767px) {
+  .su-hero-v2__sticky { margin-top: 260px; }
+}
