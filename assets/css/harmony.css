@@ -170,6 +170,12 @@ main button[class]:focus-visible {
   .su-work-v1__small { font-size: 20px; line-height: 1.3; }
 }
 
+/* Keep the complete panel box within its 620px paper. A taller box makes
+   overflow:hidden scroll on focus and cuts the top of the section title. */
+@media (min-width: 1200px) {
+  .su-situations-v1__panels { padding-bottom: 24px; }
+}
+
 /* A fixed height in the desktop FAQ reserves room for its four paper tabs. */
 @media (min-width: 1024px) {
   .su-situations-v1__header h2 {
@@ -202,6 +208,11 @@ main button[class]:focus-visible {
 }
 
 @media (min-width: 900px) and (max-width: 1279px) {
+  /* Inter is wider than the previous fallback; keep the compact header CTA
+     on one line without changing its column or height. */
+  .su-hero-v2__header-max { gap: 8px; }
+  .su-hero-v2__header-max img { width: 28px; flex: 0 0 28px; }
+  .su-hero-v2__header-max span { font-size: 15px; white-space: nowrap; }
   .su-qualification-v1__description { margin-top: 0; }
   .su-qualification-v1__all { margin-top: 20px; }
 }
