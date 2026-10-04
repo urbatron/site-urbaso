@@ -151,8 +151,9 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def run(args, *, capture=False, timeout=60):
-    result = subprocess.run(args, check=True, text=True, capture_output=capture, timeout=timeout)
+def run(args, *, capture=False, timeout=60, combine_output=False):
+    output = {'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT} if combine_output else {'capture_output': capture}
+    result = subprocess.run(args, check=True, text=True, timeout=timeout, **output)
     return result.stdout if capture else ''
 
 
@@ -421,6 +422,51 @@ def wait_for_site(backup, phase, timeout=30):
             return
 
 
+def check_final_configs(metadata, final):
+    unchanged_other_files(metadata)
+    for entry in metadata['entries']:
+        if digest(Path(entry['path']).read_bytes()) != digest(final[entry['name']].encode()):
+            fail(f'Конфиг изменился во время проверки: {entry["name"]}')
+    run(['nginx', '-t'])
+
+
+def check_certificate_renewal(name, backup, verify_configs):
+    # Only this observed transport failure may leave the dry-run unconfirmed.
+    # Validation, configuration and unknown errors remain blocking failures.
+    reset = (f"Failed to renew certificate {name} with error: "
+             "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))")
+    directory = backup / 'renewal-checks'
+    directory.mkdir(mode=0o700, exist_ok=True)
+    args = ['certbot', 'renew', '--dry-run', '--cert-name', name, '--non-interactive',
+            '--no-random-sleep-on-renew']
+    for attempt in (1, 2):
+        print(f'Пробное продление: {name}, попытка {attempt}/2', flush=True)
+        log = directory / f'{name}-{attempt}.log'
+        try:
+            output = run(args, capture=True, combine_output=True, timeout=600)
+        except subprocess.CalledProcessError as error:
+            output = (error.stdout or '') + (error.stderr or '')
+            log.write_text(output)
+            verify_configs()
+            validation_error = re.search(
+                r'challenge failed|challenges have failed|unauthorized|NXDOMAIN|invalid response',
+                output, flags=re.I)
+            if reset not in output or validation_error:
+                print(output.rstrip(), file=sys.stderr)
+                fail(f'Пробное продление {name} не прошло; журнал: {log}')
+            if attempt == 1:
+                print(f'Сброс соединения при пробном продлении {name}; повтор через 3 секунды.', flush=True)
+                time.sleep(3)
+                continue
+            print(f'Продление {name} пока не подтверждено: повторный сброс соединения. Журнал: {log}', flush=True)
+            return {'certificate': name, 'status': 'pending-network', 'attempts': attempt, 'log': str(log)}
+        else:
+            log.write_text(output)
+            verify_configs()
+            print(f'Пробное продление {name}: успешно.', flush=True)
+            return {'certificate': name, 'status': 'passed', 'attempts': attempt, 'log': str(log)}
+
+
 def main():
     args = sys.argv[1:]
     if len(args) == 2 and args[0] == '--render':
@@ -562,19 +608,22 @@ def main():
         run(['nginx', '-t'])
         run(['systemctl', 'reload', 'nginx'])
         wait_for_site(backup, 'cutover')
+        renewal_checks = []
         for name in (MAIN, 'sitetops.ru', 'disiner.ru'):
-            print(f'Проверка автоматического продления: {name}', flush=True)
-            run(['certbot', 'renew', '--dry-run', '--cert-name', name, '--non-interactive',
-                 '--no-random-sleep-on-renew'], timeout=600)
-        unchanged_other_files(metadata)
-        for entry in metadata['entries']:
-            if digest(Path(entry['path']).read_bytes()) != digest(final[entry['name']].encode()):
-                fail(f'Конфиг изменился во время проверки: {entry["name"]}')
-        run(['nginx', '-t'])
+            renewal_checks.append(check_certificate_renewal(
+                name, backup, lambda: check_final_configs(metadata, final)))
+            (backup / 'renewal-checks.json').write_text(json.dumps(renewal_checks, ensure_ascii=False, indent=2) + '\n')
+        check_final_configs(metadata, final)
         wait_for_site(backup, 'renewal')
+        pending = [item['certificate'] for item in renewal_checks if item['status'] != 'passed']
+        if pending:
+            (backup / 'RENEWAL_CHECK_PENDING').write_text('\n'.join(pending) + '\n')
         (backup / 'COMPLETED').write_text(expected_sha + '\n')
         print(f'Готово: https://urbaso.ru/\nSHA сайта: {expected_sha}\n'
               f'Откат: bash {backup}/rollback-domains.sh {backup}', flush=True)
+        if pending:
+            print('Сайт переключён, но пробное продление требует повторной проверки: '
+                  + ', '.join(pending) + f'. Отчёт: {backup}/renewal-checks.json', flush=True)
     except BaseException:
         if mutated:
             print('Переключение не завершено; восстанавливаю nginx-конфиги.', file=sys.stderr, flush=True)
