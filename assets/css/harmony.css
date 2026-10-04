@@ -314,3 +314,15 @@ main button[class]:focus-visible {
 @media (orientation: portrait) and (max-width: 767px) {
   .su-hero-v2__sticky { margin-top: 260px; }
 }
+
+/* Editorial lines are deliberate on desktop. On narrower layouts the same
+   phrases wrap naturally; only short-word pairs are joined in the markup. */
+@media (min-width: 1280px) {
+  .su-copy-line { display: block; }
+}
+
+/* Keep «и не понадобиться» together inside the narrow paper without making
+   the other answers smaller or breaking the phrase after «не». */
+@media (max-width: 389px) {
+  #su-situation-panel-1 h3 { font-size: clamp(24px, 7.5vw, 28px); }
+}
