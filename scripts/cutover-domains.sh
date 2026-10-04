@@ -15,6 +15,7 @@ import stat
 import subprocess
 import sys
 import tempfile
+import time
 
 ROOT = Path('/opt/legacy-stack/sites/sweb/site.urbaso.ru/public_html')
 AVAILABLE = Path('/etc/nginx/sites-available')
@@ -349,7 +350,10 @@ def write_config(entry, content):
 
 def request(host, scheme, path, directory):
     headers, body = directory / 'headers', directory / 'body'
-    status = run(['curl', '--noproxy', '*', '--silent', '--show-error',
+    headers.unlink(missing_ok=True)
+    body.unlink(missing_ok=True)
+    (directory / 'request.txt').write_text(f'{scheme}://{host}{path}\n')
+    status = run(['curl', '--disable', '--compressed', '--noproxy', '*', '--silent', '--show-error',
         '--connect-timeout', '5', '--max-time', '20', '--resolve',
         f'{host}:{443 if scheme == "https" else 80}:127.0.0.1',
         '--dump-header', str(headers), '--output', str(body), '--write-out', '%{http_code}',
@@ -363,8 +367,11 @@ def smoke(directory):
     for path in ('/', '/assets/css/harmony.css', '/assets/contacts/sergey-urba.vcf'):
         status, _, body = request(MAIN, 'https', path, directory)
         expected = ROOT / ('index.html' if path == '/' else path.lstrip('/'))
-        if status != '200' or body != expected.read_bytes():
-            fail(f'Основной сайт отдаёт неверный файл: {path}, HTTP {status}')
+        wanted = expected.read_bytes()
+        if status != '200' or body != wanted:
+            fail(f'Основной сайт отдаёт неверный файл: {path}, HTTP {status}; '
+                 f'ожидалось {len(wanted)} байт, SHA256 {digest(wanted)}; '
+                 f'получено {len(body)} байт, SHA256 {digest(body)}')
     probe = '/domain-cutover-check?utm_source=domain-cutover&check=1'
     for host in HOSTS:
         for scheme in ('http', 'https'):
@@ -384,6 +391,34 @@ def smoke(directory):
         fail('Инструмент проверки доступен на основном домене')
     if request('site.urbaso.ru', 'https', '/tools/layout-check.html', directory)[0] != '200':
         fail('Недоступен прежний инструмент проверки site.urbaso.ru')
+
+
+def wait_for_site(backup, phase, timeout=30):
+    # reload sends a signal; the first connection can still reach an old worker.
+    # Retry full strict checks, never accept HTTP 200 alone or a different body.
+    directory = backup / ('http-check-' + phase)
+    directory.mkdir(mode=0o700)
+    deadline = time.monotonic() + timeout
+    attempt = 0
+    while True:
+        attempt += 1
+        try:
+            smoke(directory)
+        except (RuntimeError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as error:
+            (directory / 'failure.txt').write_text(str(error) + '\n')
+            for name in ('request.txt', 'headers', 'body'):
+                path = directory / name
+                if path.exists():
+                    shutil.copy2(path, directory / ('last-failure-' + name))
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                fail(f'Проверка сайта не прошла после ожидания новой конфигурации: {error}. '
+                     f'Диагностика: {directory}')
+            print(f'Ожидание новой конфигурации nginx, проверка {attempt}: {error}', flush=True)
+            time.sleep(min(1, remaining))
+        else:
+            (directory / 'PASSED').write_text(f'passed on attempt {attempt}\n')
+            return
 
 
 def main():
@@ -526,8 +561,7 @@ def main():
             write_config(entry, final[entry['name']])
         run(['nginx', '-t'])
         run(['systemctl', 'reload', 'nginx'])
-        with tempfile.TemporaryDirectory(prefix='domain-smoke-') as temporary:
-            smoke(Path(temporary))
+        wait_for_site(backup, 'cutover')
         for name in (MAIN, 'sitetops.ru', 'disiner.ru'):
             print(f'Проверка автоматического продления: {name}', flush=True)
             run(['certbot', 'renew', '--dry-run', '--cert-name', name, '--non-interactive',
@@ -537,8 +571,7 @@ def main():
             if digest(Path(entry['path']).read_bytes()) != digest(final[entry['name']].encode()):
                 fail(f'Конфиг изменился во время проверки: {entry["name"]}')
         run(['nginx', '-t'])
-        with tempfile.TemporaryDirectory(prefix='domain-smoke-') as temporary:
-            smoke(Path(temporary))
+        wait_for_site(backup, 'renewal')
         (backup / 'COMPLETED').write_text(expected_sha + '\n')
         print(f'Готово: https://urbaso.ru/\nSHA сайта: {expected_sha}\n'
               f'Откат: bash {backup}/rollback-domains.sh {backup}', flush=True)
