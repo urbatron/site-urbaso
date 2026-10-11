@@ -1,6 +1,13 @@
 /* Decorative paper and drawn lines have intentionally art-directed dimensions.
    They are backgrounds rather than content images. Keep the accepted geometry
    at every breakpoint; the image build maps these URLs to optimized assets. */
+
+/* Keep the accepted eight-shadow outline, but composite the portrait on its
+   own layer instead of repeatedly rasterizing it with the whole artboard. */
+.su-hero-v2__artboard .portrait {
+  will-change: filter;
+}
+
 .su-hero-v2__price-paper {
   position: absolute;
   inset: 0;

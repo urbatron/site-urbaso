@@ -30,9 +30,12 @@
       }, { once: true });
     })();
   </script>
+  <!-- hero-mobile-preload:start -->
+  <link rel="preload" as="image" href="/assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp" imagesrcset="/assets/optimized/images/hero/grid-paper-sheet-384w-d065c1533650.webp 384w, /assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp 416w, /assets/optimized/images/hero/grid-paper-sheet-700w-c0c4e99d4326.webp 700w" imagesizes="(max-width: 767px) min(calc(100vw - 36px), 360px), 400px" media="(max-width: 767px)" fetchpriority="high">
+  <!-- hero-mobile-preload:end -->
   <link rel="preload" href="/assets/optimized/fonts/inter-variable-core-2eddca9110fa.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/optimized/fonts/caveat-variable-core-601b8fe54929.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/optimized/site-cc41f617a348.css">
+  <link rel="stylesheet" href="/assets/optimized/site-4ca7607a126e.css">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -50,6 +53,23 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/33578164" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <main>
     <section id="su-hero-v2" class="su-hero-v2">
+      <!-- hero-desktop-prepaint:start -->
+      <script>
+        (() => {
+          if (innerWidth < 1280) return;
+          const hero = document.currentScript.parentElement;
+          const stage = Math.min(innerWidth, 1536);
+          const fluid = Math.min(1, Math.max(0, (stage - 1280) / 256));
+          const left = 640 + 140 * fluid;
+          hero.classList.toggle('su-hero-v2--short', innerHeight < 800);
+          hero.style.setProperty('--hero-stage-width', `${stage}px`);
+          hero.style.setProperty('--hero-left-column', `${left}px`);
+          hero.style.setProperty('--hero-artboard-scale',
+            String(Math.min(1, Math.max(0, stage - left) / 756)));
+          hero.style.setProperty('--hero-fluid', String(fluid));
+        })();
+      </script>
+      <!-- hero-desktop-prepaint:end -->
       <header class="su-hero-v2__header">
         <div class="su-hero-v2__brand"><b>Сергей Урба</b><span>Сайты и&nbsp;продвижение</span></div>
         <i aria-hidden="true"></i>

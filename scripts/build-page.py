@@ -40,6 +40,62 @@ def image_sizes(src, entry, lazy):
     return ('auto, ' if lazy else '') + fallback
 
 
+def update_first_screen_hints(text):
+    # Replace only the two generated blocks so rebuilding never duplicates them.
+    for name, indent in [('hero-mobile-preload', '  '), ('hero-desktop-prepaint', '      ')]:
+        text = re.sub(
+            rf'{indent}<!-- {name}:start -->\n.*?{indent}<!-- {name}:end -->\n',
+            '', text, flags=re.S)
+
+    paper_tags = re.findall(r'<img\b[^>]*\bclass="grid-paper-top"[^>]*>', text)
+    if len(paper_tags) != 1:
+        raise ValueError('Expected one critical hero paper image')
+    parser = Attributes()
+    parser.feed(paper_tags[0])
+    paper = parser.attrs
+    # Use the exact responsive candidates of the visible image, including its
+    # fallback, to avoid a second download or a change in selected resolution.
+    preload_attrs = {
+        'rel': 'preload', 'as': 'image', 'href': paper['src'],
+        'imagesrcset': paper['srcset'], 'imagesizes': paper['sizes'],
+        'media': '(max-width: 767px)', 'fetchpriority': 'high',
+    }
+    preload = ('  <!-- hero-mobile-preload:start -->\n  <link' + ''.join(
+        f' {key}="{html.escape(value, quote=True)}"'
+        for key, value in preload_attrs.items()) +
+        '>\n  <!-- hero-mobile-preload:end -->\n')
+    font_preload = re.search(r'  <link rel="preload"[^>]* as="font"[^>]*>', text)
+    if not font_preload:
+        raise ValueError('Expected a font preload insertion point')
+    text = text[:font_preload.start()] + preload + text[font_preload.start():]
+
+    # Desktop geometry depends only on viewport dimensions. Set it before the
+    # hero children can paint; the existing runtime still owns resize, tablet
+    # measurements and the normal initialization fallback.
+    prepaint = '''      <!-- hero-desktop-prepaint:start -->
+      <script>
+        (() => {
+          if (innerWidth < 1280) return;
+          const hero = document.currentScript.parentElement;
+          const stage = Math.min(innerWidth, 1536);
+          const fluid = Math.min(1, Math.max(0, (stage - 1280) / 256));
+          const left = 640 + 140 * fluid;
+          hero.classList.toggle('su-hero-v2--short', innerHeight < 800);
+          hero.style.setProperty('--hero-stage-width', `${stage}px`);
+          hero.style.setProperty('--hero-left-column', `${left}px`);
+          hero.style.setProperty('--hero-artboard-scale',
+            String(Math.min(1, Math.max(0, stage - left) / 756)));
+          hero.style.setProperty('--hero-fluid', String(fluid));
+        })();
+      </script>
+      <!-- hero-desktop-prepaint:end -->
+'''
+    section = '    <section id="su-hero-v2" class="su-hero-v2">\n'
+    if text.count(section) != 1:
+        raise ValueError('Expected one hero section insertion point')
+    return text.replace(section, section + prepaint, 1)
+
+
 def build(stylesheet):
     assert re.fullmatch(r'/assets/optimized/site-[a-f0-9]{12}\.css', stylesheet)
     if not (ROOT / stylesheet.lstrip('/')).is_file():
@@ -131,6 +187,7 @@ def build(stylesheet):
             lambda m: m.group(1) + manifest['fonts'][family]['src'] + m.group(2), text)
         if replaced != 1:
             raise ValueError(f'Expected one preload for {family}, got {replaced}')
+    text = update_first_screen_hints(text)
     if text.count("ym(33578164, 'init'") != 1:
         raise ValueError('Metrika initialization changed')
     page.write_text(text)
