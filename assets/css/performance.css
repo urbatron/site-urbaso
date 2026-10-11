@@ -1,0 +1,45 @@
+/* Decorative paper and drawn lines have intentionally art-directed dimensions.
+   They are backgrounds rather than content images. Keep the accepted geometry
+   at every breakpoint; the image build maps these URLs to optimized assets. */
+.su-hero-v2__price-paper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/images/hero/torn-paper-sheet.webp') center / 100% 100% no-repeat;
+}
+
+.su-references-v1__title-underline {
+  position: absolute;
+  z-index: -1;
+  left: -2%;
+  top: calc(100% + 5px);
+  width: 105%;
+  height: 19px;
+  pointer-events: none;
+  background: url('/assets/images/seven/3.webp') center / 100% 100% no-repeat;
+}
+
+.su-situations-v1__line {
+  background: url('/assets/images/eight/6.webp') center / 100% 100% no-repeat;
+}
+
+@media (max-width: 599px) {
+  .su-references-v1__title-underline {
+    top: calc(100% + 2px);
+  }
+}
+
+/* The small head script enables this only when IntersectionObserver exists.
+   Restore each section's original cascade before it enters the viewport.
+   Keep all dimensions intact, including the FAQ's border-image paper slices. */
+html.su-defer-backgrounds .su-work-v1:not(.su-bg-ready) .su-work-v1__item::before,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__tab,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__paper,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__paper::before,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__paper::after,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__paper-part,
+html.su-defer-backgrounds .su-situations-v1:not(.su-bg-ready) .su-situations-v1__line {
+  background-image: none !important;
+  border-image-source: none !important;
+}

@@ -9,8 +9,28 @@
   const stackedLayout = window.matchMedia('(max-width: 1023px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let pendingScroll = 0;
-  const activeImages = tabs.map((_, index) => `/assets/images/eight/${index + 1}_blue.webp`);
-  activeImages.forEach((source) => { const image = new Image(); image.src = source; });
+  const activeImages = tabs.map((tab, index) =>
+    tab.dataset.activeImage || `/assets/images/eight/${index + 1}_blue.webp`);
+  let imagesPreloaded = false;
+  const preloadActiveImages = () => {
+    if (imagesPreloaded) return;
+    imagesPreloaded = true;
+    activeImages.forEach((source) => { const image = new Image(); image.src = source; });
+  };
+  if ('IntersectionObserver' in window) {
+    try {
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        preloadActiveImages();
+        observer.disconnect();
+      }, { rootMargin: '600px 0px' });
+      observer.observe(section);
+    } catch (_) {
+      preloadActiveImages();
+    }
+  } else {
+    preloadActiveImages();
+  }
 
   const selectTab = (tab, moveFocus = false) => {
     window.cancelAnimationFrame(pendingScroll);
@@ -41,6 +61,7 @@
   section.classList.add('su-situations-v1--ready');
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
+      preloadActiveImages();
       selectTab(tab);
       revealAnswer();
     });

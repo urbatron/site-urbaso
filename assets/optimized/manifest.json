@@ -1,0 +1,3555 @@
+{
+  "version": 1,
+  "description": "Responsive derivatives of original Git assets. Keep original hrefs for document viewers.",
+  "images": {
+    "/assets/images/eight/1.webp": {
+      "original": {
+        "src": "/assets/images/eight/1.webp",
+        "width": 500,
+        "height": 171,
+        "bytes": 9370
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/1-384w-806dfae21e22.webp",
+          "width": 384,
+          "height": 131,
+          "bytes": 7586,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/1-500w-a30b63e7e04d.webp",
+          "width": 500,
+          "height": 171,
+          "bytes": 9370,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "a30b63e7e04d",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/1_blue.webp": {
+      "original": {
+        "src": "/assets/images/eight/1_blue.webp",
+        "width": 500,
+        "height": 171,
+        "bytes": 6006
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/1_blue-384w-1bbbd768a3d2.webp",
+          "width": 384,
+          "height": 131,
+          "bytes": 4796,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/1_blue-500w-de00d85e0ddd.webp",
+          "width": 500,
+          "height": 171,
+          "bytes": 6006,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "de00d85e0ddd",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/2.webp": {
+      "original": {
+        "src": "/assets/images/eight/2.webp",
+        "width": 500,
+        "height": 180,
+        "bytes": 9784
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/2-384w-ed6b550cf7a2.webp",
+          "width": 384,
+          "height": 138,
+          "bytes": 7608,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/2-500w-9f19ab7f0373.webp",
+          "width": 500,
+          "height": 180,
+          "bytes": 9784,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "9f19ab7f0373",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/2_blue.webp": {
+      "original": {
+        "src": "/assets/images/eight/2_blue.webp",
+        "width": 500,
+        "height": 180,
+        "bytes": 6182
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/2_blue-384w-f95c83329c23.webp",
+          "width": 384,
+          "height": 138,
+          "bytes": 4960,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/2_blue-500w-1637130fcd02.webp",
+          "width": 500,
+          "height": 180,
+          "bytes": 6182,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "1637130fcd02",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/3.webp": {
+      "original": {
+        "src": "/assets/images/eight/3.webp",
+        "width": 500,
+        "height": 180,
+        "bytes": 10542
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/3-384w-542b54bb36df.webp",
+          "width": 384,
+          "height": 138,
+          "bytes": 8050,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/3-500w-47ad67eb40e9.webp",
+          "width": 500,
+          "height": 180,
+          "bytes": 10542,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "47ad67eb40e9",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/3_blue.webp": {
+      "original": {
+        "src": "/assets/images/eight/3_blue.webp",
+        "width": 500,
+        "height": 180,
+        "bytes": 6524
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/3_blue-384w-93c1e62649df.webp",
+          "width": 384,
+          "height": 138,
+          "bytes": 5182,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/3_blue-500w-b63df8652317.webp",
+          "width": 500,
+          "height": 180,
+          "bytes": 6524,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "b63df8652317",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/4.webp": {
+      "original": {
+        "src": "/assets/images/eight/4.webp",
+        "width": 500,
+        "height": 178,
+        "bytes": 10634
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/4-384w-881e8d1b414d.webp",
+          "width": 384,
+          "height": 137,
+          "bytes": 8106,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/4-500w-e4340a14ff58.webp",
+          "width": 500,
+          "height": 178,
+          "bytes": 10634,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "e4340a14ff58",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/4_blue.webp": {
+      "original": {
+        "src": "/assets/images/eight/4_blue.webp",
+        "width": 500,
+        "height": 178,
+        "bytes": 6028
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/4_blue-384w-ace730db9026.webp",
+          "width": 384,
+          "height": 137,
+          "bytes": 4904,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/4_blue-500w-5bf4a7b2b819.webp",
+          "width": 500,
+          "height": 178,
+          "bytes": 6028,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "5bf4a7b2b819",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/eight/5.webp": {
+      "original": {
+        "src": "/assets/images/eight/5.webp",
+        "width": 1000,
+        "height": 1179,
+        "bytes": 65894
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/5-384w-f66378a96d49.webp",
+          "width": 384,
+          "height": 453,
+          "bytes": 18360,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/5-640w-3d4b037b90e7.webp",
+          "width": 640,
+          "height": 755,
+          "bytes": 40344,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/5-768w-d7550214507e.webp",
+          "width": 768,
+          "height": 905,
+          "bytes": 50174,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/5-1000w-0aa86aea6885.webp",
+          "width": 1000,
+          "height": 1179,
+          "bytes": 65894,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 640
+      },
+      "sourceHash": "0aa86aea6885",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        1000
+      ]
+    },
+    "/assets/images/eight/6.webp": {
+      "original": {
+        "src": "/assets/images/eight/6.webp",
+        "width": 600,
+        "height": 34,
+        "bytes": 3656
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/6-384w-1e8b21fdb79b.webp",
+          "width": 384,
+          "height": 22,
+          "bytes": 2600,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/eight/6-600w-f51328956741.webp",
+          "width": 600,
+          "height": 34,
+          "bytes": 3656,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 600
+      },
+      "sourceHash": "f51328956741",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        600
+      ]
+    },
+    "/assets/images/eight/7.webp": {
+      "original": {
+        "src": "/assets/images/eight/7.webp",
+        "width": 300,
+        "height": 175,
+        "bytes": 15706
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/eight/7-300w-d62d1bbc554c.webp",
+          "width": 300,
+          "height": 175,
+          "bytes": 15706,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 300,
+        "desktop": 300
+      },
+      "sourceHash": "d62d1bbc554c",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        300
+      ]
+    },
+    "/assets/images/five/1.webp": {
+      "original": {
+        "src": "/assets/images/five/1.webp",
+        "width": 800,
+        "height": 807,
+        "bytes": 91408
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/1-384w-35c419494e10.webp",
+          "width": 384,
+          "height": 387,
+          "bytes": 28614,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/1-640w-27c3bf5fbc31.webp",
+          "width": 640,
+          "height": 646,
+          "bytes": 67900,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/1-800w-b246b7f7aaed.webp",
+          "width": 800,
+          "height": 807,
+          "bytes": 91408,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 640
+      },
+      "sourceHash": "b246b7f7aaed",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        800
+      ]
+    },
+    "/assets/images/five/2.webp": {
+      "original": {
+        "src": "/assets/images/five/2.webp",
+        "width": 300,
+        "height": 214,
+        "bytes": 10162
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/2-96w-5815465e0723.webp",
+          "width": 96,
+          "height": 68,
+          "bytes": 3332,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/2-128w-a399dea0c9f3.webp",
+          "width": 128,
+          "height": 91,
+          "bytes": 4586,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/2-192w-c53e9dd14ec0.webp",
+          "width": 192,
+          "height": 137,
+          "bytes": 7216,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/2-224w-6535e9198f54.webp",
+          "width": 224,
+          "height": 160,
+          "bytes": 8584,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/2-300w-5a4c639d2dec.webp",
+          "width": 300,
+          "height": 214,
+          "bytes": 10162,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 90,
+        "desktop": 100
+      },
+      "sourceHash": "5a4c639d2dec",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        128,
+        192,
+        224,
+        300
+      ]
+    },
+    "/assets/images/five/3.webp": {
+      "original": {
+        "src": "/assets/images/five/3.webp",
+        "width": 300,
+        "height": 238,
+        "bytes": 11770
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/3-96w-f7a2d326f92a.webp",
+          "width": 96,
+          "height": 76,
+          "bytes": 3940,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/3-128w-7315a9e265ad.webp",
+          "width": 128,
+          "height": 102,
+          "bytes": 5414,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/3-192w-2bb1da4a7d88.webp",
+          "width": 192,
+          "height": 152,
+          "bytes": 8410,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/3-224w-d5f6af9ae1b4.webp",
+          "width": 224,
+          "height": 178,
+          "bytes": 10194,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/3-300w-7a13d8c04c76.webp",
+          "width": 300,
+          "height": 238,
+          "bytes": 11770,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 90,
+        "desktop": 100
+      },
+      "sourceHash": "7a13d8c04c76",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        128,
+        192,
+        224,
+        300
+      ]
+    },
+    "/assets/images/five/4.webp": {
+      "original": {
+        "src": "/assets/images/five/4.webp",
+        "width": 300,
+        "height": 248,
+        "bytes": 11186
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/4-96w-9a0e9d484aa4.webp",
+          "width": 96,
+          "height": 79,
+          "bytes": 3642,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/4-128w-baa5bb989b56.webp",
+          "width": 128,
+          "height": 106,
+          "bytes": 5084,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/4-192w-c78de0512b05.webp",
+          "width": 192,
+          "height": 159,
+          "bytes": 8060,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/4-224w-8cd5f1f63359.webp",
+          "width": 224,
+          "height": 185,
+          "bytes": 9888,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/4-300w-3fc7d9a3844d.webp",
+          "width": 300,
+          "height": 248,
+          "bytes": 11186,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 90,
+        "desktop": 100
+      },
+      "sourceHash": "3fc7d9a3844d",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        128,
+        192,
+        224,
+        300
+      ]
+    },
+    "/assets/images/five/5.webp": {
+      "original": {
+        "src": "/assets/images/five/5.webp",
+        "width": 600,
+        "height": 28,
+        "bytes": 2104
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/5-384w-da6039c1b93e.webp",
+          "width": 384,
+          "height": 18,
+          "bytes": 1514,
+          "encoding": "lossless"
+        },
+        {
+          "src": "/assets/optimized/images/five/5-600w-77c9da5ef089.webp",
+          "width": 600,
+          "height": 28,
+          "bytes": 2104,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 600
+      },
+      "sourceHash": "77c9da5ef089",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        600
+      ]
+    },
+    "/assets/images/five/6.webp": {
+      "original": {
+        "src": "/assets/images/five/6.webp",
+        "width": 600,
+        "height": 23,
+        "bytes": 1868
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/five/6-384w-3483ca31c312.webp",
+          "width": 384,
+          "height": 15,
+          "bytes": 1438,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/five/6-600w-664d9fdd58ee.webp",
+          "width": 600,
+          "height": 23,
+          "bytes": 1868,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 600
+      },
+      "sourceHash": "664d9fdd58ee",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        600
+      ]
+    },
+    "/assets/images/four/1.webp": {
+      "sourceHash": "38b90d74511f",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1-paper98",
+      "original": {
+        "src": "/assets/images/four/1.webp",
+        "width": 2167,
+        "height": 726,
+        "bytes": 86046
+      },
+      "requestedWidths": [
+        192,
+        384,
+        736,
+        2167
+      ],
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/1-192w-e3668ed0472b.webp",
+          "width": 192,
+          "height": 64,
+          "bytes": 3498,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/1-384w-6da85565496c.webp",
+          "width": 384,
+          "height": 129,
+          "bytes": 9106,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/1-736w-d3a3da036256.webp",
+          "width": 736,
+          "height": 247,
+          "bytes": 25356,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/1-2167w-38b90d74511f.webp",
+          "width": 2167,
+          "height": 726,
+          "bytes": 86046,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 187,
+        "desktop": 360
+      }
+    },
+    "/assets/images/four/2.webp": {
+      "sourceHash": "12d0cd125322",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1-paper98",
+      "original": {
+        "src": "/assets/images/four/2.webp",
+        "width": 2172,
+        "height": 724,
+        "bytes": 144750
+      },
+      "requestedWidths": [
+        192,
+        288,
+        384,
+        544,
+        2172
+      ],
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/2-192w-cd15919e95e0.webp",
+          "width": 192,
+          "height": 64,
+          "bytes": 4624,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/2-288w-c98b7f44bb16.webp",
+          "width": 288,
+          "height": 96,
+          "bytes": 8058,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/2-384w-cd9ce904b4f4.webp",
+          "width": 384,
+          "height": 128,
+          "bytes": 12968,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/2-544w-b22af15dc881.webp",
+          "width": 544,
+          "height": 181,
+          "bytes": 24628,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/2-2172w-12d0cd125322.webp",
+          "width": 2172,
+          "height": 724,
+          "bytes": 144750,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 187,
+        "desktop": 260
+      }
+    },
+    "/assets/images/four/3.webp": {
+      "original": {
+        "src": "/assets/images/four/3.webp",
+        "width": 1400,
+        "height": 1123,
+        "bytes": 31236
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/3-64w-ea6417d2207f.webp",
+          "width": 64,
+          "height": 51,
+          "bytes": 392,
+          "encoding": "lossless"
+        },
+        {
+          "src": "/assets/optimized/images/four/3-128w-80c938bb25c7.webp",
+          "width": 128,
+          "height": 103,
+          "bytes": 952,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/3-160w-f85921ca1d7e.webp",
+          "width": 160,
+          "height": 128,
+          "bytes": 1280,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/3-288w-184e4fe0c68a.webp",
+          "width": 288,
+          "height": 231,
+          "bytes": 2758,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/3-1400w-7ba7d54fb2a1.webp",
+          "width": 1400,
+          "height": 1123,
+          "bytes": 31236,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 50,
+        "desktop": 135
+      },
+      "sourceHash": "7ba7d54fb2a1",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        64,
+        128,
+        160,
+        288,
+        1400
+      ]
+    },
+    "/assets/images/four/4.webp": {
+      "original": {
+        "src": "/assets/images/four/4.webp",
+        "width": 1295,
+        "height": 1215,
+        "bytes": 18748
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/4-64w-6fe658c508d9.webp",
+          "width": 64,
+          "height": 60,
+          "bytes": 312,
+          "encoding": "lossless"
+        },
+        {
+          "src": "/assets/optimized/images/four/4-96w-ccb7d4754885.webp",
+          "width": 96,
+          "height": 90,
+          "bytes": 522,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/4-192w-15706c1945b4.webp",
+          "width": 192,
+          "height": 180,
+          "bytes": 1166,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/4-1295w-492adc8b92fe.webp",
+          "width": 1295,
+          "height": 1215,
+          "bytes": 18748,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 35,
+        "desktop": 96
+      },
+      "sourceHash": "492adc8b92fe",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        64,
+        96,
+        192,
+        1295
+      ]
+    },
+    "/assets/images/four/5.webp": {
+      "original": {
+        "src": "/assets/images/four/5.webp",
+        "width": 2206,
+        "height": 713,
+        "bytes": 16870
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/5-224w-ac6dd47d6903.webp",
+          "width": 224,
+          "height": 72,
+          "bytes": 668,
+          "encoding": "lossless"
+        },
+        {
+          "src": "/assets/optimized/images/four/5-384w-17abf960e04a.webp",
+          "width": 384,
+          "height": 124,
+          "bytes": 1300,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/5-416w-71ecad64f2cf.webp",
+          "width": 416,
+          "height": 134,
+          "bytes": 1472,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/5-736w-27110c228f0f.webp",
+          "width": 736,
+          "height": 238,
+          "bytes": 3084,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/5-2206w-a936fffc2cc7.webp",
+          "width": 2206,
+          "height": 713,
+          "bytes": 16870,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 197,
+        "desktop": 360
+      },
+      "sourceHash": "a936fffc2cc7",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        224,
+        384,
+        416,
+        736,
+        2206
+      ]
+    },
+    "/assets/images/four/8.webp": {
+      "sourceHash": "5edbd825c87c",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1-paper98",
+      "original": {
+        "src": "/assets/images/four/8.webp",
+        "width": 2169,
+        "height": 725,
+        "bytes": 43852
+      },
+      "requestedWidths": [
+        192,
+        320,
+        384,
+        640,
+        2169
+      ],
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/8-192w-36565bb69d03.webp",
+          "width": 192,
+          "height": 64,
+          "bytes": 2184,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/8-320w-cab38f436321.webp",
+          "width": 320,
+          "height": 107,
+          "bytes": 4152,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/8-384w-3282e8214e35.webp",
+          "width": 384,
+          "height": 128,
+          "bytes": 5300,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/8-640w-8735dd3d815a.webp",
+          "width": 640,
+          "height": 214,
+          "bytes": 11430,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/four/8-2169w-5edbd825c87c.webp",
+          "width": 2169,
+          "height": 725,
+          "bytes": 43852,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 177,
+        "desktop": 320
+      }
+    },
+    "/assets/images/four/9.webp": {
+      "original": {
+        "src": "/assets/images/four/9.webp",
+        "width": 1296,
+        "height": 1214,
+        "bytes": 70032
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/four/9-384w-c589cf7698ff.webp",
+          "width": 384,
+          "height": 360,
+          "bytes": 14250,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/9-768w-c20b15208c3b.webp",
+          "width": 768,
+          "height": 719,
+          "bytes": 37748,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/9-928w-4a43fb1cfa4e.webp",
+          "width": 928,
+          "height": 869,
+          "bytes": 50598,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/four/9-1296w-e1f5353206e8.webp",
+          "width": 1296,
+          "height": 1214,
+          "bytes": 70032,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 920
+      },
+      "sourceHash": "e1f5353206e8",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        768,
+        928,
+        1296
+      ]
+    },
+    "/assets/images/hero/ad-dashboard_1000.webp": {
+      "original": {
+        "src": "/assets/images/hero/ad-dashboard_1000.webp",
+        "width": 1000,
+        "height": 524,
+        "bytes": 29730
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/ad-dashboard_1000-224w-9aed57a9444a.webp",
+          "width": 224,
+          "height": 117,
+          "bytes": 4310,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/ad-dashboard_1000-416w-3e56d8bea382.webp",
+          "width": 416,
+          "height": 218,
+          "bytes": 10134,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/ad-dashboard_1000-800w-575f132f8bdc.webp",
+          "width": 800,
+          "height": 419,
+          "bytes": 24088,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/ad-dashboard_1000-1000w-9ac16a257f49.webp",
+          "width": 1000,
+          "height": 524,
+          "bytes": 29730,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 205,
+        "desktop": 400
+      },
+      "sourceHash": "9ac16a257f49",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        224,
+        416,
+        800,
+        1000
+      ]
+    },
+    "/assets/images/hero/arrow-curved.webp": {
+      "original": {
+        "src": "/assets/images/hero/arrow-curved.webp",
+        "width": 400,
+        "height": 307,
+        "bytes": 7450
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/arrow-curved-128w-8573f1cb451a.webp",
+          "width": 128,
+          "height": 98,
+          "bytes": 2232,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/arrow-curved-224w-faaead8a4585.webp",
+          "width": 224,
+          "height": 172,
+          "bytes": 4512,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/arrow-curved-400w-2790422a264b.webp",
+          "width": 400,
+          "height": 307,
+          "bytes": 7450,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 110
+      },
+      "sourceHash": "2790422a264b",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        128,
+        224,
+        400
+      ]
+    },
+    "/assets/images/hero/arrow-short_2.webp": {
+      "original": {
+        "src": "/assets/images/hero/arrow-short_2.webp",
+        "width": 220,
+        "height": 43,
+        "bytes": 1880
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp",
+          "width": 220,
+          "height": 43,
+          "bytes": 1880,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 220,
+        "desktop": 220
+      },
+      "sourceHash": "efb0da767d76",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        220
+      ]
+    },
+    "/assets/images/hero/blue-paper-shape.webp": {
+      "original": {
+        "src": "/assets/images/hero/blue-paper-shape.webp",
+        "width": 600,
+        "height": 339,
+        "bytes": 12120
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/blue-paper-shape-192w-e6ae3d04b5a8.webp",
+          "width": 192,
+          "height": 108,
+          "bytes": 2888,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/blue-paper-shape-384w-1d84f579753f.webp",
+          "width": 384,
+          "height": 217,
+          "bytes": 7426,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/blue-paper-shape-600w-ffdc5b597ebd.webp",
+          "width": 600,
+          "height": 339,
+          "bytes": 12120,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 180
+      },
+      "sourceHash": "ffdc5b597ebd",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        192,
+        384,
+        600
+      ]
+    },
+    "/assets/images/hero/code.webp": {
+      "original": {
+        "src": "/assets/images/hero/code.webp",
+        "width": 600,
+        "height": 335,
+        "bytes": 23162
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/code-320w-ae8e3ad8f72f.webp",
+          "width": 320,
+          "height": 179,
+          "bytes": 11504,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/code-600w-98844da6b555.webp",
+          "width": 600,
+          "height": 335,
+          "bytes": 23162,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 300
+      },
+      "sourceHash": "98844da6b555",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        320,
+        600
+      ]
+    },
+    "/assets/images/hero/grid-paper-sheet.webp": {
+      "sourceHash": "c0c4e99d4326",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1-paper98",
+      "original": {
+        "src": "/assets/images/hero/grid-paper-sheet.webp",
+        "width": 700,
+        "height": 925,
+        "bytes": 43940
+      },
+      "requestedWidths": [
+        384,
+        416,
+        700
+      ],
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/grid-paper-sheet-384w-d065c1533650.webp",
+          "width": 384,
+          "height": 507,
+          "bytes": 37742,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp",
+          "width": 416,
+          "height": 550,
+          "bytes": 43778,
+          "encoding": "quality-98"
+        },
+        {
+          "src": "/assets/optimized/images/hero/grid-paper-sheet-700w-c0c4e99d4326.webp",
+          "width": 700,
+          "height": 925,
+          "bytes": 43940,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 360,
+        "desktop": 400
+      }
+    },
+    "/assets/images/hero/handwritten-underline.webp": {
+      "original": {
+        "src": "/assets/images/hero/handwritten-underline.webp",
+        "width": 500,
+        "height": 45,
+        "bytes": 4158
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/handwritten-underline-384w-1540f30516f7.webp",
+          "width": 384,
+          "height": 35,
+          "bytes": 3902,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/handwritten-underline-500w-c14cf095e581.webp",
+          "width": 500,
+          "height": 45,
+          "bytes": 4158,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 500
+      },
+      "sourceHash": "c14cf095e581",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        500
+      ]
+    },
+    "/assets/images/hero/lenta.webp": {
+      "original": {
+        "src": "/assets/images/hero/lenta.webp",
+        "width": 500,
+        "height": 464,
+        "bytes": 18214
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/lenta-192w-a68cea993dc9.webp",
+          "width": 192,
+          "height": 178,
+          "bytes": 6138,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/lenta-352w-f236ac788653.webp",
+          "width": 352,
+          "height": 327,
+          "bytes": 13794,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/lenta-500w-0037da924348.webp",
+          "width": 500,
+          "height": 464,
+          "bytes": 18214,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 175,
+        "desktop": 175
+      },
+      "sourceHash": "0037da924348",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        192,
+        352,
+        500
+      ]
+    },
+    "/assets/images/hero/max-icon-round.webp": {
+      "original": {
+        "src": "/assets/images/hero/max-icon-round.webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 12852
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/max-icon-round-64w-7baba52a1c1d.webp",
+          "width": 64,
+          "height": 64,
+          "bytes": 1824,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/max-icon-round-128w-d3108d6406fe.webp",
+          "width": 128,
+          "height": 128,
+          "bytes": 3546,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/max-icon-round-224w-92d829a1e204.webp",
+          "width": 224,
+          "height": 224,
+          "bytes": 6342,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/max-icon-round-500w-f3df21956117.webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 12852,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 56,
+        "desktop": 100
+      },
+      "sourceHash": "f3df21956117",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        64,
+        128,
+        224,
+        500
+      ]
+    },
+    "/assets/images/hero/one-poloska.webp": {
+      "original": {
+        "src": "/assets/images/hero/one-poloska.webp",
+        "width": 600,
+        "height": 18,
+        "bytes": 2302
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/one-poloska-384w-6031573d3704.webp",
+          "width": 384,
+          "height": 12,
+          "bytes": 1690,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/one-poloska-600w-ec7da79453d9.webp",
+          "width": 600,
+          "height": 18,
+          "bytes": 2302,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 600
+      },
+      "sourceHash": "ec7da79453d9",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        600
+      ]
+    },
+    "/assets/images/hero/orange-paper-shape.webp": {
+      "original": {
+        "src": "/assets/images/hero/orange-paper-shape.webp",
+        "width": 450,
+        "height": 475,
+        "bytes": 15480
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/orange-paper-shape-192w-3e2065800fd2.webp",
+          "width": 192,
+          "height": 203,
+          "bytes": 5052,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/orange-paper-shape-352w-a1a3908318d6.webp",
+          "width": 352,
+          "height": 372,
+          "bytes": 11908,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/orange-paper-shape-450w-0e9fcc07a6e4.webp",
+          "width": 450,
+          "height": 475,
+          "bytes": 15480,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 165
+      },
+      "sourceHash": "0e9fcc07a6e4",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        192,
+        352,
+        450
+      ]
+    },
+    "/assets/images/hero/paper-background.webp": {
+      "original": {
+        "src": "/assets/images/hero/paper-background.webp",
+        "width": 1586,
+        "height": 992,
+        "bytes": 30546
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/paper-background-384w-cef60638113d.webp",
+          "width": 384,
+          "height": 240,
+          "bytes": 870,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/paper-background-640w-9fe050f16243.webp",
+          "width": 640,
+          "height": 400,
+          "bytes": 2938,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/paper-background-768w-3c75e702672d.webp",
+          "width": 768,
+          "height": 480,
+          "bytes": 4888,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/paper-background-1280w-bc9b0a8da62d.webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 14422,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/paper-background-1586w-781604c90d96.webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 30546,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 640
+      },
+      "sourceHash": "781604c90d96",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        1280,
+        1586
+      ]
+    },
+    "/assets/images/hero/podcherkivanie.webp": {
+      "original": {
+        "src": "/assets/images/hero/podcherkivanie.webp",
+        "width": 300,
+        "height": 30,
+        "bytes": 2198
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/podcherkivanie-300w-13fa57136650.webp",
+          "width": 300,
+          "height": 30,
+          "bytes": 2198,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 300,
+        "desktop": 300
+      },
+      "sourceHash": "13fa57136650",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        300
+      ]
+    },
+    "/assets/images/hero/pricel.webp": {
+      "original": {
+        "src": "/assets/images/hero/pricel.webp",
+        "width": 100,
+        "height": 126,
+        "bytes": 2408
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/pricel-100w-414b97ab6167.webp",
+          "width": 100,
+          "height": 126,
+          "bytes": 2408,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "414b97ab6167",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/hero/punktir-2.webp": {
+      "original": {
+        "src": "/assets/images/hero/punktir-2.webp",
+        "width": 100,
+        "height": 519,
+        "bytes": 8384
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/punktir-2-32w-f0cf27b3f0d8.webp",
+          "width": 32,
+          "height": 166,
+          "bytes": 2242,
+          "encoding": "lossless"
+        },
+        {
+          "src": "/assets/optimized/images/hero/punktir-2-64w-6b04d07421a8.webp",
+          "width": 64,
+          "height": 332,
+          "bytes": 5720,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/punktir-2-100w-1e3420364e4d.webp",
+          "width": 100,
+          "height": 519,
+          "bytes": 8384,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 27,
+        "desktop": 30
+      },
+      "sourceHash": "1e3420364e4d",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        32,
+        64,
+        100
+      ]
+    },
+    "/assets/images/hero/right.webp": {
+      "original": {
+        "src": "/assets/images/hero/right.webp",
+        "width": 600,
+        "height": 74,
+        "bytes": 4384
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/right-384w-f110b2d7606d.webp",
+          "width": 384,
+          "height": 47,
+          "bytes": 2824,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/right-600w-e081a9c14ddc.webp",
+          "width": 600,
+          "height": 74,
+          "bytes": 4384,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 600
+      },
+      "sourceHash": "e081a9c14ddc",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        600
+      ]
+    },
+    "/assets/images/hero/sergeiurba_2.webp": {
+      "original": {
+        "src": "/assets/images/hero/sergeiurba_2.webp",
+        "width": 600,
+        "height": 1113,
+        "bytes": 58446
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/sergeiurba_2-256w-91ffdc4f6444.webp",
+          "width": 256,
+          "height": 475,
+          "bytes": 20760,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sergeiurba_2-512w-020bdc62f993.webp",
+          "width": 512,
+          "height": 950,
+          "bytes": 53164,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sergeiurba_2-544w-5170079dd5c6.webp",
+          "width": 544,
+          "height": 1009,
+          "bytes": 57552,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sergeiurba_2-600w-507fe0baac37.webp",
+          "width": 600,
+          "height": 1113,
+          "bytes": 58446,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 255,
+        "desktop": 532
+      },
+      "sourceHash": "507fe0baac37",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        256,
+        512,
+        544,
+        600
+      ]
+    },
+    "/assets/images/hero/sticky-note-krug.webp": {
+      "original": {
+        "src": "/assets/images/hero/sticky-note-krug.webp",
+        "width": 400,
+        "height": 269,
+        "bytes": 12368
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-krug-128w-33ed0d028bf1.webp",
+          "width": 128,
+          "height": 86,
+          "bytes": 3346,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-krug-192w-8aa8c8743bda.webp",
+          "width": 192,
+          "height": 129,
+          "bytes": 5564,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-krug-224w-0c1576686f0b.webp",
+          "width": 224,
+          "height": 151,
+          "bytes": 6776,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-krug-400w-b35a5fa16e34.webp",
+          "width": 400,
+          "height": 269,
+          "bytes": 12368,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 99,
+        "desktop": 175
+      },
+      "sourceHash": "b35a5fa16e34",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        128,
+        192,
+        224,
+        352,
+        400
+      ]
+    },
+    "/assets/images/hero/sticky-note-yellow-2.webp": {
+      "original": {
+        "src": "/assets/images/hero/sticky-note-yellow-2.webp",
+        "width": 500,
+        "height": 481,
+        "bytes": 13294
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-yellow-2-128w-a7c97ef01f39.webp",
+          "width": 128,
+          "height": 123,
+          "bytes": 2154,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-yellow-2-224w-530c7885d4f3.webp",
+          "width": 224,
+          "height": 215,
+          "bytes": 4686,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-yellow-2-256w-b0a035b9209f.webp",
+          "width": 256,
+          "height": 246,
+          "bytes": 5748,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-yellow-2-448w-93212eb2f534.webp",
+          "width": 448,
+          "height": 431,
+          "bytes": 11916,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/sticky-note-yellow-2-500w-b7b02e8f9aa3.webp",
+          "width": 500,
+          "height": 481,
+          "bytes": 13294,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 122,
+        "desktop": 215
+      },
+      "sourceHash": "b7b02e8f9aa3",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        128,
+        224,
+        256,
+        448,
+        500
+      ]
+    },
+    "/assets/images/hero/tape-diagonal.webp": {
+      "original": {
+        "src": "/assets/images/hero/tape-diagonal.webp",
+        "width": 350,
+        "height": 176,
+        "bytes": 7088
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/tape-diagonal-64w-2b6ac645260b.webp",
+          "width": 64,
+          "height": 32,
+          "bytes": 1032,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/tape-diagonal-128w-edbad2a64e84.webp",
+          "width": 128,
+          "height": 64,
+          "bytes": 2208,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/tape-diagonal-350w-1deeafd89c46.webp",
+          "width": 350,
+          "height": 176,
+          "bytes": 7088,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 59
+      },
+      "sourceHash": "1deeafd89c46",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        64,
+        128,
+        350
+      ]
+    },
+    "/assets/images/hero/tape-short.webp": {
+      "original": {
+        "src": "/assets/images/hero/tape-short.webp",
+        "width": 500,
+        "height": 142,
+        "bytes": 7922
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/tape-short-64w-86c19645a424.webp",
+          "width": 64,
+          "height": 18,
+          "bytes": 710,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/tape-short-128w-563d13728e7e.webp",
+          "width": 128,
+          "height": 36,
+          "bytes": 1458,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/tape-short-288w-581de0bfc1a9.webp",
+          "width": 288,
+          "height": 82,
+          "bytes": 4458,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/tape-short-500w-2eca0e1a05ee.webp",
+          "width": 500,
+          "height": 142,
+          "bytes": 7922,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 62,
+        "desktop": 265
+      },
+      "sourceHash": "2eca0e1a05ee",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        64,
+        128,
+        288,
+        500
+      ]
+    },
+    "/assets/images/hero/torn-paper-sheet.webp": {
+      "original": {
+        "src": "/assets/images/hero/torn-paper-sheet.webp",
+        "width": 900,
+        "height": 357,
+        "bytes": 24316
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/torn-paper-sheet-384w-17b29b69277e.webp",
+          "width": 384,
+          "height": 152,
+          "bytes": 6368,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/torn-paper-sheet-544w-d613a34f0b2d.webp",
+          "width": 544,
+          "height": 216,
+          "bytes": 12330,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/torn-paper-sheet-736w-55e452a62443.webp",
+          "width": 736,
+          "height": 292,
+          "bytes": 17638,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/torn-paper-sheet-900w-2daee8a19f82.webp",
+          "width": 900,
+          "height": 357,
+          "bytes": 24316,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 360,
+        "desktop": 520
+      },
+      "sourceHash": "2daee8a19f82",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        544,
+        736,
+        900
+      ]
+    },
+    "/assets/images/hero/traffic-sources.webp": {
+      "original": {
+        "src": "/assets/images/hero/traffic-sources.webp",
+        "width": 500,
+        "height": 345,
+        "bytes": 9372
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/traffic-sources-256w-3cb4589d6707.webp",
+          "width": 256,
+          "height": 177,
+          "bytes": 4962,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/traffic-sources-500w-2c9a4726b397.webp",
+          "width": 500,
+          "height": 345,
+          "bytes": 9372,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 255
+      },
+      "sourceHash": "2c9a4726b397",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        256,
+        500
+      ]
+    },
+    "/assets/images/hero/up.webp": {
+      "original": {
+        "src": "/assets/images/hero/up.webp",
+        "width": 409,
+        "height": 600,
+        "bytes": 8646
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/up-96w-6a04bf9e65ff.webp",
+          "width": 96,
+          "height": 141,
+          "bytes": 1438,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/up-192w-7740737d6367.webp",
+          "width": 192,
+          "height": 282,
+          "bytes": 3578,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/up-409w-dd12e02c3bb8.webp",
+          "width": 409,
+          "height": 600,
+          "bytes": 8646,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 96
+      },
+      "sourceHash": "dd12e02c3bb8",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        192,
+        409
+      ]
+    },
+    "/assets/images/hero/website-wireframe-paper.webp": {
+      "original": {
+        "src": "/assets/images/hero/website-wireframe-paper.webp",
+        "width": 600,
+        "height": 819,
+        "bytes": 39282
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/hero/website-wireframe-paper-224w-7b1b6580169b.webp",
+          "width": 224,
+          "height": 306,
+          "bytes": 9804,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/website-wireframe-paper-288w-5a50f7a65633.webp",
+          "width": 288,
+          "height": 393,
+          "bytes": 14524,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/website-wireframe-paper-448w-aff007b90fc1.webp",
+          "width": 448,
+          "height": 612,
+          "bytes": 28580,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/website-wireframe-paper-544w-1f522c4dc2a1.webp",
+          "width": 544,
+          "height": 743,
+          "bytes": 36378,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/hero/website-wireframe-paper-600w-e6bfd5b7bee5.webp",
+          "width": 600,
+          "height": 819,
+          "bytes": 39282,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 219,
+        "desktop": 260
+      },
+      "sourceHash": "e6bfd5b7bee5",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        224,
+        288,
+        448,
+        544,
+        600
+      ]
+    },
+    "/assets/images/nine/1.webp": {
+      "original": {
+        "src": "/assets/images/nine/1.webp",
+        "width": 800,
+        "height": 603,
+        "bytes": 54020
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/nine/1-384w-4b97d13233ea.webp",
+          "width": 384,
+          "height": 289,
+          "bytes": 20688,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/nine/1-640w-b1ee68eed948.webp",
+          "width": 640,
+          "height": 482,
+          "bytes": 42778,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/nine/1-800w-d13262f8685b.webp",
+          "width": 800,
+          "height": 603,
+          "bytes": 54020,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 640
+      },
+      "sourceHash": "d13262f8685b",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        800
+      ]
+    },
+    "/assets/images/nine/2.webp": {
+      "original": {
+        "src": "/assets/images/nine/2.webp",
+        "width": 300,
+        "height": 337,
+        "bytes": 17530
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/nine/2-300w-ee58d4042a39.webp",
+          "width": 300,
+          "height": 337,
+          "bytes": 17530,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 300,
+        "desktop": 300
+      },
+      "sourceHash": "ee58d4042a39",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        300
+      ]
+    },
+    "/assets/images/second/1.webp": {
+      "original": {
+        "src": "/assets/images/second/1.webp",
+        "width": 300,
+        "height": 417,
+        "bytes": 6018
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/1-256w-0ecbd97bfb7d.webp",
+          "width": 256,
+          "height": 356,
+          "bytes": 5530,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/1-300w-99f692d20ff4.webp",
+          "width": 300,
+          "height": 417,
+          "bytes": 6018,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 250
+      },
+      "sourceHash": "99f692d20ff4",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        256,
+        300
+      ]
+    },
+    "/assets/images/second/10_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/10_icons.webp",
+        "width": 100,
+        "height": 66,
+        "bytes": 2250
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/10_icons-100w-fd0c0a726170.webp",
+          "width": 100,
+          "height": 66,
+          "bytes": 2250,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "fd0c0a726170",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/10_list.webp": {
+      "original": {
+        "src": "/assets/images/second/10_list.webp",
+        "width": 443,
+        "height": 183,
+        "bytes": 6396
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/10_list-384w-fc72cc6cf1fd.webp",
+          "width": 384,
+          "height": 159,
+          "bytes": 5514,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/10_list-443w-737b0df8c7fb.webp",
+          "width": 443,
+          "height": 183,
+          "bytes": 6396,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 443
+      },
+      "sourceHash": "737b0df8c7fb",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        443
+      ]
+    },
+    "/assets/images/second/11_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/11_icons.webp",
+        "width": 100,
+        "height": 96,
+        "bytes": 3048
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/11_icons-100w-bcf745b4ea20.webp",
+          "width": 100,
+          "height": 96,
+          "bytes": 3048,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "bcf745b4ea20",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/11_list.webp": {
+      "original": {
+        "src": "/assets/images/second/11_list.webp",
+        "width": 426,
+        "height": 169,
+        "bytes": 5826
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/11_list-384w-1aabc7d4e5d7.webp",
+          "width": 384,
+          "height": 152,
+          "bytes": 5372,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/11_list-426w-3663f8b35a73.webp",
+          "width": 426,
+          "height": 169,
+          "bytes": 5826,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 426
+      },
+      "sourceHash": "3663f8b35a73",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        426
+      ]
+    },
+    "/assets/images/second/1_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/1_icons.webp",
+        "width": 100,
+        "height": 86,
+        "bytes": 1622
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/1_icons-100w-e40c5d5a9060.webp",
+          "width": 100,
+          "height": 86,
+          "bytes": 1622,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "e40c5d5a9060",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/1_list.webp": {
+      "original": {
+        "src": "/assets/images/second/1_list.webp",
+        "width": 435,
+        "height": 307,
+        "bytes": 8830
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/1_list-384w-70b602c23c8d.webp",
+          "width": 384,
+          "height": 271,
+          "bytes": 7792,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/1_list-435w-34fa1e69b3dc.webp",
+          "width": 435,
+          "height": 307,
+          "bytes": 8830,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 435
+      },
+      "sourceHash": "34fa1e69b3dc",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        435
+      ]
+    },
+    "/assets/images/second/2.webp": {
+      "original": {
+        "src": "/assets/images/second/2.webp",
+        "width": 300,
+        "height": 600,
+        "bytes": 5950
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/2-128w-7ababd9e20b5.webp",
+          "width": 128,
+          "height": 256,
+          "bytes": 2360,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/2-224w-5c65da1093eb.webp",
+          "width": 224,
+          "height": 448,
+          "bytes": 4966,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/2-300w-af14131e2618.webp",
+          "width": 300,
+          "height": 600,
+          "bytes": 5950,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 110
+      },
+      "sourceHash": "af14131e2618",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        128,
+        224,
+        300
+      ]
+    },
+    "/assets/images/second/2_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/2_icons.webp",
+        "width": 100,
+        "height": 128,
+        "bytes": 3330
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/2_icons-100w-966117555697.webp",
+          "width": 100,
+          "height": 128,
+          "bytes": 3330,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "966117555697",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/2_list.webp": {
+      "original": {
+        "src": "/assets/images/second/2_list.webp",
+        "width": 424,
+        "height": 302,
+        "bytes": 8522
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/2_list-384w-60dd9895bef5.webp",
+          "width": 384,
+          "height": 274,
+          "bytes": 7906,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/2_list-424w-a24beb8363c9.webp",
+          "width": 424,
+          "height": 302,
+          "bytes": 8522,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 424
+      },
+      "sourceHash": "a24beb8363c9",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        424
+      ]
+    },
+    "/assets/images/second/3.webp": {
+      "original": {
+        "src": "/assets/images/second/3.webp",
+        "width": 300,
+        "height": 309,
+        "bytes": 5654
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/3-96w-4ccee3e47d5b.webp",
+          "width": 96,
+          "height": 99,
+          "bytes": 1398,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/3-160w-1f9f6608ac19.webp",
+          "width": 160,
+          "height": 165,
+          "bytes": 2614,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/3-300w-69730e6a6d07.webp",
+          "width": 300,
+          "height": 309,
+          "bytes": 5654,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 75
+      },
+      "sourceHash": "69730e6a6d07",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        160,
+        300
+      ]
+    },
+    "/assets/images/second/3_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/3_icons.webp",
+        "width": 100,
+        "height": 111,
+        "bytes": 3126
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/3_icons-100w-c8d6c12b48ad.webp",
+          "width": 100,
+          "height": 111,
+          "bytes": 3126,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "c8d6c12b48ad",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/3_list.webp": {
+      "original": {
+        "src": "/assets/images/second/3_list.webp",
+        "width": 410,
+        "height": 299,
+        "bytes": 7666
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/3_list-384w-de0eb406929a.webp",
+          "width": 384,
+          "height": 280,
+          "bytes": 7480,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/3_list-410w-de3f28940ff5.webp",
+          "width": 410,
+          "height": 299,
+          "bytes": 7666,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 410
+      },
+      "sourceHash": "de3f28940ff5",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        410
+      ]
+    },
+    "/assets/images/second/4.webp": {
+      "original": {
+        "src": "/assets/images/second/4.webp",
+        "width": 300,
+        "height": 460,
+        "bytes": 5534
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/4-160w-d720e98791a6.webp",
+          "width": 160,
+          "height": 245,
+          "bytes": 2528,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/4-288w-6f7af27ac7e4.webp",
+          "width": 288,
+          "height": 442,
+          "bytes": 5432,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/4-300w-e8dcf1c2b1ef.webp",
+          "width": 300,
+          "height": 460,
+          "bytes": 5534,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 130
+      },
+      "sourceHash": "e8dcf1c2b1ef",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        160,
+        288,
+        300
+      ]
+    },
+    "/assets/images/second/4_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/4_icons.webp",
+        "width": 100,
+        "height": 110,
+        "bytes": 3050
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/4_icons-100w-9874e25f4afb.webp",
+          "width": 100,
+          "height": 110,
+          "bytes": 3050,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "9874e25f4afb",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/4_list.webp": {
+      "original": {
+        "src": "/assets/images/second/4_list.webp",
+        "width": 418,
+        "height": 260,
+        "bytes": 6600
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/4_list-384w-b546a5332e04.webp",
+          "width": 384,
+          "height": 239,
+          "bytes": 6292,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/4_list-418w-c8101d076917.webp",
+          "width": 418,
+          "height": 260,
+          "bytes": 6600,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 418
+      },
+      "sourceHash": "c8101d076917",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        418
+      ]
+    },
+    "/assets/images/second/5.webp": {
+      "original": {
+        "src": "/assets/images/second/5.webp",
+        "width": 300,
+        "height": 632,
+        "bytes": 9782
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/5-192w-870f5b1aa4af.webp",
+          "width": 192,
+          "height": 404,
+          "bytes": 5792,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/5-300w-b190b85300be.webp",
+          "width": 300,
+          "height": 632,
+          "bytes": 9782,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 165
+      },
+      "sourceHash": "b190b85300be",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        192,
+        300
+      ]
+    },
+    "/assets/images/second/5_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/5_icons.webp",
+        "width": 100,
+        "height": 133,
+        "bytes": 3146
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/5_icons-100w-ceb3e9c42bf9.webp",
+          "width": 100,
+          "height": 133,
+          "bytes": 3146,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "ceb3e9c42bf9",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/5_list.webp": {
+      "original": {
+        "src": "/assets/images/second/5_list.webp",
+        "width": 399,
+        "height": 243,
+        "bytes": 6226
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/5_list-399w-112ed3895654.webp",
+          "width": 399,
+          "height": 243,
+          "bytes": 6226,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 399
+      },
+      "sourceHash": "112ed3895654",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        399
+      ]
+    },
+    "/assets/images/second/6.webp": {
+      "original": {
+        "src": "/assets/images/second/6.webp",
+        "width": 500,
+        "height": 340,
+        "bytes": 10006
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/6-192w-e5f477546993.webp",
+          "width": 192,
+          "height": 131,
+          "bytes": 2832,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/6-352w-19176c46f6b1.webp",
+          "width": 352,
+          "height": 239,
+          "bytes": 6436,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/6-500w-d6d22c07c025.webp",
+          "width": 500,
+          "height": 340,
+          "bytes": 10006,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 175
+      },
+      "sourceHash": "d6d22c07c025",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        192,
+        352,
+        500
+      ]
+    },
+    "/assets/images/second/6_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/6_icons.webp",
+        "width": 100,
+        "height": 87,
+        "bytes": 3504
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/6_icons-100w-7f82198b7df9.webp",
+          "width": 100,
+          "height": 87,
+          "bytes": 3504,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "7f82198b7df9",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/6_list.webp": {
+      "original": {
+        "src": "/assets/images/second/6_list.webp",
+        "width": 412,
+        "height": 254,
+        "bytes": 6750
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/6_list-384w-fb78353bb095.webp",
+          "width": 384,
+          "height": 237,
+          "bytes": 6310,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/6_list-412w-08479ec927e5.webp",
+          "width": 412,
+          "height": 254,
+          "bytes": 6750,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 412
+      },
+      "sourceHash": "08479ec927e5",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        412
+      ]
+    },
+    "/assets/images/second/7.webp": {
+      "original": {
+        "src": "/assets/images/second/7.webp",
+        "width": 500,
+        "height": 517,
+        "bytes": 16642
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/7-96w-d75709c9a120.webp",
+          "width": 96,
+          "height": 99,
+          "bytes": 2430,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/7-192w-070dc2e4250a.webp",
+          "width": 192,
+          "height": 199,
+          "bytes": 5254,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/7-500w-f0fce6061999.webp",
+          "width": 500,
+          "height": 517,
+          "bytes": 16642,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 0,
+        "desktop": 90
+      },
+      "sourceHash": "f0fce6061999",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        192,
+        500
+      ]
+    },
+    "/assets/images/second/7_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/7_icons.webp",
+        "width": 100,
+        "height": 128,
+        "bytes": 3514
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/7_icons-100w-341b1e87fc1d.webp",
+          "width": 100,
+          "height": 128,
+          "bytes": 3514,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "341b1e87fc1d",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/7_list.webp": {
+      "original": {
+        "src": "/assets/images/second/7_list.webp",
+        "width": 423,
+        "height": 264,
+        "bytes": 7290
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/7_list-384w-160118786374.webp",
+          "width": 384,
+          "height": 240,
+          "bytes": 6442,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/7_list-423w-0a58b32b437b.webp",
+          "width": 423,
+          "height": 264,
+          "bytes": 7290,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 423
+      },
+      "sourceHash": "0a58b32b437b",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        423
+      ]
+    },
+    "/assets/images/second/8_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/8_icons.webp",
+        "width": 100,
+        "height": 57,
+        "bytes": 2250
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/8_icons-100w-bf2e49f4026a.webp",
+          "width": 100,
+          "height": 57,
+          "bytes": 2250,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "bf2e49f4026a",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/8_list.webp": {
+      "original": {
+        "src": "/assets/images/second/8_list.webp",
+        "width": 402,
+        "height": 261,
+        "bytes": 7110
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/8_list-384w-ce290029fe9a.webp",
+          "width": 384,
+          "height": 249,
+          "bytes": 6896,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/8_list-402w-839dfa71f3f4.webp",
+          "width": 402,
+          "height": 261,
+          "bytes": 7110,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 402
+      },
+      "sourceHash": "839dfa71f3f4",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        402
+      ]
+    },
+    "/assets/images/second/9_icons.webp": {
+      "original": {
+        "src": "/assets/images/second/9_icons.webp",
+        "width": 100,
+        "height": 102,
+        "bytes": 3290
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/9_icons-100w-2858f2f2bc34.webp",
+          "width": 100,
+          "height": 102,
+          "bytes": 3290,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 100,
+        "desktop": 100
+      },
+      "sourceHash": "2858f2f2bc34",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        100
+      ]
+    },
+    "/assets/images/second/9_list.webp": {
+      "original": {
+        "src": "/assets/images/second/9_list.webp",
+        "width": 415,
+        "height": 272,
+        "bytes": 7568
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/second/9_list-384w-5a0f292610d7.webp",
+          "width": 384,
+          "height": 252,
+          "bytes": 7298,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/second/9_list-415w-4950b4eaf772.webp",
+          "width": 415,
+          "height": 272,
+          "bytes": 7568,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 415
+      },
+      "sourceHash": "4950b4eaf772",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        415
+      ]
+    },
+    "/assets/images/seven/1.webp": {
+      "original": {
+        "src": "/assets/images/seven/1.webp",
+        "width": 300,
+        "height": 91,
+        "bytes": 4676
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/seven/1-300w-3131e37c078e.webp",
+          "width": 300,
+          "height": 91,
+          "bytes": 4676,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 300,
+        "desktop": 300
+      },
+      "sourceHash": "3131e37c078e",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        300
+      ]
+    },
+    "/assets/images/seven/2.webp": {
+      "original": {
+        "src": "/assets/images/seven/2.webp",
+        "width": 300,
+        "height": 156,
+        "bytes": 2350
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/seven/2-300w-e63acbbc7a5e.webp",
+          "width": 300,
+          "height": 156,
+          "bytes": 2350,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 300,
+        "desktop": 300
+      },
+      "sourceHash": "e63acbbc7a5e",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        300
+      ]
+    },
+    "/assets/images/seven/3.webp": {
+      "original": {
+        "src": "/assets/images/seven/3.webp",
+        "width": 600,
+        "height": 51,
+        "bytes": 7064
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/seven/3-160w-a543627a569d.webp",
+          "width": 160,
+          "height": 14,
+          "bytes": 1414,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/seven/3-320w-7f942af7a3e3.webp",
+          "width": 320,
+          "height": 27,
+          "bytes": 3294,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/seven/3-600w-e0591202b993.webp",
+          "width": 600,
+          "height": 51,
+          "bytes": 7064,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 153,
+        "desktop": 290
+      },
+      "sourceHash": "e0591202b993",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        160,
+        320,
+        600
+      ]
+    },
+    "/assets/images/seven/5.webp": {
+      "original": {
+        "src": "/assets/images/seven/5.webp",
+        "width": 1000,
+        "height": 1560,
+        "bytes": 158350
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/seven/5-384w-a278496b42da.webp",
+          "width": 384,
+          "height": 599,
+          "bytes": 47944,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/seven/5-640w-95087e258eb9.webp",
+          "width": 640,
+          "height": 998,
+          "bytes": 103346,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/seven/5-768w-12e2e773fd3d.webp",
+          "width": 768,
+          "height": 1198,
+          "bytes": 133916,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/seven/5-1000w-e2a1f8b24c71.webp",
+          "width": 1000,
+          "height": 1560,
+          "bytes": 158350,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 620
+      },
+      "sourceHash": "e2a1f8b24c71",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        1000
+      ]
+    },
+    "/assets/images/six/1.webp": {
+      "original": {
+        "src": "/assets/images/six/1.webp",
+        "width": 800,
+        "height": 593,
+        "bytes": 40648
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/six/1-288w-2a73781b618a.webp",
+          "width": 288,
+          "height": 213,
+          "bytes": 11096,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/1-384w-3f7f4c9cbc53.webp",
+          "width": 384,
+          "height": 285,
+          "bytes": 17770,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/1-576w-6231088fdcaf.webp",
+          "width": 576,
+          "height": 427,
+          "bytes": 33552,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/1-800w-c39d43a8f0dc.webp",
+          "width": 800,
+          "height": 593,
+          "bytes": 40648,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 280
+      },
+      "sourceHash": "c39d43a8f0dc",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        288,
+        384,
+        576,
+        768,
+        800
+      ]
+    },
+    "/assets/images/six/2.webp": {
+      "original": {
+        "src": "/assets/images/six/2.webp",
+        "width": 800,
+        "height": 567,
+        "bytes": 98530
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/six/2-288w-fe7b1f13d7f0.webp",
+          "width": 288,
+          "height": 204,
+          "bytes": 20960,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/2-384w-74b8d24097eb.webp",
+          "width": 384,
+          "height": 272,
+          "bytes": 36482,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/2-576w-7e82d38beefe.webp",
+          "width": 576,
+          "height": 408,
+          "bytes": 76238,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/2-800w-de5c6ce36969.webp",
+          "width": 800,
+          "height": 567,
+          "bytes": 98530,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 280
+      },
+      "sourceHash": "de5c6ce36969",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        288,
+        384,
+        576,
+        768,
+        800
+      ]
+    },
+    "/assets/images/six/3.webp": {
+      "original": {
+        "src": "/assets/images/six/3.webp",
+        "width": 800,
+        "height": 578,
+        "bytes": 60468
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/six/3-288w-e252811c8c65.webp",
+          "width": 288,
+          "height": 208,
+          "bytes": 15712,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/3-384w-bb6c188a0799.webp",
+          "width": 384,
+          "height": 277,
+          "bytes": 25864,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/3-576w-af2e07bec423.webp",
+          "width": 576,
+          "height": 416,
+          "bytes": 48956,
+          "encoding": "quality-94"
+        },
+        {
+          "src": "/assets/optimized/images/six/3-800w-89efc66adc06.webp",
+          "width": 800,
+          "height": 578,
+          "bytes": 60468,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 280
+      },
+      "sourceHash": "89efc66adc06",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        288,
+        384,
+        576,
+        768,
+        800
+      ]
+    },
+    "/assets/images/three/paper-banner-transparent.webp": {
+      "original": {
+        "src": "/assets/images/three/paper-banner-transparent.webp",
+        "width": 1200,
+        "height": 377,
+        "bytes": 28926
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/three/paper-banner-transparent-384w-106fb7bbefd8.webp",
+          "width": 384,
+          "height": 121,
+          "bytes": 6078,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/paper-banner-transparent-640w-c17bc5595374.webp",
+          "width": 640,
+          "height": 201,
+          "bytes": 13932,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/paper-banner-transparent-768w-2d0a3f5cbe3a.webp",
+          "width": 768,
+          "height": 241,
+          "bytes": 18254,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/paper-banner-transparent-1200w-c34e3c06a42f.webp",
+          "width": 1200,
+          "height": 377,
+          "bytes": 28926,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 384,
+        "desktop": 640
+      },
+      "sourceHash": "c34e3c06a42f",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        384,
+        640,
+        768,
+        1200
+      ]
+    },
+    "/assets/images/three/test.webp": {
+      "original": {
+        "src": "/assets/images/three/test.webp",
+        "width": 300,
+        "height": 270,
+        "bytes": 11958
+      },
+      "variants": [
+        {
+          "src": "/assets/optimized/images/three/test-96w-c0d23fafac44.webp",
+          "width": 96,
+          "height": 86,
+          "bytes": 3770,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/test-160w-0cec0281a8a0.webp",
+          "width": 160,
+          "height": 144,
+          "bytes": 6840,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/test-192w-cd4d2629cf3b.webp",
+          "width": 192,
+          "height": 173,
+          "bytes": 8664,
+          "encoding": "quality-90"
+        },
+        {
+          "src": "/assets/optimized/images/three/test-300w-df33c6e157dd.webp",
+          "width": 300,
+          "height": 270,
+          "bytes": 11958,
+          "encoding": "original"
+        }
+      ],
+      "suggestedSizes": {
+        "mobile": 66,
+        "desktop": 170
+      },
+      "sourceHash": "df33c6e157dd",
+      "recipe": "sharp-lanczos3-webp-q90-doc94-lossless-v1",
+      "requestedWidths": [
+        96,
+        160,
+        192,
+        300
+      ]
+    }
+  },
+  "fonts": {
+    "Inter": {
+      "src": "/assets/optimized/fonts/inter-variable-core-2eddca9110fa.woff2",
+      "bytes": 58332,
+      "originalBytes": 350460,
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 14,
+          "default": 14,
+          "max": 32
+        },
+        {
+          "tag": "wght",
+          "min": 100,
+          "default": 400,
+          "max": 900
+        }
+      ],
+      "sourceGlyphs": 2849,
+      "subsetGlyphs": 174,
+      "unicodeRange": "U+0020-007E,U+00A0,U+00AB,U+00B7,U+00BB,U+00D7,U+0401,U+0410-044F,U+0451,U+2013-2014,U+201C,U+201E,U+2022,U+2026,U+2190,U+2192",
+      "fallbackSrc": "/assets/optimized/fonts/inter-variable-latin-cyrillic-4549e6700b29.woff2",
+      "fallbackBytes": 80980
+    },
+    "Caveat": {
+      "src": "/assets/optimized/fonts/caveat-variable-core-601b8fe54929.woff2",
+      "bytes": 44524,
+      "originalBytes": 173468,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 400,
+          "default": 400,
+          "max": 700
+        }
+      ],
+      "sourceGlyphs": 753,
+      "subsetGlyphs": 72,
+      "unicodeRange": "U+0020-0021,U+0028-0029,U+002C-002E,U+0030-003B,U+003F,U+0043,U+0045,U+004D,U+004F,U+0052-0053,U+0061,U+0069,U+006C-006D,U+00A0,U+00AB,U+00BB,U+0410-0412,U+0414,U+0418,U+041C,U+041E,U+0420-0422,U+0430,U+0432-0443,U+0445-0448,U+044B-044C,U+044F,U+2013-2014,U+2022",
+      "fallbackSrc": "/assets/optimized/fonts/caveat-variable-latin-cyrillic-0716a91fcdbb.woff2",
+      "fallbackBytes": 125560
+    }
+  }
+}

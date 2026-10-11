@@ -4,15 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сергей Урба — сайты и продвижение</title>
+  <meta name="description" content="Сергей Урба: создание сайтов, веб-дизайн, Яндекс Директ и SEO-продвижение. Комплексное ведение интернет-маркетинга для бизнеса.">
   <link rel="canonical" href="https://urbaso.ru/">
-  <link rel="preload" href="./assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./assets/fonts/caveat-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/variables.css">
-  <link rel="stylesheet" href="./assets/css/style.css?v=20261003-harmony-1">
-  <link rel="stylesheet" href="./assets/css/responsive.css?v=20261004-document-viewers">
-  <link rel="stylesheet" href="./assets/css/contacts.css?v=20261004-phone-strips-1">
-  <link rel="stylesheet" href="./assets/css/harmony.css?v=20261004-text-rhythm-1">
+  <script>
+    // Keep below-fold paper backgrounds out of the first-screen request queue.
+    // Without IntersectionObserver (or if setup fails), normal CSS stays active.
+    (() => {
+      if (!('IntersectionObserver' in window)) return;
+      const root = document.documentElement;
+      root.classList.add('su-defer-backgrounds');
+      document.addEventListener('DOMContentLoaded', () => {
+        try {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add('su-bg-ready');
+              observer.unobserve(entry.target);
+            });
+          }, { rootMargin: '600px 0px' });
+          document.querySelectorAll('.su-work-v1, .su-situations-v1')
+            .forEach((section) => observer.observe(section));
+        } catch (_) {
+          root.classList.remove('su-defer-backgrounds');
+        }
+      }, { once: true });
+    })();
+  </script>
+  <link rel="preload" href="/assets/optimized/fonts/inter-variable-core-2eddca9110fa.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/optimized/fonts/caveat-variable-core-601b8fe54929.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/optimized/site-cc41f617a348.css">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -33,57 +53,57 @@
       <header class="su-hero-v2__header">
         <div class="su-hero-v2__brand"><b>Сергей Урба</b><span>Сайты и&nbsp;продвижение</span></div>
         <i aria-hidden="true"></i>
-        <div class="su-hero-v2__route" aria-label="анализ, стратегия, запуск, рост"><span>анализ</span><img src="/assets/images/hero/arrow-short_2.webp" alt="" aria-hidden="true"><span>стратегия</span><img src="/assets/images/hero/arrow-short_2.webp" alt="" aria-hidden="true"><span>запуск</span><img src="/assets/images/hero/arrow-short_2.webp" alt="" aria-hidden="true"><span>рост</span></div>
+        <div class="su-hero-v2__route" aria-label="анализ, стратегия, запуск, рост"><span>анализ</span><img src="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp 220w" sizes="auto, (max-width: 767px) min(100vw, 220px), 220px" width="220" height="43" loading="lazy" decoding="async"><span>стратегия</span><img src="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp 220w" sizes="auto, (max-width: 767px) min(100vw, 220px), 220px" width="220" height="43" loading="lazy" decoding="async"><span>запуск</span><img src="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp 220w" sizes="auto, (max-width: 767px) min(100vw, 220px), 220px" width="220" height="43" loading="lazy" decoding="async"><span>рост</span></div>
         <a class="su-hero-v2__phone" href="tel:+79052504122">+7 (905) 250-41-22</a>
-        <a class="su-hero-v2__header-max" href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer"><img src="/assets/images/hero/max-logo-white.svg" alt=""><span>Написать в&nbsp;MAX</span></a>
+        <a class="su-hero-v2__header-max" href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer"><img src="/assets/images/hero/max-logo-white.svg" alt="" width="64" height="64" loading="lazy" decoding="async"><span>Написать в&nbsp;MAX</span></a>
       </header>
 
       <div class="su-hero-v2__layout">
         <div class="su-hero-v2__content">
           <div class="su-hero-v2__heading">
             <h1><span>Интернет-маркетолог</span></h1>
-            <img class="su-hero-v2__underline" src="/assets/images/hero/handwritten-underline.webp" alt="">
+            <img class="su-hero-v2__underline" src="/assets/optimized/images/hero/handwritten-underline-500w-c14cf095e581.webp" alt="" srcset="/assets/optimized/images/hero/handwritten-underline-384w-1540f30516f7.webp 384w, /assets/optimized/images/hero/handwritten-underline-500w-c14cf095e581.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 384px), 500px" width="500" height="45" loading="lazy" decoding="async">
           </div>
           <p class="su-hero-v2__description">Сам создаю сайты, запускаю рекламу<br> и&nbsp;занимаюсь дальнейшим продвижением.<br> Клиенту не&nbsp;приходится координировать<br> нескольких подрядчиков.</p>
-          <div class="su-hero-v2__price"><img src="/assets/images/hero/torn-paper-sheet.webp" alt=""><div><span>50 000</span><span><span>руб. в&nbsp;месяц</span><span>за&nbsp;полное ведение</span></span></div></div>
+          <div class="su-hero-v2__price"><span class="su-hero-v2__price-paper" aria-hidden="true"></span><div><span>50 000</span><span><span>руб. в&nbsp;месяц</span><span>за&nbsp;полное ведение</span></span></div></div>
           <div class="su-hero-v2__bottom">
-            <div class="su-hero-v2__sticky"><img class="su-hero-v2__sticky-paper" src="/assets/images/hero/sticky-note-yellow-2.webp" alt="" aria-hidden="true"><img class="su-hero-v2__sticky-tape" src="/assets/images/hero/tape-short.webp" alt="" aria-hidden="true"><img class="su-hero-v2__sticky-circle" src="/assets/images/hero/sticky-note-krug.webp" alt="" aria-hidden="true"><p>Беру<br>ограниченное<br>количество<br>проектов</p></div>
-            <div class="su-hero-v2__max"><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer"><img src="/assets/images/hero/max-logo-white.svg" alt=""><span><b>Написать в&nbsp;MAX</b><small>только здесь</small></span></a><img src="/assets/images/hero/max-icon-round.webp" alt=""></div>
+            <div class="su-hero-v2__sticky"><img class="su-hero-v2__sticky-paper" src="/assets/optimized/images/hero/sticky-note-yellow-2-224w-530c7885d4f3.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/sticky-note-yellow-2-128w-a7c97ef01f39.webp 128w, /assets/optimized/images/hero/sticky-note-yellow-2-224w-530c7885d4f3.webp 224w, /assets/optimized/images/hero/sticky-note-yellow-2-256w-b0a035b9209f.webp 256w, /assets/optimized/images/hero/sticky-note-yellow-2-448w-93212eb2f534.webp 448w, /assets/optimized/images/hero/sticky-note-yellow-2-500w-b7b02e8f9aa3.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 122px), 215px" width="500" height="481" loading="lazy" decoding="async"><img class="su-hero-v2__sticky-tape" src="/assets/optimized/images/hero/tape-short-288w-581de0bfc1a9.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/tape-short-64w-86c19645a424.webp 64w, /assets/optimized/images/hero/tape-short-128w-563d13728e7e.webp 128w, /assets/optimized/images/hero/tape-short-288w-581de0bfc1a9.webp 288w, /assets/optimized/images/hero/tape-short-500w-2eca0e1a05ee.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 62px), 265px" width="500" height="142" loading="lazy" decoding="async"><img class="su-hero-v2__sticky-circle" src="/assets/optimized/images/hero/sticky-note-krug-192w-8aa8c8743bda.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/sticky-note-krug-128w-33ed0d028bf1.webp 128w, /assets/optimized/images/hero/sticky-note-krug-192w-8aa8c8743bda.webp 192w, /assets/optimized/images/hero/sticky-note-krug-224w-0c1576686f0b.webp 224w, /assets/optimized/images/hero/sticky-note-krug-400w-b35a5fa16e34.webp 400w" sizes="auto, (max-width: 767px) min(100vw, 99px), 175px" width="400" height="269" loading="lazy" decoding="async"><p>Беру<br>ограниченное<br>количество<br>проектов</p></div>
+            <div class="su-hero-v2__max"><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer"><img src="/assets/images/hero/max-logo-white.svg" alt="" width="64" height="64" loading="lazy" decoding="async"><span><b>Написать в&nbsp;MAX</b><small>только здесь</small></span></a><img src="/assets/optimized/images/hero/max-icon-round-128w-d3108d6406fe.webp" alt="" srcset="/assets/optimized/images/hero/max-icon-round-64w-7baba52a1c1d.webp 64w, /assets/optimized/images/hero/max-icon-round-128w-d3108d6406fe.webp 128w, /assets/optimized/images/hero/max-icon-round-224w-92d829a1e204.webp 224w, /assets/optimized/images/hero/max-icon-round-500w-f3df21956117.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 56px), 100px" width="500" height="500" loading="lazy" decoding="async"></div>
           </div>
         </div>
 
         <div class="su-hero-v2__artboard" aria-hidden="true">
-          <img class="grid-paper-top" src="/assets/images/hero/grid-paper-sheet.webp" alt=""><img class="grid-paper-bottom" src="/assets/images/hero/grid-paper-sheet.webp" alt=""><img class="grid" src="/assets/images/hero/technical-grid-overlay.svg" alt=""><img class="lines" src="/assets/images/hero/lenta.webp" alt=""><img class="wire" src="/assets/images/hero/website-wireframe-paper.webp" alt=""><img class="orange" src="/assets/images/hero/orange-paper-shape.webp" alt=""><img class="arrow" src="/assets/images/hero/arrow-curved.webp" alt=""><img class="blue" src="/assets/images/hero/blue-paper-shape.webp" alt=""><img class="blue-tape" src="/assets/images/hero/tape-diagonal.webp" alt=""><img class="dash" src="/assets/images/hero/ad-dashboard_1000.webp" alt=""><img class="traffic" src="/assets/images/hero/traffic-sources.webp" alt=""><img class="portrait" src="/assets/images/hero/sergeiurba_2.webp" alt="Сергей Урба">
-          <div class="services">• стратегия<br>• реклама<br>• аналитика<br>• рост заявок</div><img class="services-arrow-up" src="/assets/images/hero/up.webp" alt=""><img class="services-arrow-right" src="/assets/images/hero/right.webp" alt=""><img class="code" src="/assets/images/hero/code.webp" alt=""><div class="code-note"><img src="/assets/images/hero/tape-short.webp" alt=""><span>код, структура,<br>скорость, конверсия</span><img src="/assets/images/hero/arrow-short_2.webp" alt=""></div>
+          <img class="grid-paper-top" src="/assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp" alt="" srcset="/assets/optimized/images/hero/grid-paper-sheet-384w-d065c1533650.webp 384w, /assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp 416w, /assets/optimized/images/hero/grid-paper-sheet-700w-c0c4e99d4326.webp 700w" sizes="(max-width: 767px) min(calc(100vw - 36px), 360px), 400px" width="700" height="925" loading="eager" decoding="async" fetchpriority="high"><img class="grid-paper-bottom" src="/assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp" alt="" srcset="/assets/optimized/images/hero/grid-paper-sheet-384w-d065c1533650.webp 384w, /assets/optimized/images/hero/grid-paper-sheet-416w-fe09f2864554.webp 416w, /assets/optimized/images/hero/grid-paper-sheet-700w-c0c4e99d4326.webp 700w" sizes="auto, (max-width: 767px) min(calc(100vw - 36px), 360px), 400px" width="700" height="925" loading="lazy" decoding="async"><img class="grid" src="/assets/images/hero/technical-grid-overlay.svg" alt="" width="900" height="750" loading="lazy" decoding="async"><img class="lines" src="/assets/optimized/images/hero/lenta-192w-a68cea993dc9.webp" alt="" srcset="/assets/optimized/images/hero/lenta-192w-a68cea993dc9.webp 192w, /assets/optimized/images/hero/lenta-352w-f236ac788653.webp 352w, /assets/optimized/images/hero/lenta-500w-0037da924348.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 175px), 175px" width="500" height="464" loading="lazy" decoding="async"><img class="wire" src="/assets/optimized/images/hero/website-wireframe-paper-288w-5a50f7a65633.webp" alt="" srcset="/assets/optimized/images/hero/website-wireframe-paper-224w-7b1b6580169b.webp 224w, /assets/optimized/images/hero/website-wireframe-paper-288w-5a50f7a65633.webp 288w, /assets/optimized/images/hero/website-wireframe-paper-448w-aff007b90fc1.webp 448w, /assets/optimized/images/hero/website-wireframe-paper-544w-1f522c4dc2a1.webp 544w, /assets/optimized/images/hero/website-wireframe-paper-600w-e6bfd5b7bee5.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 219px), 260px" width="600" height="819" loading="lazy" decoding="async"><img class="orange" src="/assets/optimized/images/hero/orange-paper-shape-192w-3e2065800fd2.webp" alt="" srcset="/assets/optimized/images/hero/orange-paper-shape-192w-3e2065800fd2.webp 192w, /assets/optimized/images/hero/orange-paper-shape-352w-a1a3908318d6.webp 352w, /assets/optimized/images/hero/orange-paper-shape-450w-0e9fcc07a6e4.webp 450w" sizes="auto, (max-width: 767px) min(100vw, 1px), 165px" width="450" height="475" loading="lazy" decoding="async"><img class="arrow" src="/assets/optimized/images/hero/arrow-curved-128w-8573f1cb451a.webp" alt="" srcset="/assets/optimized/images/hero/arrow-curved-128w-8573f1cb451a.webp 128w, /assets/optimized/images/hero/arrow-curved-224w-faaead8a4585.webp 224w, /assets/optimized/images/hero/arrow-curved-400w-2790422a264b.webp 400w" sizes="auto, (max-width: 767px) min(100vw, 1px), 110px" width="400" height="307" loading="lazy" decoding="async"><img class="blue" src="/assets/optimized/images/hero/blue-paper-shape-192w-e6ae3d04b5a8.webp" alt="" srcset="/assets/optimized/images/hero/blue-paper-shape-192w-e6ae3d04b5a8.webp 192w, /assets/optimized/images/hero/blue-paper-shape-384w-1d84f579753f.webp 384w, /assets/optimized/images/hero/blue-paper-shape-600w-ffdc5b597ebd.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 1px), 180px" width="600" height="339" loading="lazy" decoding="async"><img class="blue-tape" src="/assets/optimized/images/hero/tape-diagonal-64w-2b6ac645260b.webp" alt="" srcset="/assets/optimized/images/hero/tape-diagonal-64w-2b6ac645260b.webp 64w, /assets/optimized/images/hero/tape-diagonal-128w-edbad2a64e84.webp 128w, /assets/optimized/images/hero/tape-diagonal-350w-1deeafd89c46.webp 350w" sizes="auto, (max-width: 767px) min(100vw, 1px), 59px" width="350" height="176" loading="lazy" decoding="async"><img class="dash" src="/assets/optimized/images/hero/ad-dashboard_1000-416w-3e56d8bea382.webp" alt="" srcset="/assets/optimized/images/hero/ad-dashboard_1000-224w-9aed57a9444a.webp 224w, /assets/optimized/images/hero/ad-dashboard_1000-416w-3e56d8bea382.webp 416w, /assets/optimized/images/hero/ad-dashboard_1000-800w-575f132f8bdc.webp 800w, /assets/optimized/images/hero/ad-dashboard_1000-1000w-9ac16a257f49.webp 1000w" sizes="auto, (max-width: 767px) min(100vw, 205px), 400px" width="1000" height="524" loading="lazy" decoding="async"><img class="traffic" src="/assets/optimized/images/hero/traffic-sources-256w-3cb4589d6707.webp" alt="" srcset="/assets/optimized/images/hero/traffic-sources-256w-3cb4589d6707.webp 256w, /assets/optimized/images/hero/traffic-sources-500w-2c9a4726b397.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 1px), 255px" width="500" height="345" loading="lazy" decoding="async"><img class="portrait" src="/assets/optimized/images/hero/sergeiurba_2-600w-507fe0baac37.webp" alt="Сергей Урба" width="600" height="1113" loading="eager" decoding="async" fetchpriority="high">
+          <div class="services">• стратегия<br>• реклама<br>• аналитика<br>• рост заявок</div><img class="services-arrow-up" src="/assets/optimized/images/hero/up-96w-6a04bf9e65ff.webp" alt="" srcset="/assets/optimized/images/hero/up-96w-6a04bf9e65ff.webp 96w, /assets/optimized/images/hero/up-192w-7740737d6367.webp 192w, /assets/optimized/images/hero/up-409w-dd12e02c3bb8.webp 409w" sizes="auto, (max-width: 767px) min(100vw, 1px), 96px" width="409" height="600" loading="lazy" decoding="async"><img class="services-arrow-right" src="/assets/optimized/images/hero/right-600w-e081a9c14ddc.webp" alt="" srcset="/assets/optimized/images/hero/right-384w-f110b2d7606d.webp 384w, /assets/optimized/images/hero/right-600w-e081a9c14ddc.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 384px), 600px" width="600" height="74" loading="lazy" decoding="async"><img class="code" src="/assets/optimized/images/hero/code-320w-ae8e3ad8f72f.webp" alt="" srcset="/assets/optimized/images/hero/code-320w-ae8e3ad8f72f.webp 320w, /assets/optimized/images/hero/code-600w-98844da6b555.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 1px), 300px" width="600" height="335" loading="lazy" decoding="async"><div class="code-note"><img src="/assets/optimized/images/hero/tape-short-288w-581de0bfc1a9.webp" alt="" srcset="/assets/optimized/images/hero/tape-short-64w-86c19645a424.webp 64w, /assets/optimized/images/hero/tape-short-128w-563d13728e7e.webp 128w, /assets/optimized/images/hero/tape-short-288w-581de0bfc1a9.webp 288w, /assets/optimized/images/hero/tape-short-500w-2eca0e1a05ee.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 62px), 265px" width="500" height="142" loading="lazy" decoding="async"><span>код, структура,<br>скорость, конверсия</span><img src="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp" alt="" srcset="/assets/optimized/images/hero/arrow-short_2-220w-efb0da767d76.webp 220w" sizes="auto, (max-width: 767px) min(100vw, 220px), 220px" width="220" height="43" loading="lazy" decoding="async"></div>
         </div>
       </div>
-      <img class="dots" src="/assets/images/hero/punktir-2.webp" alt="" aria-hidden="true"><img class="cross" src="/assets/images/hero/pricel.webp" alt="" aria-hidden="true">
+      <img class="dots" src="/assets/optimized/images/hero/punktir-2-32w-f0cf27b3f0d8.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/punktir-2-32w-f0cf27b3f0d8.webp 32w, /assets/optimized/images/hero/punktir-2-64w-6b04d07421a8.webp 64w, /assets/optimized/images/hero/punktir-2-100w-1e3420364e4d.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 27px), 30px" width="100" height="519" loading="lazy" decoding="async"><img class="cross" src="/assets/optimized/images/hero/pricel-100w-414b97ab6167.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/hero/pricel-100w-414b97ab6167.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="126" loading="lazy" decoding="async">
     </section>
 
     <section class="su-services-v2" aria-label="Услуги">
       <div class="su-services-v2__container">
         <div class="su-services-v2__grid">
-          <article class="su-services-v2__card su-services-v2__card--1"><img class="su-services-v2__sheet" src="/assets/images/second/1_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/1_icons.webp" alt="" aria-hidden="true"><h2>Создание сайта</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--2"><img class="su-services-v2__sheet" src="/assets/images/second/2_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/2_icons.webp" alt="" aria-hidden="true"><h2>Дизайн</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--3"><img class="su-services-v2__sheet" src="/assets/images/second/3_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/3_icons.webp" alt="" aria-hidden="true"><h2>Техническая поддержка</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--4"><img class="su-services-v2__sheet" src="/assets/images/second/4_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/4_icons.webp" alt="" aria-hidden="true"><h2>SEO-продвижение</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--5"><img class="su-services-v2__sheet" src="/assets/images/second/5_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/5_icons.webp" alt="" aria-hidden="true"><h2>Статьи</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--6"><img class="su-services-v2__sheet" src="/assets/images/second/6_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/6_icons.webp" alt="" aria-hidden="true"><h2>Реклама</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--7"><img class="su-services-v2__sheet" src="/assets/images/second/7_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/7_icons.webp" alt="" aria-hidden="true"><h2>Аналитика</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--8"><img class="su-services-v2__sheet" src="/assets/images/second/8_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/8_icons.webp" alt="" aria-hidden="true"><h2>CRM</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--9"><img class="su-services-v2__sheet" src="/assets/images/second/9_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/9_icons.webp" alt="" aria-hidden="true"><h2>Интеграции</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--10"><img class="su-services-v2__sheet" src="/assets/images/second/10_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/10_icons.webp" alt="" aria-hidden="true"><h2>Email-рассылки</h2></article>
-          <article class="su-services-v2__card su-services-v2__card--11"><img class="su-services-v2__sheet" src="/assets/images/second/11_list.webp" alt=""><img class="su-services-v2__icon" src="/assets/images/second/11_icons.webp" alt="" aria-hidden="true"><h2>Отчетность</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--1"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/1_list-435w-34fa1e69b3dc.webp" alt="" srcset="/assets/optimized/images/second/1_list-384w-70b602c23c8d.webp 384w, /assets/optimized/images/second/1_list-435w-34fa1e69b3dc.webp 435w" sizes="auto, (max-width: 767px) min(100vw, 384px), 435px" width="435" height="307" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/1_icons-100w-e40c5d5a9060.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/1_icons-100w-e40c5d5a9060.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="86" loading="lazy" decoding="async"><h2>Создание сайта</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--2"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/2_list-424w-a24beb8363c9.webp" alt="" srcset="/assets/optimized/images/second/2_list-384w-60dd9895bef5.webp 384w, /assets/optimized/images/second/2_list-424w-a24beb8363c9.webp 424w" sizes="auto, (max-width: 767px) min(100vw, 384px), 424px" width="424" height="302" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/2_icons-100w-966117555697.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/2_icons-100w-966117555697.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="128" loading="lazy" decoding="async"><h2>Дизайн</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--3"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/3_list-410w-de3f28940ff5.webp" alt="" srcset="/assets/optimized/images/second/3_list-384w-de0eb406929a.webp 384w, /assets/optimized/images/second/3_list-410w-de3f28940ff5.webp 410w" sizes="auto, (max-width: 767px) min(100vw, 384px), 410px" width="410" height="299" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/3_icons-100w-c8d6c12b48ad.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/3_icons-100w-c8d6c12b48ad.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="111" loading="lazy" decoding="async"><h2>Техническая поддержка</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--4"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/4_list-418w-c8101d076917.webp" alt="" srcset="/assets/optimized/images/second/4_list-384w-b546a5332e04.webp 384w, /assets/optimized/images/second/4_list-418w-c8101d076917.webp 418w" sizes="auto, (max-width: 767px) min(100vw, 384px), 418px" width="418" height="260" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/4_icons-100w-9874e25f4afb.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/4_icons-100w-9874e25f4afb.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="110" loading="lazy" decoding="async"><h2>SEO-продвижение</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--5"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/5_list-399w-112ed3895654.webp" alt="" srcset="/assets/optimized/images/second/5_list-399w-112ed3895654.webp 399w" sizes="auto, (max-width: 767px) min(100vw, 384px), 399px" width="399" height="243" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/5_icons-100w-ceb3e9c42bf9.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/5_icons-100w-ceb3e9c42bf9.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="133" loading="lazy" decoding="async"><h2>Статьи</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--6"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/6_list-412w-08479ec927e5.webp" alt="" srcset="/assets/optimized/images/second/6_list-384w-fb78353bb095.webp 384w, /assets/optimized/images/second/6_list-412w-08479ec927e5.webp 412w" sizes="auto, (max-width: 767px) min(100vw, 384px), 412px" width="412" height="254" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/6_icons-100w-7f82198b7df9.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/6_icons-100w-7f82198b7df9.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="87" loading="lazy" decoding="async"><h2>Реклама</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--7"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/7_list-423w-0a58b32b437b.webp" alt="" srcset="/assets/optimized/images/second/7_list-384w-160118786374.webp 384w, /assets/optimized/images/second/7_list-423w-0a58b32b437b.webp 423w" sizes="auto, (max-width: 767px) min(100vw, 384px), 423px" width="423" height="264" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/7_icons-100w-341b1e87fc1d.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/7_icons-100w-341b1e87fc1d.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="128" loading="lazy" decoding="async"><h2>Аналитика</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--8"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/8_list-402w-839dfa71f3f4.webp" alt="" srcset="/assets/optimized/images/second/8_list-384w-ce290029fe9a.webp 384w, /assets/optimized/images/second/8_list-402w-839dfa71f3f4.webp 402w" sizes="auto, (max-width: 767px) min(100vw, 384px), 402px" width="402" height="261" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/8_icons-100w-bf2e49f4026a.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/8_icons-100w-bf2e49f4026a.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="57" loading="lazy" decoding="async"><h2>CRM</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--9"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/9_list-415w-4950b4eaf772.webp" alt="" srcset="/assets/optimized/images/second/9_list-384w-5a0f292610d7.webp 384w, /assets/optimized/images/second/9_list-415w-4950b4eaf772.webp 415w" sizes="auto, (max-width: 767px) min(100vw, 384px), 415px" width="415" height="272" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/9_icons-100w-2858f2f2bc34.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/9_icons-100w-2858f2f2bc34.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="102" loading="lazy" decoding="async"><h2>Интеграции</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--10"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/10_list-443w-737b0df8c7fb.webp" alt="" srcset="/assets/optimized/images/second/10_list-384w-fc72cc6cf1fd.webp 384w, /assets/optimized/images/second/10_list-443w-737b0df8c7fb.webp 443w" sizes="auto, (max-width: 767px) min(100vw, 384px), 443px" width="443" height="183" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/10_icons-100w-fd0c0a726170.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/10_icons-100w-fd0c0a726170.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="66" loading="lazy" decoding="async"><h2>Email-рассылки</h2></article>
+          <article class="su-services-v2__card su-services-v2__card--11"><img class="su-services-v2__sheet" src="/assets/optimized/images/second/11_list-426w-3663f8b35a73.webp" alt="" srcset="/assets/optimized/images/second/11_list-384w-1aabc7d4e5d7.webp 384w, /assets/optimized/images/second/11_list-426w-3663f8b35a73.webp 426w" sizes="auto, (max-width: 767px) min(100vw, 384px), 426px" width="426" height="169" loading="lazy" decoding="async"><img class="su-services-v2__icon" src="/assets/optimized/images/second/11_icons-100w-bcf745b4ea20.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/second/11_icons-100w-bcf745b4ea20.webp 100w" sizes="auto, (max-width: 767px) min(100vw, 100px), 100px" width="100" height="96" loading="lazy" decoding="async"><h2>Отчетность</h2></article>
         </div>
 
         <div class="su-services-v2__decor" aria-hidden="true">
-          <img class="su-services-v2__arrow su-services-v2__arrow--1" src="/assets/images/second/1.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--2" src="/assets/images/second/2.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--3" src="/assets/images/second/3.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--4" src="/assets/images/second/4.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--5" src="/assets/images/second/5.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--6" src="/assets/images/second/6.webp" alt="">
-          <img class="su-services-v2__arrow su-services-v2__arrow--7" src="/assets/images/second/7.webp" alt="">
+          <img class="su-services-v2__arrow su-services-v2__arrow--1" src="/assets/optimized/images/second/1-256w-0ecbd97bfb7d.webp" alt="" srcset="/assets/optimized/images/second/1-256w-0ecbd97bfb7d.webp 256w, /assets/optimized/images/second/1-300w-99f692d20ff4.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 1px), 250px" width="300" height="417" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--2" src="/assets/optimized/images/second/2-128w-7ababd9e20b5.webp" alt="" srcset="/assets/optimized/images/second/2-128w-7ababd9e20b5.webp 128w, /assets/optimized/images/second/2-224w-5c65da1093eb.webp 224w, /assets/optimized/images/second/2-300w-af14131e2618.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 1px), 110px" width="300" height="600" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--3" src="/assets/optimized/images/second/3-96w-4ccee3e47d5b.webp" alt="" srcset="/assets/optimized/images/second/3-96w-4ccee3e47d5b.webp 96w, /assets/optimized/images/second/3-160w-1f9f6608ac19.webp 160w, /assets/optimized/images/second/3-300w-69730e6a6d07.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 1px), 75px" width="300" height="309" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--4" src="/assets/optimized/images/second/4-160w-d720e98791a6.webp" alt="" srcset="/assets/optimized/images/second/4-160w-d720e98791a6.webp 160w, /assets/optimized/images/second/4-288w-6f7af27ac7e4.webp 288w, /assets/optimized/images/second/4-300w-e8dcf1c2b1ef.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 1px), 130px" width="300" height="460" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--5" src="/assets/optimized/images/second/5-192w-870f5b1aa4af.webp" alt="" srcset="/assets/optimized/images/second/5-192w-870f5b1aa4af.webp 192w, /assets/optimized/images/second/5-300w-b190b85300be.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 1px), 165px" width="300" height="632" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--6" src="/assets/optimized/images/second/6-192w-e5f477546993.webp" alt="" srcset="/assets/optimized/images/second/6-192w-e5f477546993.webp 192w, /assets/optimized/images/second/6-352w-19176c46f6b1.webp 352w, /assets/optimized/images/second/6-500w-d6d22c07c025.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 1px), 175px" width="500" height="340" loading="lazy" decoding="async">
+          <img class="su-services-v2__arrow su-services-v2__arrow--7" src="/assets/optimized/images/second/7-96w-d75709c9a120.webp" alt="" srcset="/assets/optimized/images/second/7-96w-d75709c9a120.webp 96w, /assets/optimized/images/second/7-192w-070dc2e4250a.webp 192w, /assets/optimized/images/second/7-500w-f0fce6061999.webp 500w" sizes="auto, (max-width: 767px) min(100vw, 1px), 90px" width="500" height="517" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -92,13 +112,13 @@
       <div class="su-work-v1__container">
         <div class="su-work-v1__heading">
           <h2 id="su-work-v1-title">Как я работаю</h2>
-          <img class="su-work-v1__underline" src="/assets/images/hero/handwritten-underline.webp" alt="" aria-hidden="true">
+          <img class="su-work-v1__underline" src="/assets/images/hero/handwritten-underline.webp" alt="" aria-hidden="true" width="500" height="45" loading="lazy" decoding="async">
         </div>
 
         <p class="su-work-v1__subtitle">Меньше проектов — больше внимания вашему.</p>
 
         <div class="su-work-v1__banner">
-          <img class="su-work-v1__paper" src="/assets/images/three/paper-banner-transparent.webp" alt="" aria-hidden="true">
+          <img class="su-work-v1__paper" src="/assets/optimized/images/three/paper-banner-transparent-640w-c17bc5595374.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/three/paper-banner-transparent-384w-106fb7bbefd8.webp 384w, /assets/optimized/images/three/paper-banner-transparent-640w-c17bc5595374.webp 640w, /assets/optimized/images/three/paper-banner-transparent-768w-2d0a3f5cbe3a.webp 768w, /assets/optimized/images/three/paper-banner-transparent-1200w-c34e3c06a42f.webp 1200w" sizes="auto, (max-width: 767px) min(100vw, 384px), 640px" width="1200" height="377" loading="lazy" decoding="async">
 
           <div class="su-work-v1__content">
             <div class="su-work-v1__item su-work-v1__item--projects">
@@ -116,7 +136,7 @@
             </div>
 
             <div class="su-work-v1__item su-work-v1__item--reports">
-              <img class="su-work-v1__reports-icon" src="/assets/images/three/test.webp" alt="" aria-hidden="true">
+              <img class="su-work-v1__reports-icon" src="/assets/optimized/images/three/test-192w-cd4d2629cf3b.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/three/test-96w-c0d23fafac44.webp 96w, /assets/optimized/images/three/test-160w-0cec0281a8a0.webp 160w, /assets/optimized/images/three/test-192w-cd4d2629cf3b.webp 192w, /assets/optimized/images/three/test-300w-df33c6e157dd.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 66px), 170px" width="300" height="270" loading="lazy" decoding="async">
               <div class="su-work-v1__script su-work-v1__script--reports">Вы в&nbsp;курсе</div>
               <div class="su-work-v1__small su-work-v1__small--reports">Сообщаю о&nbsp;работе<br>и&nbsp;присылаю отчёты</div>
             </div>
@@ -129,7 +149,7 @@
       <div class="su-results-v1__container">
         <div class="su-results-v1__heading">
           <h2 id="su-results-v1-title">Опыт <span>и&nbsp;результаты</span></h2>
-          <img class="su-results-v1__heading-underline" src="/assets/images/four/8.webp" alt="" aria-hidden="true">
+          <img class="su-results-v1__heading-underline" src="/assets/optimized/images/four/8-320w-cab38f436321.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/8-192w-36565bb69d03.webp 192w, /assets/optimized/images/four/8-320w-cab38f436321.webp 320w, /assets/optimized/images/four/8-384w-3282e8214e35.webp 384w, /assets/optimized/images/four/8-640w-8735dd3d815a.webp 640w, /assets/optimized/images/four/8-2169w-5edbd825c87c.webp 2169w" sizes="auto, (max-width: 767px) min(100vw, 177px), 320px" width="2169" height="725" loading="lazy" decoding="async">
         </div>
 
         <div class="su-results-v1__layout">
@@ -137,7 +157,7 @@
             <div class="su-results-v1__fact">
               <strong class="su-results-v1__number">15+</strong>
               <div class="su-results-v1__fact-caption">
-                <img src="/assets/images/four/1.webp" alt="" aria-hidden="true">
+                <img src="/assets/optimized/images/four/1-384w-6da85565496c.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/1-192w-e3668ed0472b.webp 192w, /assets/optimized/images/four/1-384w-6da85565496c.webp 384w, /assets/optimized/images/four/1-736w-d3a3da036256.webp 736w, /assets/optimized/images/four/1-2167w-38b90d74511f.webp 2167w" sizes="auto, (max-width: 767px) min(100vw, 187px), 360px" width="2167" height="726" loading="lazy" decoding="async">
                 <span>лет в&nbsp;маркетинге</span>
               </div>
             </div>
@@ -145,7 +165,7 @@
             <div class="su-results-v1__fact">
               <strong class="su-results-v1__number">150+</strong>
               <div class="su-results-v1__fact-caption su-results-v1__fact-caption--projects">
-                <img src="/assets/images/four/2.webp" alt="" aria-hidden="true">
+                <img src="/assets/optimized/images/four/2-288w-c98b7f44bb16.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/2-192w-cd15919e95e0.webp 192w, /assets/optimized/images/four/2-288w-c98b7f44bb16.webp 288w, /assets/optimized/images/four/2-384w-cd9ce904b4f4.webp 384w, /assets/optimized/images/four/2-544w-b22af15dc881.webp 544w, /assets/optimized/images/four/2-2172w-12d0cd125322.webp 2172w" sizes="auto, (max-width: 767px) min(100vw, 187px), 260px" width="2172" height="724" loading="lazy" decoding="async">
                 <span>проектов</span>
               </div>
             </div>
@@ -160,9 +180,9 @@
           </div>
 
           <article class="su-results-v1__case" aria-labelledby="su-results-v1-case-title">
-            <img class="su-results-v1__case-art" src="/assets/images/four/9.webp" alt="" aria-hidden="true">
-            <img class="su-results-v1__case-arrow" src="/assets/images/four/3.webp" alt="" aria-hidden="true">
-            <img class="su-results-v1__case-marks" src="/assets/images/four/4.webp" alt="" aria-hidden="true">
+            <img class="su-results-v1__case-art" src="/assets/optimized/images/four/9-928w-4a43fb1cfa4e.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/9-384w-c589cf7698ff.webp 384w, /assets/optimized/images/four/9-768w-c20b15208c3b.webp 768w, /assets/optimized/images/four/9-928w-4a43fb1cfa4e.webp 928w, /assets/optimized/images/four/9-1296w-e1f5353206e8.webp 1296w" sizes="auto, (max-width: 767px) min(100vw, 384px), 920px" width="1296" height="1214" loading="lazy" decoding="async">
+            <img class="su-results-v1__case-arrow" src="/assets/optimized/images/four/3-160w-f85921ca1d7e.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/3-64w-ea6417d2207f.webp 64w, /assets/optimized/images/four/3-128w-80c938bb25c7.webp 128w, /assets/optimized/images/four/3-160w-f85921ca1d7e.webp 160w, /assets/optimized/images/four/3-288w-184e4fe0c68a.webp 288w, /assets/optimized/images/four/3-1400w-7ba7d54fb2a1.webp 1400w" sizes="auto, (max-width: 767px) min(100vw, 50px), 135px" width="1400" height="1123" loading="lazy" decoding="async">
+            <img class="su-results-v1__case-marks" src="/assets/optimized/images/four/4-96w-ccb7d4754885.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/four/4-64w-6fe658c508d9.webp 64w, /assets/optimized/images/four/4-96w-ccb7d4754885.webp 96w, /assets/optimized/images/four/4-192w-15706c1945b4.webp 192w, /assets/optimized/images/four/4-1295w-492adc8b92fe.webp 1295w" sizes="auto, (max-width: 767px) min(100vw, 35px), 96px" width="1295" height="1215" loading="lazy" decoding="async">
 
             <div class="su-results-v1__case-content">
               <div class="su-results-v1__case-copy">
@@ -172,7 +192,7 @@
                 <div class="su-results-v1__conclusion su-results-v1__conclusion--mobile">
                   <span class="su-results-v1__conclusion-text"><span>Меньше затрат.</span> <span>Больше переходов.</span></span>
                   <span class="su-results-v1__conclusion-line" aria-hidden="true">
-                    <img src="/assets/images/four/5.webp" alt="">
+                    <img src="/assets/optimized/images/four/5-384w-17abf960e04a.webp" alt="" srcset="/assets/optimized/images/four/5-224w-ac6dd47d6903.webp 224w, /assets/optimized/images/four/5-384w-17abf960e04a.webp 384w, /assets/optimized/images/four/5-416w-71ecad64f2cf.webp 416w, /assets/optimized/images/four/5-736w-27110c228f0f.webp 736w, /assets/optimized/images/four/5-2206w-a936fffc2cc7.webp 2206w" sizes="auto, (max-width: 767px) min(100vw, 197px), 360px" width="2206" height="713" loading="lazy" decoding="async">
                   </span>
                 </div>
               </div>
@@ -196,7 +216,7 @@
               <div class="su-results-v1__conclusion su-results-v1__conclusion--default">
                 <span class="su-results-v1__conclusion-text"><span>Меньше затрат.</span> <span>Больше переходов.</span></span>
                 <span class="su-results-v1__conclusion-line" aria-hidden="true">
-                  <img src="/assets/images/four/5.webp" alt="">
+                  <img src="/assets/optimized/images/four/5-384w-17abf960e04a.webp" alt="" srcset="/assets/optimized/images/four/5-224w-ac6dd47d6903.webp 224w, /assets/optimized/images/four/5-384w-17abf960e04a.webp 384w, /assets/optimized/images/four/5-416w-71ecad64f2cf.webp 416w, /assets/optimized/images/four/5-736w-27110c228f0f.webp 736w, /assets/optimized/images/four/5-2206w-a936fffc2cc7.webp 2206w" sizes="auto, (max-width: 767px) min(100vw, 197px), 360px" width="2206" height="713" loading="lazy" decoding="async">
                 </span>
               </div>
             </div>
@@ -211,7 +231,7 @@
 
         <div class="su-benefits-v1__layout">
           <article class="su-benefits-v1__primary">
-            <img class="su-benefits-v1__primary-art" src="/assets/images/five/1.webp" alt="" aria-hidden="true">
+            <img class="su-benefits-v1__primary-art" src="/assets/optimized/images/five/1-640w-27c3bf5fbc31.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/1-384w-35c419494e10.webp 384w, /assets/optimized/images/five/1-640w-27c3bf5fbc31.webp 640w, /assets/optimized/images/five/1-800w-b246b7f7aaed.webp 800w" sizes="auto, (max-width: 767px) min(100vw, 384px), 640px" width="800" height="807" loading="lazy" decoding="async">
             <div class="su-benefits-v1__primary-copy">
               <h3>Быстро вношу<br>изменения</h3>
               <p><span>Маркетинг, разработка и&nbsp;аналитика </span><span>в&nbsp;одних руках.</span></p>
@@ -220,23 +240,23 @@
 
           <div class="su-benefits-v1__list">
             <article class="su-benefits-v1__item">
-              <img class="su-benefits-v1__number" src="/assets/images/five/2.webp" alt="" aria-hidden="true">
+              <img class="su-benefits-v1__number" src="/assets/optimized/images/five/2-128w-a399dea0c9f3.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/2-96w-5815465e0723.webp 96w, /assets/optimized/images/five/2-128w-a399dea0c9f3.webp 128w, /assets/optimized/images/five/2-192w-c53e9dd14ec0.webp 192w, /assets/optimized/images/five/2-224w-6535e9198f54.webp 224w, /assets/optimized/images/five/2-300w-5a4c639d2dec.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 90px), 100px" width="300" height="214" loading="lazy" decoding="async">
               <div class="su-benefits-v1__copy">
                 <h3>Фокус на&nbsp;продажах</h3>
                 <p>Слежу за&nbsp;тем, как посетители становятся клиентами.</p>
               </div>
             </article>
-            <img class="su-benefits-v1__divider" src="/assets/images/five/5.webp" alt="" aria-hidden="true">
+            <img class="su-benefits-v1__divider" src="/assets/optimized/images/five/5-600w-77c9da5ef089.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/5-384w-da6039c1b93e.webp 384w, /assets/optimized/images/five/5-600w-77c9da5ef089.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 384px), 600px" width="600" height="28" loading="lazy" decoding="async">
             <article class="su-benefits-v1__item">
-              <img class="su-benefits-v1__number" src="/assets/images/five/3.webp" alt="" aria-hidden="true">
+              <img class="su-benefits-v1__number" src="/assets/optimized/images/five/3-128w-7315a9e265ad.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/3-96w-f7a2d326f92a.webp 96w, /assets/optimized/images/five/3-128w-7315a9e265ad.webp 128w, /assets/optimized/images/five/3-192w-2bb1da4a7d88.webp 192w, /assets/optimized/images/five/3-224w-d5f6af9ae1b4.webp 224w, /assets/optimized/images/five/3-300w-7a13d8c04c76.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 90px), 100px" width="300" height="238" loading="lazy" decoding="async">
               <div class="su-benefits-v1__copy">
                 <h3>Бережно к&nbsp;бюджету</h3>
                 <p><span class="su-copy-line">Фиксированная стоимость работы.</span> <span class="su-copy-line">Рекламные расходы под&nbsp;контролем.</span></p>
               </div>
             </article>
-            <img class="su-benefits-v1__divider" src="/assets/images/five/6.webp" alt="" aria-hidden="true">
+            <img class="su-benefits-v1__divider" src="/assets/optimized/images/five/6-600w-664d9fdd58ee.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/6-384w-3483ca31c312.webp 384w, /assets/optimized/images/five/6-600w-664d9fdd58ee.webp 600w" sizes="auto, (max-width: 767px) min(100vw, 384px), 600px" width="600" height="23" loading="lazy" decoding="async">
             <article class="su-benefits-v1__item">
-              <img class="su-benefits-v1__number" src="/assets/images/five/4.webp" alt="" aria-hidden="true">
+              <img class="su-benefits-v1__number" src="/assets/optimized/images/five/4-128w-baa5bb989b56.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/five/4-96w-9a0e9d484aa4.webp 96w, /assets/optimized/images/five/4-128w-baa5bb989b56.webp 128w, /assets/optimized/images/five/4-192w-c78de0512b05.webp 192w, /assets/optimized/images/five/4-224w-8cd5f1f63359.webp 224w, /assets/optimized/images/five/4-300w-3fc7d9a3844d.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 90px), 100px" width="300" height="248" loading="lazy" decoding="async">
               <div class="su-benefits-v1__copy">
                 <h3>Сайт под&nbsp;присмотром</h3>
                 <p><span class="su-copy-line">Поддерживаю сайт и&nbsp;адаптирую</span> <span class="su-copy-line">продвижение к&nbsp;изменениям поиска.</span></p>
@@ -258,19 +278,19 @@
         <div class="su-qualification-v1__previews">
           <figure class="su-qualification-v1__certificate">
             <a class="su-qualification-v1__preview" href="./assets/images/six/1.webp" data-su-qualification-index="0">
-              <img src="./assets/images/six/1.webp" alt="SEO-продвижение и реклама — «Клевер»">
+              <img src="/assets/optimized/images/six/1-288w-2a73781b618a.webp" alt="SEO-продвижение и реклама — «Клевер»" srcset="/assets/optimized/images/six/1-288w-2a73781b618a.webp 288w, /assets/optimized/images/six/1-384w-3f7f4c9cbc53.webp 384w, /assets/optimized/images/six/1-576w-6231088fdcaf.webp 576w, /assets/optimized/images/six/1-800w-c39d43a8f0dc.webp 800w" sizes="auto, (max-width: 767px) min(100vw, 384px), 384px" width="800" height="593" loading="lazy" decoding="async">
             </a>
             <figcaption>SEO и&nbsp;реклама</figcaption>
           </figure>
           <figure class="su-qualification-v1__certificate">
             <a class="su-qualification-v1__preview" href="./assets/images/six/2.webp" data-su-qualification-index="1">
-              <img src="./assets/images/six/2.webp" alt="Веб-дизайн — «АРТ-СПБ»">
+              <img src="/assets/optimized/images/six/2-288w-fe7b1f13d7f0.webp" alt="Веб-дизайн — «АРТ-СПБ»" srcset="/assets/optimized/images/six/2-288w-fe7b1f13d7f0.webp 288w, /assets/optimized/images/six/2-384w-74b8d24097eb.webp 384w, /assets/optimized/images/six/2-576w-7e82d38beefe.webp 576w, /assets/optimized/images/six/2-800w-de5c6ce36969.webp 800w" sizes="auto, (max-width: 767px) min(100vw, 384px), 384px" width="800" height="567" loading="lazy" decoding="async">
             </a>
             <figcaption>Веб-дизайн</figcaption>
           </figure>
           <figure class="su-qualification-v1__certificate">
             <a class="su-qualification-v1__preview" href="./assets/images/six/3.webp" data-su-qualification-index="2">
-              <img src="./assets/images/six/3.webp" alt="Основы программирования на JavaScript — «Амилен»">
+              <img src="/assets/optimized/images/six/3-288w-e252811c8c65.webp" alt="Основы программирования на JavaScript — «Амилен»" srcset="/assets/optimized/images/six/3-288w-e252811c8c65.webp 288w, /assets/optimized/images/six/3-384w-bb6c188a0799.webp 384w, /assets/optimized/images/six/3-576w-af2e07bec423.webp 576w, /assets/optimized/images/six/3-800w-89efc66adc06.webp 800w" sizes="auto, (max-width: 767px) min(100vw, 384px), 384px" width="800" height="578" loading="lazy" decoding="async">
             </a>
             <figcaption>JavaScript</figcaption>
           </figure>
@@ -307,9 +327,9 @@
             <span>Спросите тех,</span>
             <span class="su-references-v1__title-second">
               с&nbsp;кем я
-              <img class="su-references-v1__arrow" src="/assets/images/seven/2.webp" alt="" aria-hidden="true">
+              <img class="su-references-v1__arrow" src="/assets/optimized/images/seven/2-300w-e63acbbc7a5e.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/seven/2-300w-e63acbbc7a5e.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 300px), 300px" width="300" height="156" loading="lazy" decoding="async">
             </span>
-            <span class="su-references-v1__title-mark">работал<img src="/assets/images/seven/3.webp" alt="" aria-hidden="true"></span>
+            <span class="su-references-v1__title-mark">работал<span class="su-references-v1__title-underline" aria-hidden="true"></span></span>
           </h2>
           <p class="su-references-v1__description">Покажу сайты проектов.<br><span class="su-copy-line">По&nbsp;согласованию дам контакты клиентов,</span> <span class="su-copy-line">чтобы вы могли поговорить с&nbsp;ними напрямую.</span></p>
           <a class="su-references-v1__button" href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer">Запросить контакты</a>
@@ -318,9 +338,9 @@
         <figure class="su-references-v1__letter">
           <div class="su-references-v1__letter-frame">
             <a class="su-references-v1__letter-link" href="./assets/images/seven/5.webp" data-su-references-open>
-              <img class="su-references-v1__letter-image" src="./assets/images/seven/5.webp" alt="Рекомендательное письмо от работодателя «Стальтрубосервис»">
+              <img class="su-references-v1__letter-image" src="/assets/optimized/images/seven/5-640w-95087e258eb9.webp" alt="Рекомендательное письмо от работодателя «Стальтрубосервис»" srcset="/assets/optimized/images/seven/5-384w-a278496b42da.webp 384w, /assets/optimized/images/seven/5-640w-95087e258eb9.webp 640w, /assets/optimized/images/seven/5-768w-12e2e773fd3d.webp 768w, /assets/optimized/images/seven/5-1000w-e2a1f8b24c71.webp 1000w" sizes="auto, (max-width: 767px) min(100vw, 384px), 620px" width="1000" height="1560" loading="lazy" decoding="async">
             </a>
-            <img class="su-references-v1__tape" src="/assets/images/seven/1.webp" alt="" aria-hidden="true">
+            <img class="su-references-v1__tape" src="/assets/optimized/images/seven/1-300w-3131e37c078e.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/seven/1-300w-3131e37c078e.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 300px), 300px" width="300" height="91" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="su-references-v1__letter-caption">Рекомендательное письмо<br>от&nbsp;работодателя „Стальтрубосервис“</span>
@@ -340,7 +360,7 @@
             </div>
           </header>
           <div id="su-references-v1-document" class="su-references-v1__image-area">
-            <img src="./assets/images/seven/5.webp" alt="Рекомендательное письмо от работодателя «Стальтрубосервис»">
+            <img src="/assets/images/seven/5.webp" alt="Рекомендательное письмо от работодателя «Стальтрубосервис»" width="1000" height="1560" loading="lazy" decoding="async">
           </div>
           <footer class="su-references-v1__viewer-footer">
             <a href="./assets/images/seven/5.webp" target="_blank" rel="noopener">Открыть оригинал</a>
@@ -358,10 +378,10 @@
 
         <div class="su-situations-v1__layout">
           <div class="su-situations-v1__tabs" role="tablist" aria-label="Выберите свою ситуацию" aria-orientation="vertical">
-            <button id="su-situation-tab-1" class="su-situations-v1__tab su-situations-v1__tab--1" type="button" role="tab" aria-selected="true" aria-controls="su-situation-panel-1" tabindex="0">Сайт есть. Заявок нет.</button>
-            <button id="su-situation-tab-2" class="su-situations-v1__tab su-situations-v1__tab--2" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-2" tabindex="-1">Реклама съедает деньги.</button>
-            <button id="su-situation-tab-3" class="su-situations-v1__tab su-situations-v1__tab--3" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-3" tabindex="-1">Уже обжигался на&nbsp;подрядчиках.</button>
-            <button id="su-situation-tab-4" class="su-situations-v1__tab su-situations-v1__tab--4" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-4" tabindex="-1">Пока всё держится на&nbsp;сарафане.</button>
+            <button id="su-situation-tab-1" class="su-situations-v1__tab su-situations-v1__tab--1" type="button" role="tab" aria-selected="true" aria-controls="su-situation-panel-1" tabindex="0" data-active-image="/assets/optimized/images/eight/1_blue-500w-de00d85e0ddd.webp">Сайт есть. Заявок нет.</button>
+            <button id="su-situation-tab-2" class="su-situations-v1__tab su-situations-v1__tab--2" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-2" tabindex="-1" data-active-image="/assets/optimized/images/eight/2_blue-500w-1637130fcd02.webp">Реклама съедает деньги.</button>
+            <button id="su-situation-tab-3" class="su-situations-v1__tab su-situations-v1__tab--3" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-3" tabindex="-1" data-active-image="/assets/optimized/images/eight/3_blue-500w-b63df8652317.webp">Уже обжигался на&nbsp;подрядчиках.</button>
+            <button id="su-situation-tab-4" class="su-situations-v1__tab su-situations-v1__tab--4" type="button" role="tab" aria-selected="false" aria-controls="su-situation-panel-4" tabindex="-1" data-active-image="/assets/optimized/images/eight/4_blue-500w-5bf4a7b2b819.webp">Пока всё держится на&nbsp;сарафане.</button>
           </div>
 
           <div class="su-situations-v1__answer">
@@ -370,32 +390,32 @@
               <span class="su-situations-v1__paper-part su-situations-v1__paper-part--middle"></span>
               <span class="su-situations-v1__paper-part su-situations-v1__paper-part--bottom"></span>
             </div>
-            <img class="su-situations-v1__note" src="/assets/images/eight/7.webp" alt="" aria-hidden="true">
+            <img class="su-situations-v1__note" src="/assets/optimized/images/eight/7-300w-d62d1bbc554c.webp" alt="" aria-hidden="true" srcset="/assets/optimized/images/eight/7-300w-d62d1bbc554c.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 300px), 300px" width="300" height="175" loading="lazy" decoding="async">
             <div class="su-situations-v1__panels">
-              <article id="su-situation-panel-1" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-1">
-                <h3>Новый сайт может <br class="su-situations-v1__desktop-break">и&nbsp;не&nbsp;понадобиться.</h3><img class="su-situations-v1__line" src="/assets/images/eight/6.webp" alt="" aria-hidden="true">
+              <div id="su-situation-panel-1" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-1">
+                <h3>Новый сайт может <br class="su-situations-v1__desktop-break">и&nbsp;не&nbsp;понадобиться.</h3><span class="su-situations-v1__line" aria-hidden="true"></span>
                 <p class="su-situations-v1__lead">Сначала найдём, где теряются обращения.</p>
                 <dl><div><dt>Что проверяем</dt><dd>Рекламу, страницы и&nbsp;формы.</dd></div><div><dt>Что делаем сначала</dt><dd>Убираем препятствия для&nbsp;обращения.</dd></div><div><dt>Как оцениваем</dt><dd>По&nbsp;обращениям и&nbsp;их стоимости.</dd></div></dl>
                 <footer><strong><span class="su-situations-v1__price-label">Работа —</span> <span class="su-situations-v1__price-value">50 000 руб. в&nbsp;месяц</span></strong><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer">Обсудить мою ситуацию</a></footer>
-              </article>
-              <article id="su-situation-panel-2" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-2">
-                <h3>Сначала разберёмся, куда уходит бюджет.</h3><img class="su-situations-v1__line" src="/assets/images/eight/6.webp" alt="" aria-hidden="true">
+              </div>
+              <div id="su-situation-panel-2" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-2">
+                <h3>Сначала разберёмся, куда уходит бюджет.</h3><span class="su-situations-v1__line" aria-hidden="true"></span>
                 <p class="su-situations-v1__lead">Проверю, какие переходы дают обращения, а&nbsp;какие только расходуют деньги.</p>
                 <dl><div><dt>Что проверяем</dt><dd>Настройки рекламы, запросы, страницы и&nbsp;аналитику.</dd></div><div><dt>Что делаем сначала</dt><dd>Исправляю ошибки и&nbsp;убираю лишние расходы.</dd></div><div><dt>Как оцениваем</dt><dd>По&nbsp;стоимости и&nbsp;качеству обращений.</dd></div></dl>
                 <footer><strong><span class="su-situations-v1__price-label">Работа —</span> <span class="su-situations-v1__price-value">50 000 руб. в&nbsp;месяц</span></strong><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer">Обсудить мою ситуацию</a></footer>
-              </article>
-              <article id="su-situation-panel-3" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-3">
-                <h3>Вы будете понимать, за&nbsp;что платите.</h3><img class="su-situations-v1__line" src="/assets/images/eight/6.webp" alt="" aria-hidden="true">
+              </div>
+              <div id="su-situation-panel-3" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-3">
+                <h3>Вы будете понимать, за&nbsp;что платите.</h3><span class="su-situations-v1__line" aria-hidden="true"></span>
                 <p class="su-situations-v1__lead">Покажу, что нашёл, какие изменения предлагаю и&nbsp;зачем они нужны.</p>
                 <dl><div><dt>Что проверяем</dt><dd>Текущие настройки, доступы и&nbsp;результаты прошлых работ.</dd></div><div><dt>Что делаем сначала</dt><dd>Согласуем понятный план и&nbsp;приоритеты.</dd></div><div><dt>Как оцениваем</dt><dd>По&nbsp;выполненным задачам и&nbsp;изменениям в&nbsp;обращениях.</dd></div></dl>
                 <footer><strong><span class="su-situations-v1__price-label">Работа —</span> <span class="su-situations-v1__price-value">50 000 руб. в&nbsp;месяц</span></strong><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer">Обсудить мою ситуацию</a></footer>
-              </article>
-              <article id="su-situation-panel-4" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-4">
-                <h3>Сарафан можно усилить.</h3><img class="su-situations-v1__line" src="/assets/images/eight/6.webp" alt="" aria-hidden="true">
+              </div>
+              <div id="su-situation-panel-4" class="su-situations-v1__panel" role="tabpanel" aria-labelledby="su-situation-tab-4">
+                <h3>Сарафан можно усилить.</h3><span class="su-situations-v1__line" aria-hidden="true"></span>
                 <p class="su-situations-v1__lead">Посмотрим, как новые клиенты ищут ваши услуги.</p>
                 <dl><div><dt>Что проверяем</dt><dd>Спрос, конкурентов и&nbsp;ваши площадки в&nbsp;интернете.</dd></div><div><dt>Что делаем сначала</dt><dd>Выбираю канал и&nbsp;готовлю страницу для&nbsp;обращений.</dd></div><div><dt>Как оцениваем</dt><dd>По&nbsp;новым обращениям и&nbsp;их стоимости.</dd></div></dl>
                 <footer><strong><span class="su-situations-v1__price-label">Работа —</span> <span class="su-situations-v1__price-value">50 000 руб. в&nbsp;месяц</span></strong><a href="https://max.ru/u/f9LHodD0cOImawc4XeSPOLIWIdQ-v4U2n5ycMVbsqOLhInzaD7ucwQDbaIM" target="_blank" rel="noopener noreferrer">Обсудить мою ситуацию</a></footer>
-              </article>
+              </div>
             </div>
           </div>
         </div>
@@ -406,7 +426,7 @@
         <h2 id="su-contacts-v1-title">Заберите мой номер.</h2>
         <div class="su-contacts-v1__layout">
           <div class="su-contacts-v1__notice">
-            <img class="su-contacts-v1__paper" src="./assets/images/nine/1.webp" alt="" width="800" height="603" loading="lazy">
+            <img class="su-contacts-v1__paper" src="/assets/optimized/images/nine/1-640w-b1ee68eed948.webp" alt="" width="800" height="603" loading="lazy" srcset="/assets/optimized/images/nine/1-384w-4b97d13233ea.webp 384w, /assets/optimized/images/nine/1-640w-b1ee68eed948.webp 640w, /assets/optimized/images/nine/1-800w-d13262f8685b.webp 800w" sizes="auto, (max-width: 767px) min(100vw, 384px), 640px" decoding="async">
             <div class="su-contacts-v1__identity">
               <p class="su-contacts-v1__name">Сергей Урба</p>
               <p class="su-contacts-v1__specialty">Сайты и&nbsp;продвижение · Москва</p>
@@ -416,7 +436,7 @@
               <span>+7 (905) 250-41-22</span><span>+7 (905) 250-41-22</span>
               <span>+7 (905) 250-41-22</span><span>+7 (905) 250-41-22</span>
             </div>
-            <span class="su-contacts-v1__note" aria-hidden="true"><img src="./assets/images/nine/2.webp" alt="" width="300" height="337" loading="lazy"></span>
+            <span class="su-contacts-v1__note" aria-hidden="true"><img src="/assets/optimized/images/nine/2-300w-ee58d4042a39.webp" alt="" width="300" height="337" loading="lazy" srcset="/assets/optimized/images/nine/2-300w-ee58d4042a39.webp 300w" sizes="auto, (max-width: 767px) min(100vw, 300px), 300px" decoding="async"></span>
             <a class="su-contacts-v1__save" href="./assets/contacts/sergey-urba.vcf" download="sergey-urba.vcf" aria-label="Сохранить Сергея Урбу в контактах — скачать визитку"></a>
           </div>
           <div class="su-contacts-v1__message">
@@ -432,9 +452,9 @@
       </div>
     </section>
   </main>
-  <script src="./assets/js/su-hero-v2.js"></script>
+  <script src="./assets/js/su-hero-v2.js?v=20261011-performance" defer></script>
   <script src="./assets/js/su-qualification-v1.js?v=20261004-qualification-typography" defer></script>
   <script src="./assets/js/su-references-v1.js?v=20260926-references-2" defer></script>
-  <script src="./assets/js/su-situations-v1.js?v=20261004-answer-scroll" defer></script>
+  <script src="./assets/js/su-situations-v1.js?v=20261011-performance" defer></script>
 </body>
 </html>

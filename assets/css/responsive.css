@@ -1769,7 +1769,7 @@
     z-index: 3;
   }
 
-  .su-hero-v2 > img.cross[src$="pricel.webp"] {
+  .su-hero-v2 > img.cross {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
