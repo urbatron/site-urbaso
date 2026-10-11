@@ -19,6 +19,7 @@ BRANCH = 'codex/performance-pagespeed-20261011'
 SOURCE = 'git@github.com:urbatron/site-urbaso.git'
 ORIGINAL = '22fc0324edce4f4fec3ecf7bc65ff75a8e823cb9'
 PUBLISHED_CODE = '790642c73c8dec2d5fd7e72944ef97ea15dceab0'
+PUBLISHED_INSTALLER = 'db29fe35b793d415e5dd77e04774ab5394086c74'
 BASELINE_INDEX_SHA256 = 'b7d49ffe13355047a76f2e6fe040b44f2b81b22cf0b3b8a3e80126fdeddd2e81'
 KEY = Path('/root/.ssh/id_ed25519_site_urbaso_repo')
 DOWNLOAD_ROOT = Path('/root')
@@ -42,14 +43,15 @@ def prepare(directory, source, branch, target, baseline, environment):
 
     if git('rev-parse', 'HEAD').decode().strip() != target:
         raise RuntimeError('Ветка изменилась: установка остановлена до изменения сайта.')
-    for child, parent in ((target, PUBLISHED_CODE), (PUBLISHED_CODE, baseline), (baseline, ORIGINAL)):
+    for child, parent in ((target, PUBLISHED_INSTALLER), (PUBLISHED_INSTALLER, PUBLISHED_CODE),
+                          (PUBLISHED_CODE, baseline), (baseline, ORIGINAL)):
         if git('rev-list', '--parents', '-n', '1', child).decode().split() != [child, parent]:
             raise RuntimeError('Не совпадает линейная цепочка коммитов релиза: ' + child)
     if git('diff', '--name-only', '-z', ORIGINAL, baseline) != b'index.html\0':
         raise RuntimeError('Исходный коммит должен сохранять только прежнее изменение index.html.')
     if hashlib.sha256(git('show', baseline + ':index.html')).hexdigest() != BASELINE_INDEX_SHA256:
         raise RuntimeError('Исходный index.html не совпадает с сохранённой установкой Метрики.')
-    git('bundle', 'create', str(directory / 'release.bundle'), 'HEAD', '^' + ORIGINAL)
+    git('bundle', 'create', str(directory / 'release.bundle'), 'HEAD')
     for filename, source_name in [('install-performance-release.py', 'install-performance-release.py'),
                                   ('configure-performance.py', 'configure-performance.py'),
                                   ('install.py', 'install-performance.py')]:

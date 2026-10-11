@@ -26,6 +26,11 @@ ORIGINS = {
     'https://github.com/urbatron/site-urbaso.git',
     'https://github.com/urbatron/site-urbaso',
 }
+EQUIVALENT_ORIGINALS = {
+    'b08e39e019ec237ab8071cc4f6da90ad757cea15': '22fc0324edce4f4fec3ecf7bc65ff75a8e823cb9',
+}
+PRESERVED_ASSET = 'assets/images/hero/code-fragment.webp'
+PRESERVED_BLOB = '3e05188cc69eaf70ad8184e79336bdd356cbb8a8'
 
 
 def fail(message):
@@ -62,14 +67,52 @@ def outside(path, root):
         fail(f'Этот путь должен находиться вне webroot: {path}')
 
 
+def preserved_index_entry(root, *commits):
+    """Inspect the single known skip-worktree exception without changing it."""
+    special = [row for row in git(root, 'ls-files', '-v', '-z').stdout.split(b'\0')
+               if row and row[:1] != b'H']
+    if not special:
+        return None
+    if special != [('S ' + PRESERVED_ASSET).encode()]:
+        fail('В индексе есть неизвестные специальные флаги или конфликт; требуется ручная проверка')
+    expected_index = ('100644 ' + PRESERVED_BLOB + ' 0\t' + PRESERVED_ASSET + '\0').encode()
+    if git(root, 'ls-files', '--stage', '-z', '--', PRESERVED_ASSET).stdout != expected_index:
+        fail('Изменена запись индекса сохраняемого файла: ' + PRESERVED_ASSET)
+    expected_tree = ('100644 blob ' + PRESERVED_BLOB + '\t' + PRESERVED_ASSET + '\0').encode()
+    for commit in ('HEAD', *commits):
+        if git(root, 'ls-tree', '-z', commit, '--', PRESERVED_ASSET).stdout != expected_tree:
+            fail('Сохраняемый файл изменён в коммите ' + commit + ': ' + PRESERVED_ASSET)
+    path = root / PRESERVED_ASSET
+    for parent in path.parents:
+        if parent == root:
+            break
+        if parent.is_symlink():
+            fail('Ссылка в пути сохраняемого файла: ' + str(parent))
+    present = os.path.lexists(path)
+    digest = None
+    if present:
+        if path.is_symlink() or not path.is_file():
+            fail('Сохраняемый файл должен быть обычным файлом: ' + PRESERVED_ASSET)
+        data = path.read_bytes()
+        if data != git(root, 'cat-file', 'blob', PRESERVED_BLOB).stdout:
+            fail('Содержимое сохраняемого файла отличается от Git: ' + PRESERVED_ASSET)
+        digest = sha(data)
+    return dict(path=PRESERVED_ASSET, flag='S', blob=PRESERVED_BLOB,
+                present=present, sha256=digest)
+
+
+def check_preserved_entry(root, state):
+    actual = preserved_index_entry(root, state['previous_sha'], state['baseline_sha'], state['target_sha'])
+    if actual != state.get('preserved_index_entry'):
+        fail('Изменились флаг, наличие или содержимое сохраняемого файла; автоматическая операция остановлена')
+
+
 def check_repo(root):
     if out(root, 'rev-parse', '--show-toplevel') != str(root):
         fail('Каталог сайта не совпадает с корнем Git-репозитория')
     if out(root, 'config', '--get', 'remote.origin.url') not in ORIGINS:
         fail('Неожиданный remote.origin.url, нужен urbatron/site-urbaso')
-    for row in git(root, 'ls-files', '-v', '-z').stdout.split(b'\0'):
-        if row and row[:1] != b'H':
-            fail('В индексе есть специальные флаги или конфликт; требуется ручная проверка')
+    preserved_index_entry(root)
     git_dir = Path(out(root, 'rev-parse', '--absolute-git-dir'))
     for name in ('MERGE_HEAD', 'CHERRY_PICK_HEAD', 'REVERT_HEAD', 'rebase-merge', 'rebase-apply', 'index.lock'):
         if (git_dir / name).exists():
@@ -127,6 +170,16 @@ def load_state(backup):
     state = json.loads(raw)
     for key in ('previous_sha', 'baseline_sha', 'target_sha'):
         validate_sha(state[key])
+    preserved = state.get('preserved_index_entry')
+    if preserved is not None:
+        if (not isinstance(preserved, dict)
+                or set(preserved) != {'path', 'flag', 'blob', 'present', 'sha256'}
+                or preserved['path'] != PRESERVED_ASSET or preserved['flag'] != 'S'
+                or preserved['blob'] != PRESERVED_BLOB or type(preserved['present']) is not bool
+                or (preserved['present'] and (not isinstance(preserved['sha256'], str)
+                                             or not re.fullmatch(r'[0-9a-f]{64}', preserved['sha256'])))
+                or (not preserved['present'] and preserved['sha256'] is not None)):
+            fail('Некорректное состояние сохраняемого файла в резервной копии')
     for name, expected in state['backup_files'].items():
         if name not in ('index.before.html', 'install-performance-release.py'):
             fail('Неизвестный файл в метаданных резервной копии')
@@ -137,6 +190,7 @@ def load_state(backup):
 
 
 def restore(root, backup, state):
+    check_preserved_entry(root, state)
     clean_index(root)
     current = out(root, 'rev-parse', 'HEAD')
     if current not in (state['previous_sha'], state['target_sha']):
@@ -154,10 +208,12 @@ def restore(root, backup, state):
         branch = state['previous_branch']
         ref = 'refs/heads/' + branch if branch else ''
         exists = git(root, 'show-ref', '--verify', '--quiet', ref, check=False).returncode == 0 if ref else False
+        check_preserved_entry(root, state)
         if exists and out(root, 'rev-parse', ref) == state['previous_sha']:
             git(root, 'switch', '--no-overwrite-ignore', branch)
         else:
             git(root, 'switch', '--no-overwrite-ignore', '--detach', state['previous_sha'])
+    check_preserved_entry(root, state)
     if not restored_index or current != state['previous_sha']:
         copy_atomic(saved, root / 'index.html')
     if out(root, 'rev-parse', 'HEAD') != state['previous_sha']:
@@ -165,6 +221,7 @@ def restore(root, backup, state):
     expected_changes = {'index.html'} if state['known_metrika_edit'] else set()
     if changed(root) != expected_changes or sha((root / 'index.html').read_bytes()) != state['backup_files']['index.before.html']:
         fail('Проверка восстановленного состояния не пройдена')
+    check_preserved_entry(root, state)
     print('Восстановлен исходный код, включая Метрику. HEAD:', state['previous_sha'])
 
 
@@ -187,22 +244,26 @@ def install(args, root):
     if len(parents) != 2:
         fail('Baseline должен иметь ровно один исходный родительский коммит')
     parent = parents[1]
-    if previous not in (baseline, parent) or target == previous:
+    previous_is_original = previous == parent or (
+        EQUIVALENT_ORIGINALS.get(previous) == parent
+        and out(root, 'rev-parse', previous + '^{tree}') == out(root, 'rev-parse', parent + '^{tree}'))
+    if (previous != baseline and not previous_is_original) or target == previous:
         fail('Текущий HEAD не совпадает с ожидаемым состоянием до установки')
     if names(git(root, 'diff', '--name-only', '-z', parent, baseline).stdout) != {'index.html'}:
         fail('Baseline должен сохранять только прежнее изменение index.html с Метрикой')
     if git(root, '-c', 'core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol', 'diff', '--check', previous, target, check=False).returncode:
         fail('Целевой Git diff не прошёл проверку пробельных ошибок')
+    preserved = preserved_index_entry(root, baseline, target)
     index = root / 'index.html'
     if index.is_symlink() or not index.is_file():
         fail('index.html не является обычным файлом')
     original = index.read_bytes()
     dirty = changed(root)
-    known_edit = dirty == {'index.html'} and previous == parent and original == git(root, 'show', baseline + ':index.html').stdout
+    known_edit = dirty == {'index.html'} and previous_is_original and original == git(root, 'show', baseline + ':index.html').stdout
     if dirty and not known_edit:
         fail('Есть неизвестные изменения отслеживаемых файлов; ничего не установлено')
     # A clean old HEAD would remove an expected production counter on rollback.
-    if previous == parent and not known_edit:
+    if previous_is_original and not known_edit:
         fail('В исходном index.html нет ожидаемой сохранённой установки Метрики')
     check_collisions(root, target)
     branch = out(root, 'branch', '--show-current')
@@ -213,6 +274,7 @@ def install(args, root):
     shutil.copy2(Path(__file__).resolve(), backup / 'install-performance-release.py')
     state = dict(site_root=str(root), previous_sha=previous, previous_branch=branch,
                  baseline_sha=baseline, target_sha=target, known_metrika_edit=known_edit,
+                 preserved_index_entry=preserved,
                  bundle_sha256=sha(bundle.read_bytes()),
                  backup_files={name: sha((backup / name).read_bytes()) for name in ('index.before.html', 'install-performance-release.py')})
     raw = (json.dumps(state, ensure_ascii=False, indent=2) + '\n').encode()
@@ -229,10 +291,12 @@ def install(args, root):
     if out(root, 'rev-parse', 'HEAD') != previous or changed(root) != dirty or index.read_bytes() != original:
         fail('Состояние изменилось во время подготовки. Код не установлен')
     check_collisions(root, target)
+    check_preserved_entry(root, state)
     try:
         if known_edit:
             git(root, 'restore', '--source=HEAD', '--worktree', '--', 'index.html')
         git(root, 'switch', '--no-overwrite-ignore', '--detach', target)
+        check_preserved_entry(root, state)
         clean_index(root)
         if out(root, 'rev-parse', 'HEAD') != target or changed(root):
             fail('После установки состояние Git не совпадает с целевым')
