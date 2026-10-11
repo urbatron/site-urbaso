@@ -63,10 +63,38 @@ def prepare(directory, source, branch, target, baseline, environment):
     (directory / 'release.json').write_text(json.dumps(manifest, indent=2) + '\n')
 
 
+def prepare_upgrade(directory, site, source, branch, target, expected_from, environment):
+    subprocess.run(['git', 'check-ref-format', 'refs/heads/' + branch], check=True)
+    installed = subprocess.check_output(['git', '-C', str(site), 'rev-parse', 'HEAD']).decode().strip()
+    if installed != expected_from:
+        raise RuntimeError('Текущий коммит сайта не совпадает с --upgrade-from; установка остановлена.')
+    repo = directory / 'repository.git'
+    subprocess.run(['git', 'clone', '--bare', '--shared', str(site), str(repo)],
+                   env=environment, check=True)
+
+    def git(*arguments):
+        return subprocess.check_output(['git', '-C', str(repo), *arguments], env=environment)
+
+    if git('rev-parse', 'HEAD').decode().strip() != expected_from:
+        raise RuntimeError('Сайт изменился во время подготовки обновления; установка остановлена.')
+    git('update-ref', 'refs/heads/installed', expected_from)
+    release_ref = 'refs/urbaso-performance/upgrade-target'
+    git('fetch', '--no-tags', source, 'refs/heads/' + branch + ':' + release_ref)
+    if git('rev-parse', release_ref).decode().strip() != target:
+        raise RuntimeError('Ветка изменилась: установка остановлена до изменения сайта.')
+    if git('rev-list', '--parents', '-n', '1', target).decode().split() != [target, expected_from]:
+        raise RuntimeError('Обновление должно быть прямым потомком установленного коммита.')
+    git('bundle', 'create', str(directory / 'release.bundle'), release_ref, '^' + expected_from)
+    (directory / 'install-performance-release.py').write_bytes(
+        git('show', target + ':scripts/install-performance-release.py'))
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', type=commit_sha, required=True, help='Проверенный SHA релиза в GitHub')
-    parser.add_argument('--baseline', type=commit_sha, required=True, help='SHA исходного состояния с Метрикой')
+    installation = parser.add_mutually_exclusive_group(required=True)
+    installation.add_argument('--baseline', type=commit_sha, help='SHA исходного состояния с Метрикой')
+    installation.add_argument('--upgrade-from', type=commit_sha, help='SHA установленного релиза для обновления только кода')
     parser.add_argument('--branch', default=BRANCH, help='Ветка с проверенным релизом')
     args = parser.parse_args(argv)
     if os.geteuid() != 0 or socket.gethostname() != 'urbaserge3-vps-1':
@@ -80,8 +108,13 @@ def main(argv=None):
                        GIT_SSH_COMMAND='ssh -i ' + str(KEY) + ' -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes')
     directory = Path(tempfile.mkdtemp(prefix='urbaso-performance-', dir=DOWNLOAD_ROOT))
     print('Папка установки:', directory, flush=True)
-    prepare(directory, SOURCE, args.branch, args.target, args.baseline, environment)
-    subprocess.run([sys.executable, str(directory / 'install.py')], check=True)
+    if args.upgrade_from:
+        prepare_upgrade(directory, SITE_ROOT, SOURCE, args.branch, args.target, args.upgrade_from, environment)
+        subprocess.run([sys.executable, str(directory / 'install-performance-release.py'), 'upgrade',
+                        str(directory / 'release.bundle'), args.target, args.upgrade_from], check=True)
+    else:
+        prepare(directory, SOURCE, args.branch, args.target, args.baseline, environment)
+        subprocess.run([sys.executable, str(directory / 'install.py')], check=True)
     return 0
 
 

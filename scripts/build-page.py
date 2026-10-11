@@ -48,7 +48,7 @@ def build(stylesheet):
     page = ROOT / 'index.html'
     text = page.read_text()
     hero_end = text.index('</section>')
-    critical = {'grid-paper-top', 'portrait'}
+    critical = {'grid-paper-top', 'grid', 'portrait'}
     count = 0
 
     def update_image(match):

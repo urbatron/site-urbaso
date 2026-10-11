@@ -240,17 +240,24 @@ def install(args, root):
             fail('SHA не является коммитом: ' + commit)
     git(root, 'merge-base', '--is-ancestor', baseline, target)
     previous = out(root, 'rev-parse', 'HEAD')
-    parents = out(root, 'rev-list', '--parents', '-n', '1', baseline).split()
-    if len(parents) != 2:
-        fail('Baseline должен иметь ровно один исходный родительский коммит')
-    parent = parents[1]
-    previous_is_original = previous == parent or (
-        EQUIVALENT_ORIGINALS.get(previous) == parent
-        and out(root, 'rev-parse', previous + '^{tree}') == out(root, 'rev-parse', parent + '^{tree}'))
-    if (previous != baseline and not previous_is_original) or target == previous:
-        fail('Текущий HEAD не совпадает с ожидаемым состоянием до установки')
-    if names(git(root, 'diff', '--name-only', '-z', parent, baseline).stdout) != {'index.html'}:
-        fail('Baseline должен сохранять только прежнее изменение index.html с Метрикой')
+    if args.command == 'upgrade':
+        if previous != baseline:
+            fail('Текущий HEAD не совпадает с точным исходным SHA обновления')
+        if out(root, 'rev-list', '--parents', '-n', '1', target).split() != [target, baseline]:
+            fail('Целевой коммит должен иметь одного родителя — указанный исходный SHA')
+        previous_is_original = False
+    else:
+        parents = out(root, 'rev-list', '--parents', '-n', '1', baseline).split()
+        if len(parents) != 2:
+            fail('Baseline должен иметь ровно один исходный родительский коммит')
+        parent = parents[1]
+        previous_is_original = previous == parent or (
+            EQUIVALENT_ORIGINALS.get(previous) == parent
+            and out(root, 'rev-parse', previous + '^{tree}') == out(root, 'rev-parse', parent + '^{tree}'))
+        if (previous != baseline and not previous_is_original) or target == previous:
+            fail('Текущий HEAD не совпадает с ожидаемым состоянием до установки')
+        if names(git(root, 'diff', '--name-only', '-z', parent, baseline).stdout) != {'index.html'}:
+            fail('Baseline должен сохранять только прежнее изменение index.html с Метрикой')
     if git(root, '-c', 'core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol', 'diff', '--check', previous, target, check=False).returncode:
         fail('Целевой Git diff не прошёл проверку пробельных ошибок')
     preserved = preserved_index_entry(root, baseline, target)
@@ -321,13 +328,14 @@ def install(args, root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest='command', required=True)
-    deploy = commands.add_parser('install')
-    deploy.add_argument('bundle', type=Path)
-    deploy.add_argument('target')
-    deploy.add_argument('baseline')
-    deploy.add_argument('--site-root', type=Path, default=SITE_ROOT)
-    deploy.add_argument('--backup-root', type=Path, default=BACKUP_ROOT)
-    deploy.add_argument('--site-url', default='https://urbaso.ru')
+    for command in ('install', 'upgrade'):
+        deploy = commands.add_parser(command)
+        deploy.add_argument('bundle', type=Path)
+        deploy.add_argument('target')
+        deploy.add_argument('baseline')
+        deploy.add_argument('--site-root', type=Path, default=SITE_ROOT)
+        deploy.add_argument('--backup-root', type=Path, default=BACKUP_ROOT)
+        deploy.add_argument('--site-url', default='https://urbaso.ru')
     rollback = commands.add_parser('rollback')
     rollback.add_argument('backup', type=Path)
     args = parser.parse_args()
