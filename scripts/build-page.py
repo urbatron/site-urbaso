@@ -103,6 +103,14 @@ def build(stylesheet):
     manifest = json.loads((ROOT / 'assets/optimized/manifest.json').read_text())
     page = ROOT / 'index.html'
     text = page.read_text()
+    # The site is a single page. Sending its exact stylesheet with the HTML
+    # avoids a render-blocking request on the current HTTP/1.1 origin.
+    inline_styles = (r'  <!-- site-styles:start -->\n'
+                     r'  <style data-source="/assets/optimized/site-[a-f0-9]{12}\.css">'
+                     r'.*?</style>\n  <!-- site-styles:end -->\n')
+    text, previous_inline_styles = re.subn(inline_styles, '', text, flags=re.S)
+    if previous_inline_styles > 1:
+        raise ValueError('Duplicate generated stylesheets')
     hero_end = text.index('</section>')
     critical = {'grid-paper-top', 'grid', 'portrait'}
     count = 0
@@ -178,9 +186,18 @@ def build(stylesheet):
     # Replace only stylesheets owned by this static site's build.
     styles = r'  <link rel="stylesheet" href="(?:\./assets/css/[^\"]+|/assets/optimized/site-[a-f0-9]{12}\.css)">\n'
     text, replaced = re.subn(styles, '', text)
-    if not replaced:
-        raise ValueError('No expected stylesheet links to update')
-    text = text.replace('  <!-- Yandex.Metrika counter -->', f'  <link rel="stylesheet" href="{stylesheet}">\n  <!-- Yandex.Metrika counter -->', 1)
+    if not replaced and not previous_inline_styles:
+        raise ValueError('No expected stylesheet to update')
+    if replaced and previous_inline_styles:
+        raise ValueError('Both inline and external generated stylesheets found')
+    css = (ROOT / stylesheet.lstrip('/')).read_text()
+    if re.search(r'</style', css, flags=re.I):
+        raise ValueError('Stylesheet contains an HTML style closing tag')
+    styles_block = (f'  <!-- site-styles:start -->\n'
+                    f'  <style data-source="{stylesheet}">{css}</style>\n'
+                    f'  <!-- site-styles:end -->\n')
+    text = text.replace('  <!-- Yandex.Metrika counter -->',
+                        styles_block + '  <!-- Yandex.Metrika counter -->', 1)
     for family, stem in [('Inter', 'inter'), ('Caveat', 'caveat')]:
         text, replaced = re.subn(
             r'(<link rel="preload" href=")[^\"]*/' + stem + r'-[^\"]+\.woff2(" as="font")',
