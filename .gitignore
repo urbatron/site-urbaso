@@ -3,3 +3,14 @@ node_modules/
 .venv/
 __pycache__/
 *.py[cod]
+
+# Original videos in /delete are stored and backed up separately on the VPS.
+# Keep small images and folder documentation in Git.
+/delete/**/*.[mM][pP]4
+/delete/**/*.[mM]4[vV]
+/delete/**/*.[mM][oO][vV]
+/delete/**/*.[wW][eE][bB][mM]
+/delete/**/*.[mM][kK][vV]
+/delete/**/*.[aA][vV][iI]
+/delete/**/*.[wW][mM][vV]
+/delete/**/*.[fF][lL][vV]
