@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expose only image/video files below /delete without changing the site checkout.
+"""Configure public media or missing-page redirects without changing the checkout.
 
 Download configure-performance.py from the same reviewed commit beside this file.
 Both files must be outside the public webroot. Backups include both for rollback.
@@ -46,6 +46,15 @@ MEDIA = r'''    # Public media only; keep after the hidden-file rule.
     }
 '''
 HIDDEN = re.compile(r'(?m)^[ \t]*location\s+~\s+/\\\.\s*\{\s*return\s+404\s*;\s*\}')
+FALLBACK = re.compile(r'(?m)^[ \t]*location\s+/\s*\{\s*return\s+404\s*;\s*\}')
+PAGE_REDIRECT = r'''    # Keep these guards after the existing public media/asset locations.
+    location ~* ^/(?:assets|delete|scripts|docs|tools)(?:/|$) { return 404; }
+    location ~* \.(?:css|js|mjs|json|xml|txt|svg|ico|jpg|jpeg|png|gif|webp|avif|woff|woff2|ttf|otf|eot|vcf|mp4|webm|mov|m4v|avi|mkv|mp3|wav|ogg|pdf|zip|gz|tar|7z|rar|map|md|py|sh|toml|yaml|yml|lock|ini|conf|log|sql|db)$ { return 404; }
+    location / {
+        add_header Cache-Control "no-store" always;
+        return 302 https://urbaso.ru/$is_args$args;
+    }'''
+BACKUP_KINDS = {'delete-media-v1': 'delete-media-', 'missing-pages-v1': 'missing-pages-'}
 
 
 def patched(text):
@@ -54,6 +63,14 @@ def patched(text):
         base.fail('Не найдена единственная ожидаемая защита скрытых файлов')
     end = matches[0].end()
     return text[:end] + '\n' + MEDIA.rstrip('\n') + text[end:]
+
+
+def redirect_pages(text):
+    matches = list(FALLBACK.finditer(text))
+    if len(matches) != 1:
+        base.fail('Не найден единственный ожидаемый fallback location')
+    match = matches[0]
+    return text[:match.start()] + PAGE_REDIRECT + text[match.end():]
 
 
 def file_hash(path):
@@ -157,15 +174,40 @@ def smoke(directory, originals, size, prefix):
                 base.fail(f'Изменился доступ к закрытому пути: {host}{path}, HTTP {status}')
 
 
+def redirect_smoke(directory, originals, size, prefix):
+    smoke(directory, originals, size, prefix)
+    for host in base.HOSTS:
+        for path in ('/not-a-real-page', '/not-a-real-page/', '/old.html', '/old.php',
+                     '/deep/missing/path?utm_source=test&utm_campaign=redirect'):
+            status, headers, _ = base.request(host, path, directory)
+            query = '?' + path.split('?', 1)[1] if '?' in path else ''
+            if (status != '302' or headers.get('location') != ['https://urbaso.ru/' + query]
+                    or headers.get('cache-control') != ['no-store']):
+                base.fail(f'Неверное перенаправление отсутствующей страницы: {host}{path}')
+        for path in ('/assets/missing.css', '/assets/missing.php', '/missing.js', '/missing.jpg',
+                     '/docs/unknown.html', '/scripts/unknown.php', '/AGENTS.md', '/README.md'):
+            status, headers, _ = base.request(host, path, directory)
+            if status != '404' or headers.get('location'):
+                base.fail(f'Ресурс или закрытый путь перенаправлен вместо 404: {host}{path}')
+        status, _, body = base.request(host, '/index.html', directory)
+        if status != '200' or body != originals[host]:
+            base.fail('Изменилась выдача index.html: ' + host)
+        status, _, _ = base.request(host, '/tools/layout-check.html', directory)
+        if status != ('200' if host == 'site.urbaso.ru' else '404'):
+            base.fail('Изменился доступ к существующему инструменту: ' + host)
+
+
 def restore(backup):
     raw = (backup / 'delete-media.json').read_bytes()
     if base.digest(raw) != (backup / 'delete-media.sha256').read_text().strip():
         base.fail('Повреждены сведения резервной копии')
     metadata = json.loads(raw)
     entries = metadata.get('entries', [])
-    if (metadata.get('kind') != 'delete-media-v1' or len(entries) != 2
+    if (metadata.get('kind') not in BACKUP_KINDS or len(entries) != 2
             or {entry['name'] for entry in entries} != set(base.HOSTS)):
         base.fail('Неизвестный формат резервной копии')
+    if not backup.name.startswith(BACKUP_KINDS[metadata['kind']]):
+        base.fail('Каталог не соответствует типу резервной копии')
     before = {}
     for entry in entries:
         if entry['path'] != str(base.config_path(entry['name'])):
@@ -197,7 +239,10 @@ def restore(backup):
     print('Исходные nginx-конфиги восстановлены; файлы сайта и Git не менялись.')
 
 
-def install():
+def install(redirect_missing_pages=False):
+    kind = 'missing-pages-v1' if redirect_missing_pages else 'delete-media-v1'
+    transform = redirect_pages if redirect_missing_pages else patched
+    verify = redirect_smoke if redirect_missing_pages else smoke
     state = git_state()
     print('Текущий Git:', json.dumps(state, ensure_ascii=False), flush=True)
     rows, size, prefix = inventory()
@@ -209,11 +254,14 @@ def install():
         entry, data = base.read_entry(host)
         text = data.decode()
         current = base.tokens(text)
-        if current == base.tokens(base.optimized_config(host)):
+        expected = base.optimized_config(host)
+        if redirect_missing_pages:
+            expected = patched(expected)
+        if current == base.tokens(expected):
             modes.append('old')
-            replacement = patched(text).encode()
-        elif current == base.tokens(patched(base.optimized_config(host))):
-            modes.append('media')
+            replacement = transform(text).encode()
+        elif current == base.tokens(transform(expected)):
+            modes.append('applied')
             replacement = data
         else:
             base.fail('Неизвестная nginx-конфигурация, замена отменена: ' + host)
@@ -232,18 +280,18 @@ def install():
             if status != '200' or body != (base.ROOT / 'index.html').read_bytes():
                 base.fail('До изменения сервер отдаёт неожиданную главную страницу: ' + host)
             pages[host] = body
-        if modes[0] == 'media':
-            smoke(checks, pages, size, prefix)
+        if modes[0] == 'applied':
+            verify(checks, pages, size, prefix)
             if git_state() != state:
                 base.fail('Состояние Git изменилось во время проверки')
-            print('Доступ к медиа уже настроен и проверен; повторная запись не нужна.')
+            print('Настройка уже применена и проверена; повторная запись не нужна.')
             return
         base.BACKUPS.mkdir(mode=0o700, parents=True, exist_ok=True)
         if base.BACKUPS.resolve().is_relative_to(base.ROOT.resolve()):
             base.fail('Резервная копия должна находиться вне webroot')
-        backup = Path(tempfile.mkdtemp(prefix='delete-media-', dir=base.BACKUPS))
+        backup = Path(tempfile.mkdtemp(prefix=BACKUP_KINDS[kind], dir=base.BACKUPS))
         os.chmod(backup, 0o700)
-        metadata = {'kind': 'delete-media-v1', 'git': state, 'inventory': rows, 'entries': entries,
+        metadata = {'kind': kind, 'git': state, 'inventory': rows, 'entries': entries,
                     'other_files': {p: h for p, h in initial.items()
                                     if p not in {entry['path'] for entry in entries}}}
         for entry in entries:
@@ -272,7 +320,7 @@ def install():
             deadline = time.monotonic() + 15
             while True:
                 try:
-                    smoke(checks, pages, size, prefix)
+                    verify(checks, pages, size, prefix)
                     break
                 except (RuntimeError, subprocess.SubprocessError):
                     if time.monotonic() >= deadline:
@@ -284,7 +332,10 @@ def install():
             if git_state() != state:
                 base.fail('Состояние Git изменилось во время установки')
             (backup / 'COMPLETED').write_text(state['head'] + '\n')
-            print('Медиа открыты. Range 206, video/mp4, исходные байты и закрытые пути проверены.')
+            if redirect_missing_pages:
+                print('Перенаправление отсутствующих страниц, UTM, главная, медиа и закрытые пути проверены.')
+            else:
+                print('Медиа открыты. Range 206, video/mp4, исходные байты и закрытые пути проверены.')
         except BaseException as error:
             error_details(error)
             if mutated:
@@ -300,7 +351,10 @@ def install():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rollback', type=Path)
+    parser.add_argument('--redirect-missing-pages', action='store_true')
     args = parser.parse_args()
+    if args.rollback and args.redirect_missing_pages:
+        parser.error('--rollback используется отдельно')
     if os.geteuid() != 0 or base.run(['hostname']).strip() != 'urbaserge3-vps-1':
         base.fail('Скрипт предназначен для root на urbaserge3-vps-1')
     if Path(__file__).resolve().is_relative_to(base.ROOT.resolve()):
@@ -313,11 +367,11 @@ def main():
         fcntl.flock(git_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if args.rollback:
             backup = args.rollback.resolve(strict=True)
-            if backup.parent != base.BACKUPS.resolve() or not backup.name.startswith('delete-media-'):
+            if backup.parent != base.BACKUPS.resolve() or not backup.name.startswith(tuple(BACKUP_KINDS.values())):
                 base.fail('Неожиданный каталог резервной копии')
             restore(backup)
         else:
-            install()
+            install(args.redirect_missing_pages)
 
 
 if __name__ == '__main__':
